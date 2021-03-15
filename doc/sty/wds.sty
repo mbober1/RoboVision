@@ -1,0 +1,60 @@
+
+
+\newcommand{\wdsTytulProjektu}[1]{\newcommand{\xwdsTytulProjektu}{#1}}
+\newcommand{\wdsAutor}[1]{\newcommand{\xwdsAutor}{#1}}
+
+
+\newcommand\wdsStronaTytulowa{%
+%
+  %\begin{titlepage}
+\begin{titlepage}
+  \begin{center}
+   \textsc{\Large Projekt}\\[2ex]
+   \textsc{Wizualizacja Danych Sensorycznych}\\
+% 
+   \mbox{}\hrulefill\\[2ex]
+   %
+   {\Large\bfseries \xwdsTytulProjektu}\\
+   %
+   \hrulefill\\
+   \vspace{1cm}
+   \mbox{}\hfill{\bfseries \xwdsAutor}\\[5pt]
+  % ----------------------------------------------------------------
+ \vspace{2cm}
+ \vfill
+ % ----------------------------------------------------------------
+ \mbox{}\hfill
+ \raisebox{-2ex}{%
+ \begin{minipage}{0.4\textwidth}
+  \mbox{}\hrulefill\mbox{}\\[-1ex]
+  \mbox{}\hrulefill\mbox{}\\[-1ex]
+  \mbox{}\hrulefill\mbox{}\\
+ \end{minipage}
+ }%
+\raisebox{-4ex}{~~\includegraphics[width=0.10\textwidth]{sty/CyRobek.png}}
+\hspace*{2em}
+\begin{minipage}{0.38\textwidth}
+     {\it Prowadzący:}\\
+     dr inż. Bogdan Kreczmer
+\begin{center}
+{Katedra Cybernetyki i Robotyki}\\[3pt]
+{Wydziału Elektroniki}\\[3pt]
+{Politechniki Wrocławskiej}\\
+        \end{center}
+ \end{minipage}
+    \vfill
+   {\today}
+ \end{center}
+\end{titlepage}
+% \end{titlepage}
+}
+
+
+\newcommand{\wdsSpisTresci}{%
+ \pagenumbering{roman}
+ \tableofcontents
+ \newpage
+ \pagenumbering{arabic}
+ \setcounter{page}{1}
+}
+
