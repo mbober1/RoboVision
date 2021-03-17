@@ -1,53 +1,41 @@
 cmake_minimum_required(VERSION 3.5)
-
 project(RoboVision LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 14)
+# Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-set(CMAKE_AUTOUIC ON)
+# Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Find the QtWidgets library
+find_package(Qt5Widgets)
+find_package(Qt5Gamepad)
+find_package(Qt53DCore)
+find_package(Qt53DExtras)
+find_package(Qt53DInput)
+find_package(Qt53DRender)
+find_package(Qt5Gui)
 
-# QtCreator supports the following variables for Android, which are identical to qmake Android variables.
-# Check https://doc.qt.io/qt/deployment-android.html for more information.
-# They need to be set before the find_package( ...) calls below.
-
-#if(ANDROID)
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-#    if (ANDROID_ABI STREQUAL "armeabi-v7a")
-#        set(ANDROID_EXTRA_LIBS
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libcrypto.so
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libssl.so)
-#    endif()
-#endif()
-
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        gamepadmonitor.h
+        gamepadmonitor.cpp
 )
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(RoboVision
-        ${PROJECT_SOURCES}
-    )
-else()
-    if(ANDROID)
-        add_library(RoboVision SHARED
-            ${PROJECT_SOURCES}
-        )
-    else()
-        add_executable(RoboVision
-            ${PROJECT_SOURCES}
-        )
-    endif()
-endif()
+# Tell CMake to create the helloworld executable
+add_executable(RoboVision ${PROJECT_SOURCES})
 
-target_link_libraries(RoboVision PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+# Use the Widgets module from Qt 5.
+target_link_libraries(RoboVision 
+Qt5::Widgets 
+Qt5::Gamepad
+Qt5::3DCore
+Qt5::3DExtras
+Qt5::3DInput
+Qt5::3DRender
+Qt5::Gui
+)

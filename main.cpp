@@ -1,6 +1,6 @@
-#include "mainwindow.h"
-// #include "gamepad.h"
 #include <QApplication>
+#include "mainwindow.h"
+#include "gamepadmonitor.h"
 
 #include <stdio.h>
 #include <arpa/inet.h>
@@ -17,12 +17,16 @@ std::string STATUS;
 char recvBuf[100];
 char sendBuf[100];
 
+
+
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    // Gamepad2 gamepadds;
-    w.show();
+    QApplication app(argc, argv);
+    MainWindow window;
+    GamepadMonitor joystick;
+    window.show();
+
+    
 
     // int result;
     // int newSocket;
@@ -106,5 +110,5 @@ int main(int argc, char *argv[])
     //     printf("L:%+3.0f% R:%+3.0f%\n", (left*10)/SENSITIVITY, (right*10)/SENSITIVITY);
     // }
     
-    return a.exec();
+    return app.exec();
 }

@@ -1,25 +1,26 @@
-#include "gamepad.h"
-#include <QtGamepad>
-#include <QDebug>
-#include <QLoggingCategory>
+#include "gamepadmonitor.h"
 
-Gamepad2::Gamepad2(QObject *parent) : QObject(parent), m_gamepad(0)
+
+GamepadMonitor::GamepadMonitor(QObject *parent)
+    : QObject(parent)
+    , m_gamepad(0)
 {
-    // QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
+    QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
 
-    // auto gamepads = QGamepadManager::instance()->connectedGamepads();
-    // if (gamepads.isEmpty()) {
-    //     qDebug() << "Did not find any connected gamepads";
-    //     return;
-    // }
+    auto gamepads = QGamepadManager::instance()->connectedGamepads();
+    if (gamepads.isEmpty()) {
+        qDebug() << "Did not find any connected gamepads";
+        return;
+    }
 
-    // m_gamepad = new QGamepad(*gamepads.begin(), this);
-    // connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [](double value){
-    //     qDebug() << "Left X" << value;
-    // });
-    // connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [](double value){
-    //     qDebug() << "Left Y" << value;
-    // });
+    m_gamepad = new QGamepad(*gamepads.begin(), this);
+
+    connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [](double value){
+        qDebug() << "Left X" << value;
+    });
+    connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [](double value){
+        qDebug() << "Left Y" << value;
+    });
     // connect(m_gamepad, &QGamepad::axisRightXChanged, this, [](double value){
     //     qDebug() << "Right X" << value;
     // });
@@ -59,5 +60,9 @@ Gamepad2::Gamepad2(QObject *parent) : QObject(parent), m_gamepad(0)
     // connect(m_gamepad, &QGamepad::buttonGuideChanged, this, [](bool pressed){
     //     qDebug() << "Button Guide" << pressed;
     // });
+}
 
+GamepadMonitor::~GamepadMonitor()
+{
+    delete m_gamepad;
 }
