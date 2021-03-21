@@ -18,8 +18,6 @@ class GamepadMonitor : public QObject
 public:
     explicit GamepadMonitor(QObject *parent = 0);
     ~GamepadMonitor();
-
-private:
     QGamepad *m_gamepad;
 };
 

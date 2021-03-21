@@ -15,18 +15,6 @@ GamepadMonitor::GamepadMonitor(QObject *parent)
 
     m_gamepad = new QGamepad(*gamepads.begin(), this);
 
-    connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [](double value){
-        qDebug() << "Left X" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [](double value){
-        qDebug() << "Left Y" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisRightXChanged, this, [](double value){
-        qDebug() << "Right X" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisRightYChanged, this, [](double value){
-        qDebug() << "Right Y" << value;
-    });
     connect(m_gamepad, &QGamepad::buttonAChanged, this, [](bool pressed){
         qDebug() << "Button A" << pressed;
     });

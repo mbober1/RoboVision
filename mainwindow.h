@@ -14,6 +14,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void leftX(double value);
+    void leftY(double value);
+    void gamepadStatus(bool status);
 
 private slots:
     void on_pushButtonClose_clicked();

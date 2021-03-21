@@ -26,8 +26,17 @@ int main(int argc, char *argv[])
     GamepadMonitor joystick;
     window.show();
 
-    
+    joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftXChanged, [&window](double value){
+        window.leftX(value);
+    });
 
+    joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftYChanged, [&window](double value){
+        window.leftY(-value);
+    });
+
+    joystick.connect(joystick.m_gamepad, &QGamepad::connectedChanged, [&window](bool value){
+        window.gamepadStatus(value);
+    });
     // int result;
     // int newSocket;
 
