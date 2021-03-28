@@ -91,11 +91,9 @@
     \item 17 maja 2020 -- wizualizacja wskazań akcelometru
     \item 24 maja 2020 -- przygotowanie wizualizacji obiektu 3D
     \item 31 maja 2020 -- implementacja obracania obiektu 3D przy użyciu żyroskopu
-    \item  7 czerwca 2020 -- Szukanie błędów i testowanie wszystkich funkcji
-    \item 14 czerwca 2020 -- Ostateczne testy działania aplikacji
+    \item  7 czerwca 2020 -- szukanie błędów i testowanie wszystkich funkcji
+    \item 14 czerwca 2020 -- ostateczne testy działania aplikacji
   \end{itemize}
-  %
-  % Dopełnieniem harmonogramu powinien być diagram Gantta.
 
   \begin{figure}[ht]
     \centering
@@ -106,7 +104,29 @@
   \end{figure}
 
 
+  \newpage
 
+  \section{Projekt interfejsu graficznego}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{img/schemat.png}
+    \caption{szablon interfejsu graficznego}
+    \label{fig:interfejs}
+  \end{figure}
+
+  Największy wycinek okna przeznaczony jest na prezentowanie modelu
+  robota w trójwymiarze. Obiekt ten będzie obracał się zgodnie z
+  wskazaniami akcelometru zamontowanego na realnym pojeżdzie. Będzie
+  więc to wizualizacja ustawienia robota w przestrzeni.
+
+  Po prawej stonie widniejąc trzy wykresy prezentujące pomiary
+  akcelometru w 3 osiach. Poniżej znajdują się kolejno wskażniki 
+  opóżnienia  komunikacji, prędkości liniowej pojazdu i odległości od
+  przeszkody, a także poziom naładowania baterii.
+
+  Na dolnej belce umieszczona jest informacja o podłączonym kontrolerze,
+  status komunikacji z robotem, pola do wprowadzenia adresu sterowanego
+  obiektu i przycisk umożliwiający nawiązanie/zerwanie połączenia.
 
 % \section{{\it Kilka przykładów wykorzystania \LaTeX a} }
 

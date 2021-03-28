@@ -15,6 +15,7 @@ find_package(Qt53DExtras)
 find_package(Qt53DInput)
 find_package(Qt53DRender)
 find_package(Qt5Gui)
+find_package(Qt5Network)
 
 
 set(PROJECT_SOURCES
@@ -24,6 +25,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
         gamepadmonitor.h
         gamepadmonitor.cpp
+        myudp.h
+        myudp.cpp
 )
 
 # Tell CMake to create the helloworld executable
@@ -38,4 +41,5 @@ Qt5::3DExtras
 Qt5::3DInput
 Qt5::3DRender
 Qt5::Gui
+Qt5::Network
 )

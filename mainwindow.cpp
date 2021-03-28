@@ -29,14 +29,14 @@ void MainWindow::on_pushButtonConnect_clicked()
     ui->labelConnectionStatus->setText("CONNECTED");
 }
 
-void MainWindow::leftX(double value) {
-    ui->progressBarLeftX->setValue((int)(value * 100));
-}
+//void MainWindow::leftX(double value) {
+//    ui->progressBarLeftX->setValue((int)(value * 100));
+//}
 
-void MainWindow::leftY(double value) {
-    ui->progressBarLeftY->setValue((int)(value * 100));
-}
+//void MainWindow::leftY(double value) {
+//    ui->progressBarLeftY->setValue((int)(value * 100));
+//}
 
-void MainWindow::gamepadStatus(bool status) {
-    ui->labelGamepadStatus->setText(status?"Gamepad connected":"Gamepad disconnected");
-}
+//void MainWindow::gamepadStatus(bool status) {
+//    ui->labelGamepadStatus->setText(status?"Gamepad connected":"Gamepad disconnected");
+//}

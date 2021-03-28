@@ -1,21 +1,22 @@
 #include <QApplication>
 #include "mainwindow.h"
 #include "gamepadmonitor.h"
+#include "myudp.h"
 
-#include <stdio.h>
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <string>
+// #include <stdio.h>
+// #include <arpa/inet.h>
+// #include <sys/socket.h>
+// #include <string>
 
-std::string IP_ADDRES;
-uint16_t PORT;
-std::string STATUS;
+// std::string IP_ADDRES;
+// uint16_t PORT;
+// std::string STATUS;
 
-#define PORT 8090
-#define MAX_INT 64500
-#define SENSITIVITY 6700
-char recvBuf[100];
-char sendBuf[100];
+// #define PORT 8090
+// #define MAX_INT 64500
+// #define SENSITIVITY 6700
+// char recvBuf[100];
+// char sendBuf[100];
 
 
 
@@ -24,19 +25,23 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     MainWindow window;
     GamepadMonitor joystick;
+    clientUDP client;
     window.show();
 
-    joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftXChanged, [&window](double value){
-        window.leftX(value);
-    });
+    // joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftXChanged, [&window](double value){
+    //     window.leftX(value);
+    // });
 
-    joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftYChanged, [&window](double value){
-        window.leftY(-value);
-    });
+    // joystick.connect(joystick.m_gamepad, &QGamepad::axisLeftYChanged, [&window, &client](double value){
+    //     window.leftY(-value);
+    //     client.send(-value * 100, -value * 100);
+    // });
 
-    joystick.connect(joystick.m_gamepad, &QGamepad::connectedChanged, [&window](bool value){
-        window.gamepadStatus(value);
-    });
+    // joystick.connect(joystick.m_gamepad, &QGamepad::connectedChanged, [&window](bool value){
+    //     window.gamepadStatus(value);
+    // });
+
+
     // int result;
     // int newSocket;
 

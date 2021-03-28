@@ -2,7 +2,9 @@
     "files.associations": {
         "qtgamepad": "cpp",
         "*.tcc": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "qmainwindow": "cpp",
+        "qudpsocket": "cpp"
     },
     "mermaid-editor.generate.type": "jpg"
 }
