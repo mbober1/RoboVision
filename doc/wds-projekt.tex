@@ -62,8 +62,6 @@
 
  \section{Specyfikacja finalnego produktu}
 
-    % Jakie są spodziewane efekty realizowanego projektu.
-    % Jakie są oczekiwane zakresy mierzonych wartości, dokładności itp.
   Aplikacja będzie w stanie wizualizować dane odbierane z czujników robota.
   Będą to między innymi:
   \begin{itemize}
@@ -84,7 +82,7 @@
                             związanych z danym tematem
     \item 29 marca 2020 -- przygotowanie schematu widoku aplikacji
     \item 12 kwietnia 2020 -- oprogramowanie obsługi joysticka
-    \item 19 kwietnia 2020 -- zdefiniowanie szczegółów komunikacji i budowy przesyłanych ramek
+    \item 19 kwietnia 2020 -- zdefiniowanie protokołu komunikacji i budowy przesyłanych ramek
     \item 26 kwietnia 2020 -- przygotowanie logiki sterownia
     \item  4 maja 2020 -- implementacja dwustronnej komunikacji z robotem
     \item 10 maja 2020 -- wizualizacja wskazań prędkości i naładowania baterii
@@ -109,24 +107,30 @@
   \section{Projekt interfejsu graficznego}
   \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{img/schemat.png}
+    \includegraphics[width=1\textwidth]{img/schemat2.png}
     \caption{szablon interfejsu graficznego}
     \label{fig:interfejs}
   \end{figure}
 
   Największy wycinek okna przeznaczony jest na prezentowanie modelu
-  robota w trójwymiarze. Obiekt ten będzie obracał się zgodnie z
+  robota w trójwymiarze (1). Obiekt ten będzie obracał się zgodnie z
   wskazaniami akcelometru zamontowanego na realnym pojeżdzie. Będzie
   więc to wizualizacja ustawienia robota w przestrzeni.
 
   Po prawej stonie widniejąc trzy wykresy prezentujące pomiary
-  akcelometru w 3 osiach. Poniżej znajdują się kolejno wskażniki 
-  opóżnienia  komunikacji, prędkości liniowej pojazdu i odległości od
-  przeszkody, a także poziom naładowania baterii.
+  akcelometru w 3 osiach (2). Poniżej znajdują się kolejno wskażniki 
+  opóźnienia  komunikacji (3), prędkości liniowej pojazdu (4) i odległości od
+  przeszkody (5), a także poziom naładowania baterii (6).
 
-  Na dolnej belce umieszczona jest informacja o podłączonym kontrolerze,
-  status komunikacji z robotem, pola do wprowadzenia adresu sterowanego
-  obiektu i przycisk umożliwiający nawiązanie/zerwanie połączenia.
+  Na dolnej belce umieszczona jest informacja o podłączonym kontrolerze (7),
+  i słownym statusie komunikacji z robotem (8).
+  
+  Na szczycie aplikacji znajduje się belka narzędziowa (9), która zawiera 
+  opcję nawiązania/zerwania połączenia, wyjście z programu i informację
+  o autorze aplikacji. Po wybraniu funkcji połączenia z robotem, 
+  wyświetli się dodatkowe okienko z możliwością wprowadzenia adresu 
+  sterowanego obiektu i przycisk umożliwiający inicjację połączenia.
+  
 
 % \section{{\it Kilka przykładów wykorzystania \LaTeX a} }
 
