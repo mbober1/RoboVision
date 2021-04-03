@@ -13,11 +13,13 @@ class clientUDP : public QObject
 {
     Q_OBJECT
 public:
+    QString address;
+    int port;
     explicit clientUDP(QObject *parent = 0);
     QHostAddress client;
     void send(int left, int right);
     QUdpSocket *socket;
-    void init(QString addr, int port);
+    void init();
     void close();
 
 signals:

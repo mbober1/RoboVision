@@ -17,9 +17,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void leftX(double value);
-    void leftY(double value);
-    void gamepadStatus(bool status);
     void connectionError(QAbstractSocket::SocketError error);
 
     GamepadMonitor joystick;
@@ -27,7 +24,8 @@ public:
     clientTCP tcp;
 
 public slots:
-    void on_pushButtonConnect_clicked();
+    void actionConnect();
+    void actionDisconnect();
     void changeConnectionStatus(QAbstractSocket::SocketState status);
 
 private:

@@ -2,7 +2,6 @@
 #define GAMEPADMONITOR_H
 
 #include <QtCore/QObject>
-#include <QtCore/QTimer>
 #include <QtGamepad/QGamepad>
 
 #include <QDebug>

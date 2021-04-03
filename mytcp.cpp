@@ -10,10 +10,10 @@ clientTCP::clientTCP(QObject *parent) :
     connect(&timer, &QTimer::timeout, this, &clientTCP::ping);
 }
 
-void clientTCP::initConnection(QString ip, int port)
+void clientTCP::initConnection()
 {
     qDebug() << "TCP Connecting...";
-    socket->connectToHost(ip, port);
+    socket->connectToHost(this->address, this->port);
 }
 
 void clientTCP::connected()

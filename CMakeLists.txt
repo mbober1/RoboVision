@@ -29,6 +29,9 @@ set(PROJECT_SOURCES
         myudp.cpp
         mytcp.hpp
         mytcp.cpp
+        connectiondialog.h
+        connectiondialog.cpp
+        connectiondialog.ui
 )
 
 # Tell CMake to create the helloworld executable

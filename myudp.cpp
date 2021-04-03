@@ -9,8 +9,9 @@ clientUDP::clientUDP(QObject *parent) :
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
 }
 
-void clientUDP::init(QString addr, int port) {
-    socket->connectToHost(addr, port);
+void clientUDP::init() {
+    qDebug() << "UDP Connecting...";
+    socket->connectToHost(this->address, this->port);
 }
 
 void clientUDP::close() {

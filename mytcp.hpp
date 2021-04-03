@@ -16,7 +16,9 @@ class clientTCP : public QObject
     Q_OBJECT
 public:
     explicit clientTCP(QObject *parent = 0);
-    void initConnection(QString ip, int port);
+    void initConnection();
+    QString address;
+    int port;
 
     std::chrono::time_point<std::chrono::system_clock> lastPing = std::chrono::system_clock::now();
 
