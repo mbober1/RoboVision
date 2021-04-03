@@ -6,7 +6,7 @@ https://github.com/mbober1/ReTank
 
 ## Features
 - [X] Gamepad support
-- [ ] Wireless robot connection
+- [X] Wireless robot connection
 - [ ] Real speed of the robot
 - [ ] Indications of the robot's accelerometer
 - [ ] 3D robot model
