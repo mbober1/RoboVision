@@ -32,6 +32,9 @@ set(PROJECT_SOURCES
         connectiondialog.h
         connectiondialog.cpp
         connectiondialog.ui
+        packet.hpp
+        packet.cpp
+        crc.h
 )
 
 # Tell CMake to create the helloworld executable

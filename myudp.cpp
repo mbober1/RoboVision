@@ -20,9 +20,8 @@ void clientUDP::close() {
 
 void clientUDP::send(int left, int right)
 {   
-    char buffer[50];
-    sprintf(buffer, "L%3d;R%3d", left, right);
-    socket->write(buffer);
+    EnginePacket packet = EnginePacket(left, right);
+    socket->write(packet.prepare());
 }
 
 void clientUDP::connected()

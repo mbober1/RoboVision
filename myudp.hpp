@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QUdpSocket>
 #include <QHostAddress>
+#include "packet.hpp"
 
 QT_BEGIN_NAMESPACE
 class QUdpSocket;

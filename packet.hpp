@@ -1,47 +1,44 @@
+#ifndef MYPACKET_H
+#define MYPACKET_H
+
 #include <string>
 #include "crc.h"
+#include <QtCore/QtDebug>
 
 class Packet {
-    virtual std::string prepare() = 0;
 public:
     Packet();
     Packet(std::string data);
-    char type;
-    int checksum;
+    virtual const char* prepare() = 0;
+    static Packet* decode(std::string data);
+    virtual char getType() = 0;
+};
+#endif // MYPACKET_H
+
+#ifndef MYPACKETPING_H
+#define MYPACKETPING_H
+
+class PingPacket : public Packet {
+public:
+    PingPacket();
+    virtual const char* prepare();
+    virtual char getType();
 };
 
-class PingPacket : Packet {
-    virtual std::string prepare() = 0;
-public:
-    char type = 'P';
-};
+#endif // MYPACKET_H
 
-class EnginePacket : Packet {
-    virtual std::string prepare() = 0;
+
+#ifndef MYPACKETENGINE_H
+#define MYPACKETENGINE_H
+
+class EnginePacket : public Packet {
 public:
-    char type = 'E';
+    EnginePacket(std::string data);
+    EnginePacket(int8_t left, int8_t right);
+    virtual const char* prepare();
     int left;
     int right;
+    virtual char getType();
 };
 
-
-
-std::string PingPacket::prepare() {
-    std::string tmp;
-    tmp += this->type;
-    tmp += ";";
-    tmp += CRC::Calculate(tmp.c_str(), tmp.size(), CRC::CRC_32());
-    return tmp;
-}
-
-
-std::string EnginePacket::prepare() {
-    std::string tmp;
-    tmp += this->type;
-    tmp += this->left;
-    tmp += " ";
-    tmp += this->right;
-    tmp += ";";
-    tmp += CRC::Calculate(tmp.c_str(), tmp.size(), CRC::CRC_32());
-    return tmp;
-}
+#endif // MYPACKET_H

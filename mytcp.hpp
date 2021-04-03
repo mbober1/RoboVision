@@ -6,6 +6,7 @@
 #include <QTimer>
 #include <chrono>
 #include <ctime>  
+#include "packet.hpp"
 
 QT_BEGIN_NAMESPACE
 class QTcpSocket;
@@ -35,6 +36,7 @@ public slots:
 
 private:
     QTimer timer;
+    // void write();
 
 };
 

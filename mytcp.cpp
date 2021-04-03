@@ -30,15 +30,36 @@ void clientTCP::disconnected()
 
 void clientTCP::readyRead()
 {
-    // qDebug() << "Reading...";
-    qDebug() << socket->readAll();
-    auto end = std::chrono::system_clock::now();
-    std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
-    emit latencyChanged(elapsed_seconds.count() * 1000);
+    std::string x = socket->readAll().toStdString();
+    qDebug() << x.c_str();
+    Packet* packet = Packet::decode(x);
+
+    if (packet != nullptr) {
+        switch (packet->getType())
+        {
+        case 'P': {
+            qDebug() << "PONG!";
+            auto end = std::chrono::system_clock::now();
+            std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
+            emit latencyChanged(elapsed_seconds.count() * 1000);
+            break;
+        }
+
+        case 'E':
+            qDebug() << "ENGINE" << ((EnginePacket*)packet)->left << ((EnginePacket*)packet)->right;
+            break;
+        
+        default:
+            qDebug() << "du[pa!";
+            break;
+        }
+
+        delete packet;
+    }
 }
 
 void clientTCP::ping()
 {
-    socket->write("ping");
+    socket->write(PingPacket().prepare());
     this->lastPing = std::chrono::system_clock::now();
 }
