@@ -19,6 +19,9 @@ public:
     explicit GamepadMonitor(QObject *parent = 0);
     ~GamepadMonitor();
     QGamepad *m_gamepad;
+
+private:
+
 };
 
 #endif // GAMEPADMONITOR_H

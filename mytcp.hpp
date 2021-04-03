@@ -21,7 +21,6 @@ public:
     std::chrono::time_point<std::chrono::system_clock> lastPing = std::chrono::system_clock::now();
 
     QTcpSocket *socket;
-    QTimer *timer = new QTimer();;
 
 signals:
     void latencyChanged(int latency);
@@ -29,9 +28,12 @@ signals:
 public slots:
     void connected();
     void disconnected();
-    void bytesWritten(qint64 bytes);
     void readyRead();
     void ping();
+
+private:
+    QTimer timer;
+
 };
 
 #endif // MYTCP_H

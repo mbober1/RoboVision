@@ -5,6 +5,7 @@ GamepadMonitor::GamepadMonitor(QObject *parent)
     : QObject(parent)
     , m_gamepad(0)
 {
+    
     QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
 
     auto gamepads = QGamepadManager::instance()->connectedGamepads();

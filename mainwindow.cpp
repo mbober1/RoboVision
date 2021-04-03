@@ -14,7 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(tcp.socket, &QTcpSocket::stateChanged, [this](QAbstractSocket::SocketState state) {
         this->changeConnectionStatus(state);
+        this->toggleDataTimer();
+        if(state == QAbstractSocket::ConnectedState) udp.init(ui->lineEditAdress->text(), ui->lineEditPort->text().toInt() - 1);
+        else udp.close();
     });
+
+    connect(joystick.m_gamepad, &QGamepad::connectedChanged, this, &MainWindow::toggleDataTimer);
+    connect(udp.socket, &QUdpSocket::stateChanged, this, &MainWindow::toggleDataTimer);
 
     connect(tcp.socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), this, &MainWindow::connectionError);
 
@@ -22,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->lcdNumberPing->display(latency);
     });
 
-
+    connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
 }
 
 MainWindow::~MainWindow()
@@ -39,7 +45,6 @@ void MainWindow::on_pushButtonConnect_clicked()
 }
 
 void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
-    qDebug() << "dupa" << state;
     switch (state)
     {
     case QAbstractSocket::ConnectedState:
@@ -64,19 +69,6 @@ void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
     }
 }
 
-// void MainWindow::leftX(double value) {
-//     ui->progressBarBattery->setValue((int)(value * 100));
-// }
-
-// void MainWindow::leftY(double value) {
-//    ui->progressBarBattery->setValue((int)(value * 100));
-// }
-
-//void MainWindow::gamepadStatus(bool status) {
-//    ui->labelGamepadStatus->setText(status?"Gamepad connected":"Gamepad disconnected");
-//}
-
-
 void MainWindow::connectionError(QAbstractSocket::SocketError error) {
     QString mess = "Connection error occured! Please contact your administartor";
 
@@ -90,4 +82,16 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
         break;
     }
     QMessageBox::critical(this, "Connection error", mess);
+}
+
+void MainWindow::readData() {
+    qDebug() << joystick.m_gamepad->axisLeftY();
+    udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftX()*100);
+}
+
+
+void MainWindow::toggleDataTimer() {
+    if(joystick.m_gamepad->isConnected() && tcp.socket->state() == QAbstractSocket::ConnectedState && udp.socket->state() == QAbstractSocket::ConnectedState) {
+        dataTimer.start(17);
+    } else dataTimer.stop();
 }

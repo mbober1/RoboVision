@@ -27,11 +27,13 @@ public:
     clientTCP tcp;
 
 public slots:
-    // void on_pushButtonClose_clicked();
     void on_pushButtonConnect_clicked();
     void changeConnectionStatus(QAbstractSocket::SocketState status);
 
 private:
+    QTimer dataTimer;
     Ui::MainWindow *ui;
+    void readData();
+    void toggleDataTimer();
 };
 #endif // MAINWINDOW_H

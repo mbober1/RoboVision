@@ -7,37 +7,31 @@ clientTCP::clientTCP(QObject *parent) :
     connect(socket, SIGNAL(connected()), this, SLOT(connected()));
     connect(socket, SIGNAL(disconnected()), this, SLOT(disconnected()));
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
-    connect(socket, SIGNAL(bytesWritten(qint64)), this, SLOT(bytesWritten(qint64)));
-    connect(timer, &QTimer::timeout, this, &clientTCP::ping);
+    connect(&timer, &QTimer::timeout, this, &clientTCP::ping);
 }
 
 void clientTCP::initConnection(QString ip, int port)
 {
-    qDebug() << "Connecting...";
+    qDebug() << "TCP Connecting...";
     socket->connectToHost(ip, port);
 }
 
 void clientTCP::connected()
 {
-    qDebug() << "Connected!";
-    timer->start(1000);
+    qDebug() << "TCP Connected!";
+    timer.start(1000);
 }
 
 void clientTCP::disconnected()
 {
-    qDebug() << "Disconnected!";
-    timer->stop();
-}
-
-void clientTCP::bytesWritten(qint64 bytes)
-{
-    qDebug() << "We wrote: " << bytes;
+    qDebug() << "TCP Disconnected!";
+    timer.stop();
 }
 
 void clientTCP::readyRead()
 {
-    qDebug() << "Reading...";
-    qDebug() << socket->readAll();
+    // qDebug() << "Reading...";
+    // qDebug() << socket->readAll();
     auto end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
     emit latencyChanged(elapsed_seconds.count() * 1000);

@@ -16,13 +16,18 @@ public:
     explicit clientUDP(QObject *parent = 0);
     QHostAddress client;
     void send(int left, int right);
+    QUdpSocket *socket;
+    void init(QString addr, int port);
+    void close();
+
 signals:
     
 public slots:
+    void connected();
+    void disconnected();
     void readyRead();
 
 private:
-    QUdpSocket *socket;
 };
 
 #endif // MYUDP_H
