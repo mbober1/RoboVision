@@ -1,4 +1,4 @@
-#include "myudp.h"
+#include "myudp.hpp"
 
 clientUDP::clientUDP(QObject *parent) :
     QObject(parent)

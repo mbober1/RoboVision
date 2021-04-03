@@ -122,6 +122,9 @@
       <height>16777215</height>
      </size>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDigitsOnly</set>
+    </property>
     <property name="text">
      <string>8098</string>
     </property>

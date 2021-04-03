@@ -25,8 +25,10 @@ set(PROJECT_SOURCES
         mainwindow.ui
         gamepadmonitor.h
         gamepadmonitor.cpp
-        myudp.h
+        myudp.hpp
         myudp.cpp
+        mytcp.hpp
+        mytcp.cpp
 )
 
 # Tell CMake to create the helloworld executable
