@@ -51,7 +51,7 @@ void MainWindow::actionConnect()
     // else tcp.initConnection(ui->lineEditAdress->text(), ui->lineEditPort->text().toInt());
         tcp.initConnection();
     }
-    qDebug() << tcp.socket->state();
+    // qDebug() << tcp.socket->state();
 }
 
 void MainWindow::actionDisconnect() {
@@ -105,7 +105,6 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
 }
 
 void MainWindow::readData() {
-    qDebug() << joystick.m_gamepad->axisLeftY();
     udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftX()*100);
 }
 

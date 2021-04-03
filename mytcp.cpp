@@ -31,7 +31,7 @@ void clientTCP::disconnected()
 void clientTCP::readyRead()
 {
     // qDebug() << "Reading...";
-    // qDebug() << socket->readAll();
+    qDebug() << socket->readAll();
     auto end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
     emit latencyChanged(elapsed_seconds.count() * 1000);
