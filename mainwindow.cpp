@@ -29,6 +29,14 @@ MainWindow::MainWindow(QWidget *parent)
        ui->lcdNumberPing->display(latency);
     });
 
+    QObject::connect(&tcp, &clientTCP::batteryChanged, [this](int level) {
+       ui->progressBarBattery->setValue(level);
+    });
+
+    QObject::connect(&tcp, &clientTCP::distanceChanged, [this](int distance) {
+       ui->progressBarObstacle->setValue(distance);
+    });
+
     connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
 }
 

@@ -27,6 +27,8 @@ public:
 
 signals:
     void latencyChanged(int latency);
+    void batteryChanged(int level);
+    void distanceChanged(int distance);
 
 public slots:
     void connected();

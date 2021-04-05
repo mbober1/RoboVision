@@ -38,15 +38,19 @@ void clientTCP::readyRead()
         switch (packet->getType())
         {
         case 'P': {
-            qDebug() << "PONG!";
+            // qDebug() << "PONG!";
             auto end = std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
             emit latencyChanged(elapsed_seconds.count() * 1000);
             break;
         }
 
-        case 'E':
-            qDebug() << "ENGINE" << ((EnginePacket*)packet)->left << ((EnginePacket*)packet)->right;
+        case 'B':
+            emit batteryChanged(((BatteryPacket*)packet)->level);
+            break;
+
+        case 'D':
+            emit distanceChanged(((DistancePacket*)packet)->distance);
             break;
         
         default:
