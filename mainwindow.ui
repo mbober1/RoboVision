@@ -31,23 +31,7 @@
     <item row="7" column="0" colspan="2">
      <widget class="QLabel" name="labelGamepadStatus">
       <property name="text">
-       <string>Connected Dualshock4</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="5">
-     <widget class="QLabel" name="labelConnectionStatus">
-      <property name="minimumSize">
-       <size>
-        <width>110</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>DISCONNECTED</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <string/>
       </property>
      </widget>
     </item>
@@ -74,7 +58,7 @@
     <item row="4" column="3" colspan="3">
      <widget class="QProgressBar" name="progressBarObstacle">
       <property name="value">
-       <number>24</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
@@ -170,6 +154,22 @@
       </property>
      </widget>
     </item>
+    <item row="7" column="6" colspan="2">
+     <widget class="QLabel" name="labelConnectionStatus">
+      <property name="minimumSize">
+       <size>
+        <width>110</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>DISCONNECTED</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -178,7 +178,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>27</height>
+     <height>34</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuConnection">

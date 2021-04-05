@@ -1,63 +1,115 @@
 #include "packet.hpp"
 
 Packet::Packet() {}
+Packet::~Packet() {}
 
-Packet* Packet::decode(std::string data) {
-    char type = data.at(0);
-    switch (type)
-    {
-    case 'P':
-        return new PingPacket();
-
-    case 'E':
-        return new EnginePacket(data);
-    
-    default:
-        return nullptr;
-        // qDebug() << "unknown packet";
-        break;
-    }
+uint8_t Packet::checksum(const std::string &data) {
+    return CRC::Calculate(data.c_str(), data.size(), CRC::CRC_8());
 }
+
+Packet* Packet::decode(std::string &data) {
+    char crc = data.at(data.size() - 1);
+    data.pop_back();
+
+    if(Packet::checksum(data) == (uint8_t)crc) {
+        char type = data.at(0);
+        switch (type)
+        {
+        case 'P':
+            return new PingPacket();
+
+        case 'E':
+            return new EnginePacket(data);
+
+        case 'B':
+            return new BatteryPacket(data);
+        
+        default:
+            return nullptr;
+            printf("unknown packet");
+            break;
+        }
+    } else {
+        printf("złe crc :(");
+        return nullptr;
+    }
+
+}
+
+
+
 
 PingPacket::PingPacket() {}
-
-const char* PingPacket::prepare() {
-    std::string tmp;
-    tmp += this->getType();
-    tmp += ';';
-    tmp += CRC::Calculate(tmp.c_str(), tmp.size(), CRC::CRC_32());
-    return tmp.c_str();
-}
+PingPacket::~PingPacket() {}
 
 char PingPacket::getType() {
     return 'P';
 }
 
-// E12 3;C
-EnginePacket::EnginePacket(std::string data)
+
+std::string PingPacket::prepare() {
+    std::string tmp;
+    tmp += this->getType();
+    tmp += ';';
+    tmp += Packet::checksum(tmp);
+    return tmp;
+}
+
+
+
+
+EnginePacket::EnginePacket(const int8_t &left, const int8_t &right) : left(left), right(right) {}
+EnginePacket::~EnginePacket() {}
+
+EnginePacket::EnginePacket(const std::string &data)
 {
-    this->left = (int8_t)(data[1]);
-    this->right = (int8_t)(data[3]);
+    if(!data.empty()) {
+        int separator = data.find(' ');
+        std::string parse = data.substr(1, separator - 1);
+        this->left = std::atoi(parse.c_str());
+        parse = data.substr(separator + 1, data.find(';') - separator - 1);
+        this->right = std::atoi(parse.c_str());
+    }
 }
 
 char EnginePacket::getType() {
     return 'E';
 }
 
-EnginePacket::EnginePacket(int8_t left, int8_t right)
-    : left(left),
-      right(right)
-{
-    
-}
-
-const char* EnginePacket::prepare() {
+std::string EnginePacket::prepare() {
     std::string tmp;
     tmp += this->getType();
-    tmp += this->left;
+    tmp += std::to_string(this->left);
     tmp += ' ';
-    tmp += this->right;
+    tmp += std::to_string(this->right);
     tmp += ';';
-    tmp += CRC::Calculate(tmp.c_str(), tmp.size(), CRC::CRC_32());
-    return tmp.c_str();
+    tmp += Packet::checksum(tmp);
+    return tmp;
+}
+
+
+
+BatteryPacket::BatteryPacket(const uint8_t &level) : level(level) {}
+BatteryPacket::~BatteryPacket() {}
+
+BatteryPacket::BatteryPacket(const std::string &data)
+{
+    if(!data.empty()) {
+        int separator = data.find(';');
+        std::string parse = data.substr(1, separator - 1);
+        this->level = std::atoi(parse.c_str());
+    }
+}
+
+char BatteryPacket::getType() {
+    return 'B';
+}
+
+std::string BatteryPacket::prepare() {
+    std::string tmp;
+    tmp += this->getType();
+    tmp += std::to_string(this->level);
+    tmp += ';';
+    tmp += Packet::checksum(tmp);
+    return tmp;
 }

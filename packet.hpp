@@ -1,44 +1,46 @@
-#ifndef MYPACKET_H
-#define MYPACKET_H
-
+#pragma once
 #include <string>
 #include "crc.h"
-#include <QtCore/QtDebug>
 
 class Packet {
 public:
     Packet();
-    Packet(std::string data);
-    virtual const char* prepare() = 0;
-    static Packet* decode(std::string data);
+    Packet(const std::string &data);
+    virtual ~Packet() = 0;
+    virtual std::string prepare() = 0;
+    static Packet* decode(std::string &data);
     virtual char getType() = 0;
+    static uint8_t checksum(const std::string &data);
 };
-#endif // MYPACKET_H
 
-#ifndef MYPACKETPING_H
-#define MYPACKETPING_H
 
 class PingPacket : public Packet {
 public:
     PingPacket();
-    virtual const char* prepare();
+    ~PingPacket();
+    virtual std::string prepare();
     virtual char getType();
 };
 
-#endif // MYPACKET_H
-
-
-#ifndef MYPACKETENGINE_H
-#define MYPACKETENGINE_H
 
 class EnginePacket : public Packet {
 public:
-    EnginePacket(std::string data);
-    EnginePacket(int8_t left, int8_t right);
-    virtual const char* prepare();
+    EnginePacket(const std::string &data);
+    EnginePacket(const int8_t &left, const int8_t &right);
+    ~EnginePacket();
+    virtual std::string prepare();
     int left;
     int right;
     virtual char getType();
 };
 
-#endif // MYPACKET_H
+
+class BatteryPacket : public Packet {
+public:
+    BatteryPacket(const std::string &data);
+    BatteryPacket(const uint8_t &level);
+    ~BatteryPacket();
+    virtual std::string prepare();
+    int level;
+    virtual char getType();
+};

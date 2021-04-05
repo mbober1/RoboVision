@@ -21,19 +21,19 @@ void clientUDP::close() {
 void clientUDP::send(int left, int right)
 {   
     EnginePacket packet = EnginePacket(left, right);
-    socket->write(packet.prepare());
+    std::string data = packet.prepare();
+    qDebug() << "wysylam: " << data.c_str();
+    socket->write(data.c_str());
 }
 
 void clientUDP::connected()
 {
     qDebug() << "UDP Connected!";
-    // timer.start(1000);
 }
 
 void clientUDP::disconnected()
 {
     qDebug() << "UDP Disconnected!";
-    // timer.stop();
 }
 
 void clientUDP::readyRead()

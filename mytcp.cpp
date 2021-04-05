@@ -31,7 +31,7 @@ void clientTCP::disconnected()
 void clientTCP::readyRead()
 {
     std::string x = socket->readAll().toStdString();
-    qDebug() << x.c_str();
+    qDebug() << "Odbieram: " << x.c_str();
     Packet* packet = Packet::decode(x);
 
     if (packet != nullptr) {
@@ -60,6 +60,7 @@ void clientTCP::readyRead()
 
 void clientTCP::ping()
 {
-    socket->write(PingPacket().prepare());
+    std::string data = PingPacket().prepare();
+    socket->write(data.c_str(), data.size());
     this->lastPing = std::chrono::system_clock::now();
 }
