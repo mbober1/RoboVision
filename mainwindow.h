@@ -2,9 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 #include "gamepadmonitor.h"
 #include "myudp.hpp"
 #include "mytcp.hpp"
+// #include "keyboard.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,8 +22,12 @@ public:
     void connectionError(QAbstractSocket::SocketError error);
 
     GamepadMonitor joystick;
+    // Keyboard keyboard;
     clientUDP udp;
     clientTCP tcp;
+
+protected:
+    void keyPressEvent(QKeyEvent* event);
 
 public slots:
     void actionConnect();

@@ -112,6 +112,10 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
     QMessageBox::critical(this, "Connection error", mess);
 }
 
+void MainWindow::keyPressEvent(QKeyEvent* event) {
+    qDebug() << event->text();
+}
+
 void MainWindow::readData() {
     udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftX()*100);
 }
