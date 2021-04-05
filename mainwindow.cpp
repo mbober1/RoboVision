@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <string>
 #include <QMessageBox>
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionDisconnect, &QAction::triggered, this, &MainWindow::actionDisconnect);
     connect(ui->actionQuit, &QAction::triggered, this, &MainWindow::close);
     connect(tcp.socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::errorOccurred), this, &MainWindow::connectionError);
+    connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
     // connect(tcp, &clientTCP::closeConnection, this, &MainWindow::actionDisconnect);
 
     QObject::connect(&tcp, &clientTCP::latencyChanged, [this](int latency) {
@@ -38,18 +40,18 @@ MainWindow::MainWindow(QWidget *parent)
        ui->progressBarObstacle->setValue(distance);
     });
 
+    QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {
+       QDesktopServices::openUrl(QUrl("https://github.com/mbober1/", QUrl::TolerantMode));
+    });
 
-    connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
 }
 
 
-void MainWindow::actionConnect()
-{
+void MainWindow::actionConnect() {
     ConnectionDialog dialog;
     dialog.setModal(true);
     if(dialog.exec() == QDialog::Accepted) {
@@ -57,11 +59,8 @@ void MainWindow::actionConnect()
         tcp.port = dialog.getTcpPort();
         udp.address = dialog.getAdress();
         udp.port = dialog.getUdpPort();
-    // if(tcp.socket->state() == QAbstractSocket::ConnectedState) tcp.socket->close();
-    // else tcp.initConnection(ui->lineEditAdress->text(), ui->lineEditPort->text().toInt());
         tcp.initConnection();
     }
-    // qDebug() << tcp.socket->state();
 }
 
 void MainWindow::actionDisconnect() {
@@ -100,7 +99,7 @@ void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
 }
 
 void MainWindow::connectionError(QAbstractSocket::SocketError error) {
-    QString mess = "Connection error occured! Please contact your administartor";
+    QString mess = "Connection error occured! Please try again";
 
     switch (error)
     {
@@ -121,7 +120,6 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
 void MainWindow::readData() {
     udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftX()*100);
 }
-
 
 void MainWindow::toggleDataTimer() {
     if(joystick.m_gamepad->isConnected() && tcp.socket->state() == QAbstractSocket::ConnectedState && udp.socket->state() == QAbstractSocket::ConnectedState) {
