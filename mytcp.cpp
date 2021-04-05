@@ -52,6 +52,14 @@ void clientTCP::readyRead()
         case 'D':
             emit distanceChanged(((DistancePacket*)packet)->distance);
             break;
+
+        case 'S':
+            qDebug() << "Speed:" << ((SpeedPacket*)packet)->left << "|" << ((SpeedPacket*)packet)->right;
+            break;
+
+        case 'C':
+            emit closeConnection();
+            break;
         
         default:
             qDebug() << "du[pa!";

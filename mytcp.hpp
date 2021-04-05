@@ -29,6 +29,7 @@ signals:
     void latencyChanged(int latency);
     void batteryChanged(int level);
     void distanceChanged(int distance);
+    void closeConnection();
 
 public slots:
     void connected();

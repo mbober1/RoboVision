@@ -1,6 +1,7 @@
 #include <QApplication>
 #include "mainwindow.h"
 
+#include "packet.hpp"
 
 int main(int argc, char *argv[])
 {
