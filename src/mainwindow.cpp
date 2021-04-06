@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionQuit, &QAction::triggered, this, &MainWindow::close);
     connect(tcp.socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::errorOccurred), this, &MainWindow::connectionError);
     connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
-    // connect(tcp, &clientTCP::closeConnection, this, &MainWindow::actionDisconnect);
+    connect(&tcp, &clientTCP::closeConnection, this, &MainWindow::actionDisconnect);
 
     QObject::connect(&tcp, &clientTCP::latencyChanged, [this](int latency) {
        ui->lcdNumberPing->display(latency);
