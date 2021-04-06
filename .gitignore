@@ -74,3 +74,5 @@ Thumbs.db
 build
 .vscode
 .vscode/*
+
+!ui/ui_*.h
