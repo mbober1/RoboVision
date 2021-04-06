@@ -18,27 +18,34 @@ find_package(Qt5Gui)
 find_package(Qt5Network)
 
 
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        gamepadmonitor.h
-        gamepadmonitor.cpp
-        myudp.hpp
-        myudp.cpp
-        mytcp.hpp
-        mytcp.cpp
-        connectiondialog.h
-        connectiondialog.cpp
-        connectiondialog.ui
-        packet.hpp
-        packet.cpp
-        crc.h
-)
+set(SOURCES
+    src/main.cpp
+    src/connectiondialog.cpp
+    src/gamepadmonitor.cpp
+    src/mainwindow.cpp
+    src/mytcp.cpp
+    src/myudp.cpp
+    src/packet.cpp)
+set(HEADERS
+    include/connectiondialog.h
+    include/gamepadmonitor.h
+    include/mainwindow.h
+    include/mytcp.hpp
+    include/myudp.hpp
+    include/crc.h
+    include/packet.hpp)
+set(UIS
+    ui/ui_mainwindow.h
+    ui/ui_connectiondialog.h)
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
+target_include_directories(${PROJECT_NAME} PUBLIC include ui)
 
-# Tell CMake to create the helloworld executable
-add_executable(RoboVision ${PROJECT_SOURCES})
+# add_subdirectory(src)
+# include_directories(inc)
+# add_executable(RoboVision ${SRC_LIST})
+# target_include_directories(${PROJECT_NAME} PUBLIC inc)
+
+
 
 # Use the Widgets module from Qt 5.
 target_link_libraries(RoboVision 
