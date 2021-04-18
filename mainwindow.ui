@@ -20,157 +20,190 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Battery</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QLabel" name="labelGamepadStatus">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2" colspan="4">
-     <widget class="QProgressBar" name="progressBarBattery">
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="4">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="4" column="3" colspan="3">
-     <widget class="QProgressBar" name="progressBarObstacle">
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="7">
-     <widget class="QLCDNumber" name="lcdNumberPing">
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="segmentStyle">
-       <enum>QLCDNumber::Flat</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Obstacle distance</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="8">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>km/h</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0" rowspan="2" colspan="6">
-     <widget class="QOpenGLWidget" name="openGLWidget"/>
-    </item>
-    <item row="1" column="6" rowspan="2" colspan="3">
-     <widget class="QOpenGLWidget" name="openGLWidget_2"/>
-    </item>
-    <item row="4" column="8">
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>ms</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="6">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Speedometer</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="6">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Ping</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="7">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="6" column="7">
-     <widget class="QLCDNumber" name="lcdNumberSpeed">
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="smallDecimalPoint">
-       <bool>false</bool>
-      </property>
-      <property name="digitCount">
-       <number>5</number>
-      </property>
-      <property name="segmentStyle">
-       <enum>QLCDNumber::Flat</enum>
-      </property>
-      <property name="value" stdset="0">
-       <double>0.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="6" colspan="2">
-     <widget class="QLabel" name="labelConnectionStatus">
-      <property name="minimumSize">
-       <size>
-        <width>110</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>DISCONNECTED</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Obstacle distance</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QProgressBar" name="progressBarObstacle">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="format">
+        <string>%p cm</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QOpenGLWidget" name="openGLWidget"/>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <widget class="QOpenGLWidget" name="openGLWidget_2"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>781</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="3">
+        <widget class="QLabel" name="labelGamepadStatus">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLCDNumber" name="lcdNumberSpeed">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>5</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>ms</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="labelConnectionStatus">
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>DISCONNECTED</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLCDNumber" name="lcdNumberPing">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>m/s</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Ping</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Speed</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <widget class="QProgressBar" name="progressBarBattery">
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Battery</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
