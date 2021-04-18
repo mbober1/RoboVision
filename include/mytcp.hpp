@@ -39,8 +39,6 @@ public slots:
 
 private:
     QTimer timer;
-    // void write();
-
 };
 
 #endif // MYTCP_H

@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {
-       QDesktopServices::openUrl(QUrl("https://github.com/mbober1/", QUrl::TolerantMode));
+       QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
     });
 
 }
@@ -123,6 +123,6 @@ void MainWindow::readData() {
 
 void MainWindow::toggleDataTimer() {
     if(joystick.m_gamepad->isConnected() && tcp.socket->state() == QAbstractSocket::ConnectedState && udp.socket->state() == QAbstractSocket::ConnectedState) {
-        dataTimer.start(17);
+        dataTimer.start(50);
     } else dataTimer.stop();
 }
