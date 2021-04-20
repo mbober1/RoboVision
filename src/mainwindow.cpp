@@ -120,7 +120,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
 }
 
 void MainWindow::readData() {
-    udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftX()*100);
+    udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftY()*100);
 }
 
 void MainWindow::toggleDataTimer() {

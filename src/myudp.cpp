@@ -22,7 +22,8 @@ void clientUDP::send(int left, int right)
 {   
     EnginePacket packet = EnginePacket(left, right);
     std::string data = packet.prepare();
-    // socket->write(data.c_str());
+    // qDebug() << data.c_str();
+    socket->write(data.c_str());
 }
 
 void clientUDP::connected()

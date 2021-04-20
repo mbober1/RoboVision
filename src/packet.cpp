@@ -8,10 +8,10 @@ uint8_t Packet::checksum(const std::string &data) {
 }
 
 Packet* Packet::decode(std::string &data) {
-    char crc = data.at(data.size() - 1);
+    uint8_t crc = data.at(data.size() - 1);
     data.pop_back();
 
-    if(Packet::checksum(data) == (uint8_t)crc) {
+    if(Packet::checksum(data) == crc) {
         char type = data.at(0);
         switch (type)
         {
@@ -41,7 +41,7 @@ Packet* Packet::decode(std::string &data) {
 
         default:
             return nullptr;
-            printf("unknown packet");
+            printf("unknown packet\n");
             break;
         }
     } else {
