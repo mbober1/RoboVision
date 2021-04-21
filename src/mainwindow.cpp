@@ -120,7 +120,50 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
 }
 
 void MainWindow::readData() {
-    udp.send(joystick.m_gamepad->axisLeftY()*100,joystick.m_gamepad->axisLeftY()*100);
+    int nJoyX = joystick.m_gamepad->axisLeftX() * 100;
+    int nJoyY = -joystick.m_gamepad->axisLeftY() * 100;
+
+    // CONFIG
+    // - fPivYLimt  : The threshold at which the pivot action starts
+    //                This threshold is measured in units on the Y-axis
+    //                away from the X-axis (Y=0). A greater value will assign
+    //                more of the joystick's range to pivot actions.
+    //                Allowable range: (0..+127)
+    float fPivYLimit = 32.0;
+                
+    // TEMP VARIABLES
+    float   nMotPremixL;    // Motor (left)  premixed output        (-128..+127)
+    float   nMotPremixR;    // Motor (right) premixed output        (-128..+127)
+    int     nPivSpeed;      // Pivot Speed                          (-128..+127)
+    float   fPivScale;      // Balance scale b/w drive and pivot    (   0..1   )
+
+
+    // Calculate Drive Turn output due to Joystick X input
+    if (nJoyY >= 0) {
+    // Forward
+        nMotPremixL = (nJoyX>=0)? 127.0 : (127.0 + nJoyX);
+        nMotPremixR = (nJoyX>=0)? (127.0 - nJoyX) : 127.0;
+    } else {
+    // Reverse
+        nMotPremixL = (nJoyX>=0)? (127.0 - nJoyX) : 127.0;
+        nMotPremixR = (nJoyX>=0)? 127.0 : (127.0 + nJoyX);
+    }
+
+    // Scale Drive output due to Joystick Y input (throttle)
+    nMotPremixL = nMotPremixL * nJoyY/128.0;
+    nMotPremixR = nMotPremixR * nJoyY/128.0;
+
+    // Now calculate pivot amount
+    // - Strength of pivot (nPivSpeed) based on Joystick X input
+    // - Blending of pivot vs drive (fPivScale) based on Joystick Y input
+    nPivSpeed = nJoyX;
+    fPivScale = (abs(nJoyY)>fPivYLimit)? 0.0 : (1.0 - abs(nJoyY)/fPivYLimit);
+
+    int left = (1.0-fPivScale)*nMotPremixL + fPivScale*( nPivSpeed);
+    int right = (1.0-fPivScale)*nMotPremixR + fPivScale*(-nPivSpeed);
+
+	printf("L: %d, R: %d\n", left, right);			
+    // udp.send(left, right);
 }
 
 void MainWindow::toggleDataTimer() {
