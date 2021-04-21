@@ -163,7 +163,7 @@ void MainWindow::readData() {
     int right = (1.0-fPivScale)*nMotPremixR + fPivScale*(-nPivSpeed);
 
 	printf("L: %d, R: %d\n", left, right);			
-    // udp.send(left, right);
+    udp.send(left, right);
 }
 
 void MainWindow::toggleDataTimer() {
