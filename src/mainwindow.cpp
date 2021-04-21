@@ -120,7 +120,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
 }
 
 void MainWindow::readData() {
-    int nJoyX = joystick.m_gamepad->axisLeftX() * 100;
+    int nJoyX = -joystick.m_gamepad->axisLeftX() * 100;
     int nJoyY = -joystick.m_gamepad->axisLeftY() * 100;
 
     // CONFIG
