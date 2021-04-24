@@ -234,62 +234,24 @@
 
   \subsection{Żyroskop}
   Przesyła informacje z robota o aktualnych wskazaniach żyroskopu.
-  
+
   Forma ramki to: $G<uint8\_t> <uint8\_t> <uint8\_t>\#$;
   \newline
 
   Gdzie \# oznacza CRC. Przed nim znajdujdują się trzy wartości oddzielone spacją
   odnoszące się do aktualnych wskazań żyroskopu.
 
-% \section{{\it Kilka przykładów wykorzystania \LaTeX a} }
 
-%  To rozdział jest tu tylko po to, aby zaprezentować wybrane
-%  możliwości \LaTeX a.
-%  Przy odwoływaniu się do rozdziałów zawsze stosujemy odwołanie
-%  przez etykietę. Nigdy nie odwołujemy się wpisując konkretny
-%  numer, np. tutaj wykorzystując polecenie {\tt $\backslash$ref}
-%  można odwołać się do rozdziału \ref{sekcja-charakterystyka}.
-%  Można też podać stronę, na której ten rozdział jest, 
-%  np. patrz rodział  \ref{sekcja-charakterystyka} 
-% (str.  \pageref{sekcja-charakterystyka}).
-%  Przy małych dokumentach to nie ma sensu, ale może się przydać
-%  przy większych.
+  \section{Aktualne rezultaty}
+  Na dzień dzisiejszy, projekt nie jest obarczony żadnymi opóźnieniami. Wszystkie 
+  zaplanowane kamienie milowe zostały osiągnięte przed terminem. Aplikacja może 
+  poszczycić się już działającą obsługa joysticka, gotową komunikacją z robotem,
+  algorytmem różnicowego układu sterowania oraz działającym wskaźnikiem opóźnienia,
+  prędkości liniowej i poziomu baterii. Pozostało więc zaimplementować wizualizację
+  obiektu 3D oraz wykresy przeciążeń. Ostatnia faza projektu zakłada również eliminację
+  błędów.
 
-%  W ten sam sposób odwołujemy się do równań i wzorów,
-%  \begin{equation}
-%     F = ma
-%   \label{wzor-Newton2}
-%  \end{equation}
-%  np. możemy wskazać równianie (\ref{wzor-Newton2}).
-%  \begin{figure}[hbpt]
-%    \center\includegraphics[width=6cm]{img/origami-gwiazda.png}
-%    \caption{Podpis pod rysunkiem.}
-%    \label{rysunek-gwiazda}
-%  \end{figure}
-%  W analogiczny sposób odwołujemy się do rysunków, tak
-%  jak np. do rys. \ref{rysunek-gwiazda} (Uwaga: etykieta musi
-%  być zdefiniowana po instrukcji {\tt $\backslash$caption}).
-
-%  Literaturę należy cytować dowołując się do pozycji 
-%  z bazy biliograficznej (jest ona w podkartotece {\tt bib}
-%  w pliku {\tt  baza\_bibliografii.bib}.
-%  Odwołujemy się również do nich również poprzez etykiety
-%  np. \cite{HTTP2}\cite{Hallam:PHD-thesis}
-%  lub \cite{Blanchette:Qt}. Etykietą jest
-%  pierwszy element w danej pozycji biliograficznej.
-
-
-% \section{Przykłady zapisu jednostek z wykorzystaniem pakietu {\sf units}}
-
-% Opis pakietu: {\tt https://ctan.org/pkg/units}\\[1ex]
-% \begin{tabular}{rcl}
-%   Odległość/długość & -- & \unit[2,4]{m}             \\[1ex]
-%   Szybkość          & -- & \unitfrac[48]{km}{h}      \\[1ex]
-%   Szybkość          & -- & \unit[48]{$\frac{km}{h}$} \\[1ex]
-%   Napięcie          & -- & \unit[$-5$]{V}, \unit[$+12$]{V} \\[1ex]
-%   Kąt               & -- & 15$^\circ$
-% \end{tabular} 
-
+  
 \bibliographystyle{plplain}
 \bibliography{baza_bibliografii}
 \end{document}
