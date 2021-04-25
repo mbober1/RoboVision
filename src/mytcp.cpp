@@ -1,5 +1,10 @@
 #include "mytcp.hpp"
 
+
+/**
+ * A constructor.
+ * @param parent QWidget type parent.
+ */
 clientTCP::clientTCP(QObject *parent) :
     QObject(parent)
 {
@@ -10,24 +15,40 @@ clientTCP::clientTCP(QObject *parent) :
     connect(&timer, &QTimer::timeout, this, &clientTCP::ping);
 }
 
+
+/**
+ * Initialize connection
+ */
 void clientTCP::initConnection()
 {
     qDebug() << "TCP Connecting...";
     socket->connectToHost(this->address, this->port);
 }
 
+
+/**
+ * Connected status
+ */
 void clientTCP::connected()
 {
     qDebug() << "TCP Connected!";
     timer.start(1000);
 }
 
+
+/**
+ * Disconnected status
+ */
 void clientTCP::disconnected()
 {
     qDebug() << "TCP Disconnected!";
     timer.stop();
 }
 
+
+/**
+ * Incoming data handler
+ */
 void clientTCP::readyRead()
 {
     std::string data = socket->readAll().toStdString();
@@ -81,6 +102,10 @@ void clientTCP::readyRead()
     }
 }
 
+
+/**
+ * Prepare and send ping request
+ */
 void clientTCP::ping()
 {
     qDebug() << "PING!";

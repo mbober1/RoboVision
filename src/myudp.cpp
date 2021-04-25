@@ -1,5 +1,10 @@
 #include "myudp.hpp"
 
+
+/**
+ * A constructor.
+ * @param parent QWidget type parent.
+ */
 clientUDP::clientUDP(QObject *parent) :
     QObject(parent)
 {
@@ -9,15 +14,29 @@ clientUDP::clientUDP(QObject *parent) :
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
 }
 
+
+/**
+ * Initialize connection
+ */
 void clientUDP::init() {
     qDebug() << "UDP Connecting...";
     socket->connectToHost(this->address, this->port);
 }
 
+
+/**
+ * Close connection
+ */
 void clientUDP::close() {
     socket->close();
 }
 
+
+/**
+ * Send sterring data
+ * @param left Left engine power 0-100
+ * @param left Right engine power 0-100
+ */
 void clientUDP::send(int left, int right)
 {   
     EnginePacket packet = EnginePacket(left, right);
@@ -26,16 +45,28 @@ void clientUDP::send(int left, int right)
     socket->write(data.c_str());
 }
 
+
+/**
+ * Connected status
+ */
 void clientUDP::connected()
 {
     qDebug() << "UDP Connected!";
 }
 
+
+/**
+ * Disconnected status
+ */
 void clientUDP::disconnected()
 {
     qDebug() << "UDP Disconnected!";
 }
 
+
+/**
+ * Incoming data handler
+ */
 void clientUDP::readyRead()
 {
     // when data comes in
