@@ -1,13 +1,14 @@
 #include "gamepadmonitor.h"
 
 
+/**
+ * A constructor.
+ * @param parent QWidget type parent.
+ */
 GamepadMonitor::GamepadMonitor(QObject *parent)
     : QObject(parent)
     , m_gamepad(0)
 {
-    
-    // QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
-
     auto gamepads = QGamepadManager::instance()->connectedGamepads();
     if (gamepads.isEmpty()) {
         qDebug() << "Did not find any connected gamepads";
@@ -17,6 +18,10 @@ GamepadMonitor::GamepadMonitor(QObject *parent)
     m_gamepad = new QGamepad(*gamepads.begin(), this);
 }
 
+
+/**
+ * A destructor.
+ */
 GamepadMonitor::~GamepadMonitor()
 {
     delete m_gamepad;

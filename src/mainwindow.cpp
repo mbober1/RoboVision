@@ -6,6 +6,11 @@
 #include <QMessageBox>
 #include <QDesktopServices>
 
+
+/**
+ * A constructor.
+ * @param parent QWidget type parent.
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -46,6 +51,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 
+
+/**
+ * A destructor.
+ */
 MainWindow::~MainWindow() {
     qDebug() << "koniec";
     actionDisconnect();
@@ -53,6 +62,9 @@ MainWindow::~MainWindow() {
 }
 
 
+/**
+ * Connect to server slot.
+ */
 void MainWindow::actionConnect() {
     ConnectionDialog dialog;
     dialog.setModal(true);
@@ -65,11 +77,20 @@ void MainWindow::actionConnect() {
     }
 }
 
+
+/**
+ * Disconect from server slot.
+ */
 void MainWindow::actionDisconnect() {
     tcp.socket->close();
     udp.socket->close();
 }
 
+
+/**
+ * Change connection status slot
+ * @param state Socket state
+ */
 void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
     switch (state)
     {
@@ -100,6 +121,11 @@ void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
     }
 }
 
+
+/**
+ * Connection error handler
+ * @param error Socket error
+ */
 void MainWindow::connectionError(QAbstractSocket::SocketError error) {
     QString mess = "Connection error occured! Please try again";
 
@@ -115,10 +141,19 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
     QMessageBox::critical(this, "Connection error", mess);
 }
 
+
+/**
+ * CKeyboard key event handler
+ * @param event Key event
+ */
 void MainWindow::keyPressEvent(QKeyEvent* event) {
     qDebug() << event->text();
 }
 
+
+/**
+ * Read data from joystick and send it to robot
+ */
 void MainWindow::readData() {
     int nJoyX = -joystick.m_gamepad->axisLeftX() * 100;
     int nJoyY = -joystick.m_gamepad->axisLeftY() * 100;
@@ -166,6 +201,10 @@ void MainWindow::readData() {
     udp.send(left, right);
 }
 
+
+/**
+ * Timer service
+ */
 void MainWindow::toggleDataTimer() {
     if(joystick.m_gamepad->isConnected() && tcp.socket->state() == QAbstractSocket::ConnectedState && udp.socket->state() == QAbstractSocket::ConnectedState) {
         dataTimer.start(50);
