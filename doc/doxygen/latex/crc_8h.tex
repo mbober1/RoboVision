@@ -1,0 +1,59 @@
+\hypertarget{crc_8h}{}\doxysection{include/crc.h File Reference}
+\label{crc_8h}\index{include/crc.h@{include/crc.h}}
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_r_c}{CRC}}
+\begin{DoxyCompactList}\small\item\em Static class for computing CRCs. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_c_r_c_1_1_parameters}{CRC\+::\+Parameters$<$ CRCType, CRCWidth $>$}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_r_c}{CRC}} parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_c_r_c_1_1_table}{CRC\+::\+Table$<$ CRCType, CRCWidth $>$}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_r_c}{CRC}} lookup table. After construction, the \mbox{\hyperlink{class_c_r_c}{CRC}} parameters are fixed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{crc_8h_a28cd0a17324a479874c3bdd5387d6b04}\label{crc_8h_a28cd0a17324a479874c3bdd5387d6b04}} 
+\#define \mbox{\hyperlink{crc_8h_a28cd0a17324a479874c3bdd5387d6b04}{crcpp\+\_\+uint8}}~uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em Unsigned 8-\/bit integer definition, used primarily for parameter definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crc_8h_add273674b22f031b158220eeb560c7a0}\label{crc_8h_add273674b22f031b158220eeb560c7a0}} 
+\#define \mbox{\hyperlink{crc_8h_add273674b22f031b158220eeb560c7a0}{crcpp\+\_\+uint16}}~uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em Unsigned 16-\/bit integer definition, used primarily for parameter definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crc_8h_a4469d365469b254f21fb50316e079094}\label{crc_8h_a4469d365469b254f21fb50316e079094}} 
+\#define \mbox{\hyperlink{crc_8h_a4469d365469b254f21fb50316e079094}{crcpp\+\_\+uint32}}~uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Unsigned 32-\/bit integer definition, used primarily for parameter definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crc_8h_a3541074ba795d31a40f13e78c77c0e7c}\label{crc_8h_a3541074ba795d31a40f13e78c77c0e7c}} 
+\#define \mbox{\hyperlink{crc_8h_a3541074ba795d31a40f13e78c77c0e7c}{crcpp\+\_\+uint64}}~uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em Unsigned 64-\/bit integer definition, used primarily for parameter definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crc_8h_af44cfa9e71356f05c42b363cf04ea9a6}\label{crc_8h_af44cfa9e71356f05c42b363cf04ea9a6}} 
+\#define \mbox{\hyperlink{crc_8h_af44cfa9e71356f05c42b363cf04ea9a6}{crcpp\+\_\+size}}~size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Unsigned size definition, used for specifying data sizes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crc_8h_ac53723d95b5c8c7d707e8e3ebcb4e143}\label{crc_8h_ac53723d95b5c8c7d707e8e3ebcb4e143}} 
+\#define \mbox{\hyperlink{crc_8h_ac53723d95b5c8c7d707e8e3ebcb4e143}{crcpp\+\_\+constexpr}}~const
+\begin{DoxyCompactList}\small\item\em Compile-\/time expression definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Daniel Bahr 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+CRC++ Copyright (c) 2021, Daniel Bahr All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+Neither the name of CRC++ nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+\end{DoxyCopyright}

@@ -1,0 +1,135 @@
+\hypertarget{struct_c_r_c_1_1_table}{}\doxysection{CRC\+::Table$<$ CRCType, CRCWidth $>$ Struct Template Reference}
+\label{struct_c_r_c_1_1_table}\index{CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}}
+
+
+\mbox{\hyperlink{class_c_r_c}{CRC}} lookup table. After construction, the \mbox{\hyperlink{class_c_r_c}{CRC}} parameters are fixed.  
+
+
+
+
+{\ttfamily \#include $<$crc.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_r_c_1_1_table_a875427c38c37efb633602eecc302dc6a}{Table}} (const \mbox{\hyperlink{struct_c_r_c_1_1_parameters}{Parameters}}$<$ CRCType, CRCWidth $>$ \&parameters)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_c_r_c}{CRC}} table from a set of \mbox{\hyperlink{class_c_r_c}{CRC}} parameters. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_c_r_c_1_1_parameters}{Parameters}}$<$ CRCType, CRCWidth $>$ \& \mbox{\hyperlink{struct_c_r_c_1_1_table_a7c32dfe94f0652bdf12faac383ad5b2e}{Get\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_c_r_c}{CRC}} parameters used to construct the \mbox{\hyperlink{class_c_r_c}{CRC}} table. \end{DoxyCompactList}\item 
+const CRCType $\ast$ \mbox{\hyperlink{struct_c_r_c_1_1_table_a46fb89a74528b52df029248a643d83c0}{Get\+Table}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_c_r_c}{CRC}} table. \end{DoxyCompactList}\item 
+CRCType \mbox{\hyperlink{struct_c_r_c_1_1_table_a84eaebd5423d4695aa32ec8d3ca53907}{operator\mbox{[}$\,$\mbox{]}}} (unsigned char index) const
+\begin{DoxyCompactList}\small\item\em Gets an entry in the \mbox{\hyperlink{class_c_r_c}{CRC}} table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename CRCType, crcpp\+\_\+uint16 CRCWidth$>$\newline
+struct CRC\+::\+Table$<$ CRCType, CRCWidth $>$}
+
+\mbox{\hyperlink{class_c_r_c}{CRC}} lookup table. After construction, the \mbox{\hyperlink{class_c_r_c}{CRC}} parameters are fixed. 
+
+\begin{DoxyNote}{Note}
+A \mbox{\hyperlink{class_c_r_c}{CRC}} table can be used for multiple \mbox{\hyperlink{class_c_r_c}{CRC}} calculations. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_c_r_c_1_1_table_a875427c38c37efb633602eecc302dc6a}\label{struct_c_r_c_1_1_table_a875427c38c37efb633602eecc302dc6a}} 
+\index{CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}!Table@{Table}}
+\index{Table@{Table}!CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily template$<$typename CRCType , crcpp\+\_\+uint16 CRCWidth$>$ \\
+\mbox{\hyperlink{struct_c_r_c_1_1_table}{CRC\+::\+Table}}$<$ CRCType, CRCWidth $>$\+::\mbox{\hyperlink{struct_c_r_c_1_1_table}{Table}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_r_c_1_1_parameters}{Parameters}}$<$ CRCType, CRCWidth $>$ \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_c_r_c}{CRC}} table from a set of \mbox{\hyperlink{class_c_r_c}{CRC}} parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em params} & \mbox{\hyperlink{class_c_r_c}{CRC}} parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CRCType} & Integer type for storing the \mbox{\hyperlink{class_c_r_c}{CRC}} result \\
+\hline
+{\em CRCWidth} & Number of bits in the \mbox{\hyperlink{class_c_r_c}{CRC}} \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_c_r_c_1_1_table_a7c32dfe94f0652bdf12faac383ad5b2e}\label{struct_c_r_c_1_1_table_a7c32dfe94f0652bdf12faac383ad5b2e}} 
+\index{CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}!GetParameters@{GetParameters}}
+\index{GetParameters@{GetParameters}!CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}}
+\doxysubsubsection{\texorpdfstring{GetParameters()}{GetParameters()}}
+{\footnotesize\ttfamily template$<$typename CRCType , crcpp\+\_\+uint16 CRCWidth$>$ \\
+const \mbox{\hyperlink{struct_c_r_c_1_1_parameters}{CRC\+::\+Parameters}}$<$ CRCType, CRCWidth $>$ \& \mbox{\hyperlink{struct_c_r_c_1_1_table}{CRC\+::\+Table}}$<$ CRCType, CRCWidth $>$\+::Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \mbox{\hyperlink{class_c_r_c}{CRC}} parameters used to construct the \mbox{\hyperlink{class_c_r_c}{CRC}} table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CRCType} & Integer type for storing the \mbox{\hyperlink{class_c_r_c}{CRC}} result \\
+\hline
+{\em CRCWidth} & Number of bits in the \mbox{\hyperlink{class_c_r_c}{CRC}} \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_r_c}{CRC}} parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_c_r_c_1_1_table_a46fb89a74528b52df029248a643d83c0}\label{struct_c_r_c_1_1_table_a46fb89a74528b52df029248a643d83c0}} 
+\index{CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}!GetTable@{GetTable}}
+\index{GetTable@{GetTable}!CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}}
+\doxysubsubsection{\texorpdfstring{GetTable()}{GetTable()}}
+{\footnotesize\ttfamily template$<$typename CRCType , crcpp\+\_\+uint16 CRCWidth$>$ \\
+const CRCType $\ast$ \mbox{\hyperlink{struct_c_r_c_1_1_table}{CRC\+::\+Table}}$<$ CRCType, CRCWidth $>$\+::Get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \mbox{\hyperlink{class_c_r_c}{CRC}} table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CRCType} & Integer type for storing the \mbox{\hyperlink{class_c_r_c}{CRC}} result \\
+\hline
+{\em CRCWidth} & Number of bits in the \mbox{\hyperlink{class_c_r_c}{CRC}} \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_r_c}{CRC}} table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_c_r_c_1_1_table_a84eaebd5423d4695aa32ec8d3ca53907}\label{struct_c_r_c_1_1_table_a84eaebd5423d4695aa32ec8d3ca53907}} 
+\index{CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!CRC::Table$<$ CRCType, CRCWidth $>$@{CRC::Table$<$ CRCType, CRCWidth $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename CRCType , crcpp\+\_\+uint16 CRCWidth$>$ \\
+CRCType \mbox{\hyperlink{struct_c_r_c_1_1_table}{CRC\+::\+Table}}$<$ CRCType, CRCWidth $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned char}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an entry in the \mbox{\hyperlink{class_c_r_c}{CRC}} table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Index into the \mbox{\hyperlink{class_c_r_c}{CRC}} table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CRCType} & Integer type for storing the \mbox{\hyperlink{class_c_r_c}{CRC}} result \\
+\hline
+{\em CRCWidth} & Number of bits in the \mbox{\hyperlink{class_c_r_c}{CRC}} \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_r_c}{CRC}} table entry 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{crc_8h}{crc.\+h}}\end{DoxyCompactItemize}

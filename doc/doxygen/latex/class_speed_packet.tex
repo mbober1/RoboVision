@@ -1,0 +1,99 @@
+\hypertarget{class_speed_packet}{}\doxysection{Speed\+Packet Class Reference}
+\label{class_speed_packet}\index{SpeedPacket@{SpeedPacket}}
+Inheritance diagram for Speed\+Packet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_speed_packet}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_speed_packet_a8c107dbd097cea00354fd4d38c4e45b2}{Speed\+Packet}} (const std\+::string \&data)
+\item 
+\mbox{\hyperlink{class_speed_packet_ae1f3802fd9aef1fb8d0f5d894b3d7427}{Speed\+Packet}} (const int8\+\_\+t \&left, const int8\+\_\+t \&right)
+\item 
+\mbox{\hyperlink{class_speed_packet_afc23c6fcb9100267f59f5744b77046cc}{$\sim$\+Speed\+Packet}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_speed_packet_a69cb5b51299c6b836f9010f6a7137b62}{prepare}} ()
+\item 
+virtual char \mbox{\hyperlink{class_speed_packet_a4feb12625e259bec6d900395b89f6628}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_speed_packet_a4ab7acb59cb4cfa4127c0d63af3643ca}\label{class_speed_packet_a4ab7acb59cb4cfa4127c0d63af3643ca}} 
+int8\+\_\+t {\bfseries left}
+\item 
+\mbox{\Hypertarget{class_speed_packet_a662fbed57f95e29668f1181ce30f155d}\label{class_speed_packet_a662fbed57f95e29668f1181ce30f155d}} 
+int8\+\_\+t {\bfseries right}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_speed_packet_a8c107dbd097cea00354fd4d38c4e45b2}\label{class_speed_packet_a8c107dbd097cea00354fd4d38c4e45b2}} 
+\index{SpeedPacket@{SpeedPacket}!SpeedPacket@{SpeedPacket}}
+\index{SpeedPacket@{SpeedPacket}!SpeedPacket@{SpeedPacket}}
+\doxysubsubsection{\texorpdfstring{SpeedPacket()}{SpeedPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Speed\+Packet\+::\+Speed\+Packet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+A constructor for parsing data. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Data string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_speed_packet_ae1f3802fd9aef1fb8d0f5d894b3d7427}\label{class_speed_packet_ae1f3802fd9aef1fb8d0f5d894b3d7427}} 
+\index{SpeedPacket@{SpeedPacket}!SpeedPacket@{SpeedPacket}}
+\index{SpeedPacket@{SpeedPacket}!SpeedPacket@{SpeedPacket}}
+\doxysubsubsection{\texorpdfstring{SpeedPacket()}{SpeedPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Speed\+Packet\+::\+Speed\+Packet (\begin{DoxyParamCaption}\item[{const int8\+\_\+t \&}]{left,  }\item[{const int8\+\_\+t \&}]{right }\end{DoxyParamCaption})}
+
+A constructor. 
+\begin{DoxyParams}{Parameters}
+{\em left} & engine speed. \\
+\hline
+{\em right} & engine speed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_speed_packet_afc23c6fcb9100267f59f5744b77046cc}\label{class_speed_packet_afc23c6fcb9100267f59f5744b77046cc}} 
+\index{SpeedPacket@{SpeedPacket}!````~SpeedPacket@{$\sim$SpeedPacket}}
+\index{````~SpeedPacket@{$\sim$SpeedPacket}!SpeedPacket@{SpeedPacket}}
+\doxysubsubsection{\texorpdfstring{$\sim$SpeedPacket()}{~SpeedPacket()}}
+{\footnotesize\ttfamily Speed\+Packet\+::$\sim$\+Speed\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_speed_packet_a4feb12625e259bec6d900395b89f6628}\label{class_speed_packet_a4feb12625e259bec6d900395b89f6628}} 
+\index{SpeedPacket@{SpeedPacket}!getType@{getType}}
+\index{getType@{getType}!SpeedPacket@{SpeedPacket}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily char Speed\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get type of packet. \begin{DoxyReturn}{Returns}
+Type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+\mbox{\Hypertarget{class_speed_packet_a69cb5b51299c6b836f9010f6a7137b62}\label{class_speed_packet_a69cb5b51299c6b836f9010f6a7137b62}} 
+\index{SpeedPacket@{SpeedPacket}!prepare@{prepare}}
+\index{prepare@{prepare}!SpeedPacket@{SpeedPacket}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily std\+::string Speed\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepare packet for sending. \begin{DoxyReturn}{Returns}
+String of data. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/packet.\+hpp\item 
+src/packet.\+cpp\end{DoxyCompactItemize}

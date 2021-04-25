@@ -1,0 +1,69 @@
+\hypertarget{classclient_t_c_p}{}\doxysection{client\+TCP Class Reference}
+\label{classclient_t_c_p}\index{clientTCP@{clientTCP}}
+Inheritance diagram for client\+TCP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classclient_t_c_p}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_aeda1f33fd0c175e7d7f61565e4085020}\label{classclient_t_c_p_aeda1f33fd0c175e7d7f61565e4085020}} 
+void {\bfseries connected} ()
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a57d490d8226f8dfa938bda9399705f2b}\label{classclient_t_c_p_a57d490d8226f8dfa938bda9399705f2b}} 
+void {\bfseries disconnected} ()
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a96c32edf9bb6a5dc35169ff1f7205f93}\label{classclient_t_c_p_a96c32edf9bb6a5dc35169ff1f7205f93}} 
+void {\bfseries ready\+Read} ()
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a5956ae8780fb55a7ac5d822d7f0a611d}\label{classclient_t_c_p_a5956ae8780fb55a7ac5d822d7f0a611d}} 
+void {\bfseries ping} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_ac2a71e11bcc3a60378125fb88c9a6a35}\label{classclient_t_c_p_ac2a71e11bcc3a60378125fb88c9a6a35}} 
+void {\bfseries latency\+Changed} (int latency)
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a759d10db6f4b0a7cbac604924beec270}\label{classclient_t_c_p_a759d10db6f4b0a7cbac604924beec270}} 
+void {\bfseries battery\+Changed} (int level)
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_ae9e02374329a7fbfc12bfda8e32564fa}\label{classclient_t_c_p_ae9e02374329a7fbfc12bfda8e32564fa}} 
+void {\bfseries distance\+Changed} (int distance)
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a9b7f9eb507f4da0c891bef1c1866dafc}\label{classclient_t_c_p_a9b7f9eb507f4da0c891bef1c1866dafc}} 
+void {\bfseries close\+Connection} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a00c1c540dce688e6df9a683ed57adeff}\label{classclient_t_c_p_a00c1c540dce688e6df9a683ed57adeff}} 
+{\bfseries client\+TCP} (QObject $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a68816e20d86c6bcd650aa0ded9f47a98}\label{classclient_t_c_p_a68816e20d86c6bcd650aa0ded9f47a98}} 
+void {\bfseries init\+Connection} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a7e4651c9c99933f938f50bd1c9867441}\label{classclient_t_c_p_a7e4651c9c99933f938f50bd1c9867441}} 
+QString {\bfseries address}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a2896da48445f92df3700b08c05009925}\label{classclient_t_c_p_a2896da48445f92df3700b08c05009925}} 
+int {\bfseries port}
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_a9ae8785b4aed68edf30e18a5c7515e4d}\label{classclient_t_c_p_a9ae8785b4aed68edf30e18a5c7515e4d}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ {\bfseries last\+Ping} = std\+::chrono\+::system\+\_\+clock\+::now()
+\item 
+\mbox{\Hypertarget{classclient_t_c_p_aa78b6c88d7cc2c1a62da31fca3bdcfd7}\label{classclient_t_c_p_aa78b6c88d7cc2c1a62da31fca3bdcfd7}} 
+QTcp\+Socket $\ast$ {\bfseries socket}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mytcp.\+hpp\item 
+build/\+Robo\+Vision\+\_\+autogen/6\+YEA5652\+QU/moc\+\_\+mytcp.\+cpp\item 
+src/mytcp.\+cpp\end{DoxyCompactItemize}
