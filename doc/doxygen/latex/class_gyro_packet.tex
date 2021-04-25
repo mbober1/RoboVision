@@ -1,5 +1,14 @@
 \hypertarget{class_gyro_packet}{}\doxysection{Gyro\+Packet Class Reference}
 \label{class_gyro_packet}\index{GyroPacket@{GyroPacket}}
+
+
+Gyroscop data management class.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+hpp$>$}
+
 Inheritance diagram for Gyro\+Packet\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +18,17 @@ Inheritance diagram for Gyro\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_gyro_packet_a826f6278c58aa721ad1cb20ac3dc204e}{Gyro\+Packet}} (std\+::string data)
+\mbox{\Hypertarget{class_gyro_packet_a826f6278c58aa721ad1cb20ac3dc204e}\label{class_gyro_packet_a826f6278c58aa721ad1cb20ac3dc204e}} 
+{\bfseries Gyro\+Packet} (std\+::string data)
 \item 
-\mbox{\hyperlink{class_gyro_packet_ada56558d1fa77bef859ba8fb97601213}{Gyro\+Packet}} (const int8\+\_\+t \&x, const int8\+\_\+t \&y, const int8\+\_\+t \&z)
+\mbox{\Hypertarget{class_gyro_packet_ada56558d1fa77bef859ba8fb97601213}\label{class_gyro_packet_ada56558d1fa77bef859ba8fb97601213}} 
+{\bfseries Gyro\+Packet} (const int8\+\_\+t \&x, const int8\+\_\+t \&y, const int8\+\_\+t \&z)
 \item 
-\mbox{\hyperlink{class_gyro_packet_a0d2928fad8faa42dd5f422458c57a895}{$\sim$\+Gyro\+Packet}} ()
+\mbox{\Hypertarget{class_gyro_packet_a264dd09ce24a9bb9bbd2baf4288e0d40}\label{class_gyro_packet_a264dd09ce24a9bb9bbd2baf4288e0d40}} 
+virtual std\+::string {\bfseries prepare} ()
 \item 
-virtual std\+::string \mbox{\hyperlink{class_gyro_packet_ae217de3c74d14b5a75ecec3f3158412d}{prepare}} ()
-\item 
-virtual char \mbox{\hyperlink{class_gyro_packet_a05e87ac4f097f3ff6b5ae11cb2935622}{get\+Type}} ()
+\mbox{\Hypertarget{class_gyro_packet_ab5e403f7f4ee00a3c69ab984094725ec}\label{class_gyro_packet_ab5e403f7f4ee00a3c69ab984094725ec}} 
+virtual char {\bfseries get\+Type} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -34,71 +45,9 @@ int8\+\_\+t {\bfseries z}
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_gyro_packet_a826f6278c58aa721ad1cb20ac3dc204e}\label{class_gyro_packet_a826f6278c58aa721ad1cb20ac3dc204e}} 
-\index{GyroPacket@{GyroPacket}!GyroPacket@{GyroPacket}}
-\index{GyroPacket@{GyroPacket}!GyroPacket@{GyroPacket}}
-\doxysubsubsection{\texorpdfstring{GyroPacket()}{GyroPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Gyro\+Packet\+::\+Gyro\+Packet (\begin{DoxyParamCaption}\item[{std\+::string}]{data }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Gyroscop data management class. 
 
-A constructor for parsing data. 
-\begin{DoxyParams}{Parameters}
-{\em data} & Data string. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_gyro_packet_ada56558d1fa77bef859ba8fb97601213}\label{class_gyro_packet_ada56558d1fa77bef859ba8fb97601213}} 
-\index{GyroPacket@{GyroPacket}!GyroPacket@{GyroPacket}}
-\index{GyroPacket@{GyroPacket}!GyroPacket@{GyroPacket}}
-\doxysubsubsection{\texorpdfstring{GyroPacket()}{GyroPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Gyro\+Packet\+::\+Gyro\+Packet (\begin{DoxyParamCaption}\item[{const int8\+\_\+t \&}]{x,  }\item[{const int8\+\_\+t \&}]{y,  }\item[{const int8\+\_\+t \&}]{z }\end{DoxyParamCaption})}
-
-A constructor. 
-\begin{DoxyParams}{Parameters}
-{\em x} & gyroscop data of X axis. \\
-\hline
-{\em y} & gyroscop data of Y axis. \\
-\hline
-{\em z} & gyroscop data of Z axis. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_gyro_packet_a0d2928fad8faa42dd5f422458c57a895}\label{class_gyro_packet_a0d2928fad8faa42dd5f422458c57a895}} 
-\index{GyroPacket@{GyroPacket}!````~GyroPacket@{$\sim$GyroPacket}}
-\index{````~GyroPacket@{$\sim$GyroPacket}!GyroPacket@{GyroPacket}}
-\doxysubsubsection{\texorpdfstring{$\sim$GyroPacket()}{~GyroPacket()}}
-{\footnotesize\ttfamily Gyro\+Packet\+::$\sim$\+Gyro\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A destructor. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_gyro_packet_a05e87ac4f097f3ff6b5ae11cb2935622}\label{class_gyro_packet_a05e87ac4f097f3ff6b5ae11cb2935622}} 
-\index{GyroPacket@{GyroPacket}!getType@{getType}}
-\index{getType@{getType}!GyroPacket@{GyroPacket}}
-\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily char Gyro\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Get type of packet. \begin{DoxyReturn}{Returns}
-Type. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-\mbox{\Hypertarget{class_gyro_packet_ae217de3c74d14b5a75ecec3f3158412d}\label{class_gyro_packet_ae217de3c74d14b5a75ecec3f3158412d}} 
-\index{GyroPacket@{GyroPacket}!prepare@{prepare}}
-\index{prepare@{prepare}!GyroPacket@{GyroPacket}}
-\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
-{\footnotesize\ttfamily std\+::string Gyro\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Prepare packet for sending. \begin{DoxyReturn}{Returns}
-String of data. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\item 
-src/packet.\+cpp\end{DoxyCompactItemize}
+include/packet.\+hpp\end{DoxyCompactItemize}

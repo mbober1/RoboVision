@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['decode_116',['decode',['../class_packet.html#a836cdf3ecc0c37bac38ed49a239c5feb',1,'Packet']]],
-  ['distancepacket_117',['DistancePacket',['../class_distance_packet.html#aa0ab664b98d1e6ddffb282134c23a6b6',1,'DistancePacket::DistancePacket(const std::string &amp;data)'],['../class_distance_packet.html#a008509c21075bc9d8b52374218f1e086',1,'DistancePacket::DistancePacket(const uint8_t &amp;distance)']]]
+  ['operator_5b_5d_82',['operator[]',['../struct_c_r_c_1_1_table.html#a84eaebd5423d4695aa32ec8d3ca53907',1,'CRC::Table']]]
 ];

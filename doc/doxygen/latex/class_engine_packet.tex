@@ -1,5 +1,14 @@
 \hypertarget{class_engine_packet}{}\doxysection{Engine\+Packet Class Reference}
 \label{class_engine_packet}\index{EnginePacket@{EnginePacket}}
+
+
+Engine power management class.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+hpp$>$}
+
 Inheritance diagram for Engine\+Packet\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,17 +18,17 @@ Inheritance diagram for Engine\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_engine_packet_a5687330009c7b633fd67e1879daf009b}{Engine\+Packet}} (const std\+::string \&data)
+\mbox{\Hypertarget{class_engine_packet_a5687330009c7b633fd67e1879daf009b}\label{class_engine_packet_a5687330009c7b633fd67e1879daf009b}} 
+{\bfseries Engine\+Packet} (const std\+::string \&data)
 \item 
-\mbox{\hyperlink{class_engine_packet_acc00990d08d83a7c7b5361e676ca99cb}{Engine\+Packet}} (const int8\+\_\+t \&left, const int8\+\_\+t \&right)
+\mbox{\Hypertarget{class_engine_packet_acc00990d08d83a7c7b5361e676ca99cb}\label{class_engine_packet_acc00990d08d83a7c7b5361e676ca99cb}} 
+{\bfseries Engine\+Packet} (const int8\+\_\+t \&left, const int8\+\_\+t \&right)
 \item 
-\mbox{\hyperlink{class_engine_packet_a8bd1d15b4f894b73788cba9fb30c6e31}{Engine\+Packet}} ()
+\mbox{\Hypertarget{class_engine_packet_a39c0d980142b09af52ce343e4c1280de}\label{class_engine_packet_a39c0d980142b09af52ce343e4c1280de}} 
+virtual std\+::string {\bfseries prepare} ()
 \item 
-\mbox{\hyperlink{class_engine_packet_a8c4b47d0ece41973819ff55103e485d1}{$\sim$\+Engine\+Packet}} ()
-\item 
-virtual std\+::string \mbox{\hyperlink{class_engine_packet_a92a1110773579f57841601b9d4029fd1}{prepare}} ()
-\item 
-virtual char \mbox{\hyperlink{class_engine_packet_a809b56c44088b148fee04f731a0c9ffd}{get\+Type}} ()
+\mbox{\Hypertarget{class_engine_packet_a303a5b04b7539798d69872c8c879365f}\label{class_engine_packet_a303a5b04b7539798d69872c8c879365f}} 
+virtual char {\bfseries get\+Type} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -33,75 +42,9 @@ int {\bfseries right}
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_engine_packet_a5687330009c7b633fd67e1879daf009b}\label{class_engine_packet_a5687330009c7b633fd67e1879daf009b}} 
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{EnginePacket()}{EnginePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Engine\+Packet\+::\+Engine\+Packet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Engine power management class. 
 
-A constructor for parsing data. 
-\begin{DoxyParams}{Parameters}
-{\em data} & Data string. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_engine_packet_acc00990d08d83a7c7b5361e676ca99cb}\label{class_engine_packet_acc00990d08d83a7c7b5361e676ca99cb}} 
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{EnginePacket()}{EnginePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Engine\+Packet\+::\+Engine\+Packet (\begin{DoxyParamCaption}\item[{const int8\+\_\+t \&}]{left,  }\item[{const int8\+\_\+t \&}]{right }\end{DoxyParamCaption})}
-
-A constructor. 
-\begin{DoxyParams}{Parameters}
-{\em left} & engine power 0-\/100. \\
-\hline
-{\em right} & engine power 0-\/100. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_engine_packet_a8bd1d15b4f894b73788cba9fb30c6e31}\label{class_engine_packet_a8bd1d15b4f894b73788cba9fb30c6e31}} 
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\index{EnginePacket@{EnginePacket}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{EnginePacket()}{EnginePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Engine\+Packet\+::\+Engine\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A constructor. \mbox{\Hypertarget{class_engine_packet_a8c4b47d0ece41973819ff55103e485d1}\label{class_engine_packet_a8c4b47d0ece41973819ff55103e485d1}} 
-\index{EnginePacket@{EnginePacket}!````~EnginePacket@{$\sim$EnginePacket}}
-\index{````~EnginePacket@{$\sim$EnginePacket}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{$\sim$EnginePacket()}{~EnginePacket()}}
-{\footnotesize\ttfamily Engine\+Packet\+::$\sim$\+Engine\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A destructor. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_engine_packet_a809b56c44088b148fee04f731a0c9ffd}\label{class_engine_packet_a809b56c44088b148fee04f731a0c9ffd}} 
-\index{EnginePacket@{EnginePacket}!getType@{getType}}
-\index{getType@{getType}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily char Engine\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Get type of packet. \begin{DoxyReturn}{Returns}
-Type. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-\mbox{\Hypertarget{class_engine_packet_a92a1110773579f57841601b9d4029fd1}\label{class_engine_packet_a92a1110773579f57841601b9d4029fd1}} 
-\index{EnginePacket@{EnginePacket}!prepare@{prepare}}
-\index{prepare@{prepare}!EnginePacket@{EnginePacket}}
-\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
-{\footnotesize\ttfamily std\+::string Engine\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Prepare packet for sending. \begin{DoxyReturn}{Returns}
-String of data. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\item 
-src/packet.\+cpp\end{DoxyCompactItemize}
+include/packet.\+hpp\end{DoxyCompactItemize}

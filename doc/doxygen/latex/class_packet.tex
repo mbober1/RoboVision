@@ -9,12 +9,8 @@ Inheritance diagram for Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_packet_aabcfb963c0d5bc0fa554668f92989622}{Packet}} ()
-\item 
 \mbox{\Hypertarget{class_packet_a02b1c004b3d6e3a4d2b96c9789103edb}\label{class_packet_a02b1c004b3d6e3a4d2b96c9789103edb}} 
 {\bfseries Packet} (const std\+::string \&data)
-\item 
-virtual \mbox{\hyperlink{class_packet_ab5a9d64f6753143adc51e43eb4746c9c}{$\sim$\+Packet}} ()=0
 \item 
 \mbox{\Hypertarget{class_packet_a25e778275bed3b0c609b0e8d6a8e5cef}\label{class_packet_a25e778275bed3b0c609b0e8d6a8e5cef}} 
 virtual std\+::string {\bfseries prepare} ()=0
@@ -25,59 +21,14 @@ virtual char {\bfseries get\+Type} ()=0
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_packet}{Packet}} $\ast$ \mbox{\hyperlink{class_packet_a836cdf3ecc0c37bac38ed49a239c5feb}{decode}} (std\+::string \&data)
+\mbox{\Hypertarget{class_packet_a24de6e03892623a526ee7a3ddd90e6b7}\label{class_packet_a24de6e03892623a526ee7a3ddd90e6b7}} 
+static \mbox{\hyperlink{class_packet}{Packet}} $\ast$ {\bfseries decode} (std\+::string \&data)
 \item 
-static uint8\+\_\+t \mbox{\hyperlink{class_packet_ab615eece36d1289d37eb55c9c4820b4f}{checksum}} (const std\+::string \&data)
+\mbox{\Hypertarget{class_packet_afdb3b303140125c15090b3b61c30004c}\label{class_packet_afdb3b303140125c15090b3b61c30004c}} 
+static uint8\+\_\+t {\bfseries checksum} (const std\+::string \&data)
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_packet_aabcfb963c0d5bc0fa554668f92989622}\label{class_packet_aabcfb963c0d5bc0fa554668f92989622}} 
-\index{Packet@{Packet}!Packet@{Packet}}
-\index{Packet@{Packet}!Packet@{Packet}}
-\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}}
-{\footnotesize\ttfamily Packet\+::\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A constructor. \mbox{\Hypertarget{class_packet_ab5a9d64f6753143adc51e43eb4746c9c}\label{class_packet_ab5a9d64f6753143adc51e43eb4746c9c}} 
-\index{Packet@{Packet}!````~Packet@{$\sim$Packet}}
-\index{````~Packet@{$\sim$Packet}!Packet@{Packet}}
-\doxysubsubsection{\texorpdfstring{$\sim$Packet()}{~Packet()}}
-{\footnotesize\ttfamily Packet\+::$\sim$\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-A destructor. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_packet_ab615eece36d1289d37eb55c9c4820b4f}\label{class_packet_ab615eece36d1289d37eb55c9c4820b4f}} 
-\index{Packet@{Packet}!checksum@{checksum}}
-\index{checksum@{checksum}!Packet@{Packet}}
-\doxysubsubsection{\texorpdfstring{checksum()}{checksum()}}
-{\footnotesize\ttfamily uint8\+\_\+t Packet\+::checksum (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-Calculate \mbox{\hyperlink{class_c_r_c}{CRC}} for given string 
-\begin{DoxyParams}{Parameters}
-{\em data} & string with data. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Calculated crc. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_packet_a836cdf3ecc0c37bac38ed49a239c5feb}\label{class_packet_a836cdf3ecc0c37bac38ed49a239c5feb}} 
-\index{Packet@{Packet}!decode@{decode}}
-\index{decode@{decode}!Packet@{Packet}}
-\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_packet}{Packet}} $\ast$ Packet\+::decode (\begin{DoxyParamCaption}\item[{std\+::string \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-Decode incoming packet. 
-\begin{DoxyParams}{Parameters}
-{\em data} & string with data. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to decoded packet. 
-\end{DoxyReturn}
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\item 
-src/packet.\+cpp\end{DoxyCompactItemize}
+include/packet.\+hpp\end{DoxyCompactItemize}

@@ -7,6 +7,10 @@ namespace Ui {
 class ConnectionDialog;
 }
 
+
+/**
+    @brief Connection pop-up dialog class
+*/
 class ConnectionDialog : public QDialog
 {
     Q_OBJECT

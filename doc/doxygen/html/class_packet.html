@@ -95,26 +95,22 @@ Inheritance diagram for Packet:</div>
  <div class="center">
   <img src="class_packet.png" usemap="#Packet_map" alt=""/>
   <map id="Packet_map" name="Packet_map">
-<area href="class_accelo_packet.html" alt="AcceloPacket" shape="rect" coords="109,56,208,80"/>
-<area href="class_battery_packet.html" alt="BatteryPacket" shape="rect" coords="109,112,208,136"/>
-<area href="class_close_packet.html" alt="ClosePacket" shape="rect" coords="109,168,208,192"/>
-<area href="class_distance_packet.html" alt="DistancePacket" shape="rect" coords="109,224,208,248"/>
-<area href="class_engine_packet.html" alt="EnginePacket" shape="rect" coords="109,280,208,304"/>
-<area href="class_gyro_packet.html" alt="GyroPacket" shape="rect" coords="109,336,208,360"/>
-<area href="class_ping_packet.html" alt="PingPacket" shape="rect" coords="109,392,208,416"/>
-<area href="class_speed_packet.html" alt="SpeedPacket" shape="rect" coords="109,448,208,472"/>
+<area href="class_accelo_packet.html" title="Accelometer data management class." alt="AcceloPacket" shape="rect" coords="109,56,208,80"/>
+<area href="class_battery_packet.html" title="Battery power management class." alt="BatteryPacket" shape="rect" coords="109,112,208,136"/>
+<area href="class_close_packet.html" title="Connection status management class." alt="ClosePacket" shape="rect" coords="109,168,208,192"/>
+<area href="class_distance_packet.html" title="Obstalce distance management class." alt="DistancePacket" shape="rect" coords="109,224,208,248"/>
+<area href="class_engine_packet.html" title="Engine power management class." alt="EnginePacket" shape="rect" coords="109,280,208,304"/>
+<area href="class_gyro_packet.html" title="Gyroscop data management class." alt="GyroPacket" shape="rect" coords="109,336,208,360"/>
+<area href="class_ping_packet.html" title="Class for pinging packets." alt="PingPacket" shape="rect" coords="109,392,208,416"/>
+<area href="class_speed_packet.html" title="Engine speed management class." alt="SpeedPacket" shape="rect" coords="109,448,208,472"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aabcfb963c0d5bc0fa554668f92989622"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#aabcfb963c0d5bc0fa554668f92989622">Packet</a> ()</td></tr>
-<tr class="separator:aabcfb963c0d5bc0fa554668f92989622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02b1c004b3d6e3a4d2b96c9789103edb"><td class="memItemLeft" align="right" valign="top"><a id="a02b1c004b3d6e3a4d2b96c9789103edb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Packet</b> (const std::string &amp;data)</td></tr>
 <tr class="separator:a02b1c004b3d6e3a4d2b96c9789103edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a9d64f6753143adc51e43eb4746c9c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab5a9d64f6753143adc51e43eb4746c9c">~Packet</a> ()=0</td></tr>
-<tr class="separator:ab5a9d64f6753143adc51e43eb4746c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e778275bed3b0c609b0e8d6a8e5cef"><td class="memItemLeft" align="right" valign="top"><a id="a25e778275bed3b0c609b0e8d6a8e5cef"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>prepare</b> ()=0</td></tr>
 <tr class="separator:a25e778275bed3b0c609b0e8d6a8e5cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,126 +120,15 @@ virtual char&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a836cdf3ecc0c37bac38ed49a239c5feb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_packet.html">Packet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a836cdf3ecc0c37bac38ed49a239c5feb">decode</a> (std::string &amp;data)</td></tr>
-<tr class="separator:a836cdf3ecc0c37bac38ed49a239c5feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab615eece36d1289d37eb55c9c4820b4f"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab615eece36d1289d37eb55c9c4820b4f">checksum</a> (const std::string &amp;data)</td></tr>
-<tr class="separator:ab615eece36d1289d37eb55c9c4820b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24de6e03892623a526ee7a3ddd90e6b7"><td class="memItemLeft" align="right" valign="top"><a id="a24de6e03892623a526ee7a3ddd90e6b7"></a>
+static <a class="el" href="class_packet.html">Packet</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (std::string &amp;data)</td></tr>
+<tr class="separator:a24de6e03892623a526ee7a3ddd90e6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb3b303140125c15090b3b61c30004c"><td class="memItemLeft" align="right" valign="top"><a id="afdb3b303140125c15090b3b61c30004c"></a>
+static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>checksum</b> (const std::string &amp;data)</td></tr>
+<tr class="separator:afdb3b303140125c15090b3b61c30004c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aabcfb963c0d5bc0fa554668f92989622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabcfb963c0d5bc0fa554668f92989622">&#9670;&nbsp;</a></span>Packet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Packet::Packet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A constructor. </p>
-
-</div>
-</div>
-<a id="ab5a9d64f6753143adc51e43eb4746c9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5a9d64f6753143adc51e43eb4746c9c">&#9670;&nbsp;</a></span>~Packet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Packet::~Packet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A destructor. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab615eece36d1289d37eb55c9c4820b4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab615eece36d1289d37eb55c9c4820b4f">&#9670;&nbsp;</a></span>checksum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Packet::checksum </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Calculate <a class="el" href="class_c_r_c.html" title="Static class for computing CRCs.">CRC</a> for given string </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>string with data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Calculated crc. </dd></dl>
-
-</div>
-</div>
-<a id="a836cdf3ecc0c37bac38ed49a239c5feb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836cdf3ecc0c37bac38ed49a239c5feb">&#9670;&nbsp;</a></span>decode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_packet.html">Packet</a> * Packet::decode </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Decode incoming packet. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>string with data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to decoded packet. </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="packet_8hpp_source.html">packet.hpp</a></li>
-<li>src/packet.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

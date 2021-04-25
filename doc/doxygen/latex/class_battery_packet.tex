@@ -1,5 +1,14 @@
 \hypertarget{class_battery_packet}{}\doxysection{Battery\+Packet Class Reference}
 \label{class_battery_packet}\index{BatteryPacket@{BatteryPacket}}
+
+
+Battery power management class.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+hpp$>$}
+
 Inheritance diagram for Battery\+Packet\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +18,17 @@ Inheritance diagram for Battery\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_battery_packet_aaff78618c35fb3e607f2bb889724f2c2}{Battery\+Packet}} (const std\+::string \&data)
+\mbox{\Hypertarget{class_battery_packet_aaff78618c35fb3e607f2bb889724f2c2}\label{class_battery_packet_aaff78618c35fb3e607f2bb889724f2c2}} 
+{\bfseries Battery\+Packet} (const std\+::string \&data)
 \item 
-\mbox{\hyperlink{class_battery_packet_a6979e6787a3cbecdaa74ddbacc035c2a}{Battery\+Packet}} (const uint8\+\_\+t \&level)
+\mbox{\Hypertarget{class_battery_packet_a6979e6787a3cbecdaa74ddbacc035c2a}\label{class_battery_packet_a6979e6787a3cbecdaa74ddbacc035c2a}} 
+{\bfseries Battery\+Packet} (const uint8\+\_\+t \&level)
 \item 
-\mbox{\hyperlink{class_battery_packet_ad038f04fabbf19e4396f1e0289fc738a}{$\sim$\+Battery\+Packet}} ()
+\mbox{\Hypertarget{class_battery_packet_a9ffa393b411d91f5c033aa89e28fb86c}\label{class_battery_packet_a9ffa393b411d91f5c033aa89e28fb86c}} 
+virtual std\+::string {\bfseries prepare} ()
 \item 
-virtual std\+::string \mbox{\hyperlink{class_battery_packet_a5a91fd6641ba44cf3978de00a5781e26}{prepare}} ()
-\item 
-virtual char \mbox{\hyperlink{class_battery_packet_a1b4e51da80960dd343473e870b83941f}{get\+Type}} ()
+\mbox{\Hypertarget{class_battery_packet_acf09f2f12cd78accf510104fc40f79ac}\label{class_battery_packet_acf09f2f12cd78accf510104fc40f79ac}} 
+virtual char {\bfseries get\+Type} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -28,67 +39,9 @@ int {\bfseries level}
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_battery_packet_aaff78618c35fb3e607f2bb889724f2c2}\label{class_battery_packet_aaff78618c35fb3e607f2bb889724f2c2}} 
-\index{BatteryPacket@{BatteryPacket}!BatteryPacket@{BatteryPacket}}
-\index{BatteryPacket@{BatteryPacket}!BatteryPacket@{BatteryPacket}}
-\doxysubsubsection{\texorpdfstring{BatteryPacket()}{BatteryPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Battery\+Packet\+::\+Battery\+Packet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Battery power management class. 
 
-A constructor for parsing data. 
-\begin{DoxyParams}{Parameters}
-{\em data} & Data string. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_battery_packet_a6979e6787a3cbecdaa74ddbacc035c2a}\label{class_battery_packet_a6979e6787a3cbecdaa74ddbacc035c2a}} 
-\index{BatteryPacket@{BatteryPacket}!BatteryPacket@{BatteryPacket}}
-\index{BatteryPacket@{BatteryPacket}!BatteryPacket@{BatteryPacket}}
-\doxysubsubsection{\texorpdfstring{BatteryPacket()}{BatteryPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Battery\+Packet\+::\+Battery\+Packet (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{level }\end{DoxyParamCaption})}
-
-A constructor. 
-\begin{DoxyParams}{Parameters}
-{\em level} & Battery level 0-\/100. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_battery_packet_ad038f04fabbf19e4396f1e0289fc738a}\label{class_battery_packet_ad038f04fabbf19e4396f1e0289fc738a}} 
-\index{BatteryPacket@{BatteryPacket}!````~BatteryPacket@{$\sim$BatteryPacket}}
-\index{````~BatteryPacket@{$\sim$BatteryPacket}!BatteryPacket@{BatteryPacket}}
-\doxysubsubsection{\texorpdfstring{$\sim$BatteryPacket()}{~BatteryPacket()}}
-{\footnotesize\ttfamily Battery\+Packet\+::$\sim$\+Battery\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A destructor. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_battery_packet_a1b4e51da80960dd343473e870b83941f}\label{class_battery_packet_a1b4e51da80960dd343473e870b83941f}} 
-\index{BatteryPacket@{BatteryPacket}!getType@{getType}}
-\index{getType@{getType}!BatteryPacket@{BatteryPacket}}
-\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily char Battery\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Get type of packet. \begin{DoxyReturn}{Returns}
-Type. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-\mbox{\Hypertarget{class_battery_packet_a5a91fd6641ba44cf3978de00a5781e26}\label{class_battery_packet_a5a91fd6641ba44cf3978de00a5781e26}} 
-\index{BatteryPacket@{BatteryPacket}!prepare@{prepare}}
-\index{prepare@{prepare}!BatteryPacket@{BatteryPacket}}
-\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
-{\footnotesize\ttfamily std\+::string Battery\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Prepare packet for sending. \begin{DoxyReturn}{Returns}
-String of data. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\item 
-src/packet.\+cpp\end{DoxyCompactItemize}
+include/packet.\+hpp\end{DoxyCompactItemize}

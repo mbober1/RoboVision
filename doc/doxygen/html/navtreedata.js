@@ -25,10 +25,6 @@
 var NAVTREE =
 [
   [ "RoboVision", "index.html", [
-    [ "RoboVision - Remote control software", "md__r_e_a_d_m_e.html", [
-      [ "Remote control device", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Features", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

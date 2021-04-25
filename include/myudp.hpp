@@ -10,6 +10,10 @@ QT_BEGIN_NAMESPACE
 class QUdpSocket;
 QT_END_NAMESPACE
 
+
+/**
+    @brief UDP client connection class
+*/
 class clientUDP : public QObject
 {
     Q_OBJECT

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ui_5fconnectiondialog_60',['Ui_ConnectionDialog',['../class_ui___connection_dialog.html',1,'']]],
-  ['ui_5fmainwindow_61',['Ui_MainWindow',['../class_ui___main_window.html',1,'']]]
+  ['table_72',['Table',['../struct_c_r_c_1_1_table.html',1,'CRC::Table&lt; CRCType, CRCWidth &gt;'],['../struct_c_r_c_1_1_table.html#a875427c38c37efb633602eecc302dc6a',1,'CRC::Table::Table()']]]
 ];

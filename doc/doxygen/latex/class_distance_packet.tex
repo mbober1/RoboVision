@@ -1,5 +1,14 @@
 \hypertarget{class_distance_packet}{}\doxysection{Distance\+Packet Class Reference}
 \label{class_distance_packet}\index{DistancePacket@{DistancePacket}}
+
+
+Obstalce distance management class.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+hpp$>$}
+
 Inheritance diagram for Distance\+Packet\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +18,17 @@ Inheritance diagram for Distance\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_distance_packet_aa0ab664b98d1e6ddffb282134c23a6b6}{Distance\+Packet}} (const std\+::string \&data)
+\mbox{\Hypertarget{class_distance_packet_aa0ab664b98d1e6ddffb282134c23a6b6}\label{class_distance_packet_aa0ab664b98d1e6ddffb282134c23a6b6}} 
+{\bfseries Distance\+Packet} (const std\+::string \&data)
 \item 
-\mbox{\hyperlink{class_distance_packet_a008509c21075bc9d8b52374218f1e086}{Distance\+Packet}} (const uint8\+\_\+t \&distance)
+\mbox{\Hypertarget{class_distance_packet_a008509c21075bc9d8b52374218f1e086}\label{class_distance_packet_a008509c21075bc9d8b52374218f1e086}} 
+{\bfseries Distance\+Packet} (const uint8\+\_\+t \&distance)
 \item 
-\mbox{\hyperlink{class_distance_packet_a510e59bcd69d948d4a7d33aad55ce264}{$\sim$\+Distance\+Packet}} ()
+\mbox{\Hypertarget{class_distance_packet_a18e5e69f59aa6bc7f5cbde6546fab035}\label{class_distance_packet_a18e5e69f59aa6bc7f5cbde6546fab035}} 
+virtual std\+::string {\bfseries prepare} ()
 \item 
-virtual std\+::string \mbox{\hyperlink{class_distance_packet_adf78c19d8b3e69bbb56d5eb1dd625b54}{prepare}} ()
-\item 
-virtual char \mbox{\hyperlink{class_distance_packet_aec193f1f73455dcd349424a5e64b1133}{get\+Type}} ()
+\mbox{\Hypertarget{class_distance_packet_a22ed9de8422205b6fa31bdf7728fbe8c}\label{class_distance_packet_a22ed9de8422205b6fa31bdf7728fbe8c}} 
+virtual char {\bfseries get\+Type} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -28,67 +39,9 @@ int {\bfseries distance}
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_distance_packet_aa0ab664b98d1e6ddffb282134c23a6b6}\label{class_distance_packet_aa0ab664b98d1e6ddffb282134c23a6b6}} 
-\index{DistancePacket@{DistancePacket}!DistancePacket@{DistancePacket}}
-\index{DistancePacket@{DistancePacket}!DistancePacket@{DistancePacket}}
-\doxysubsubsection{\texorpdfstring{DistancePacket()}{DistancePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Distance\+Packet\+::\+Distance\+Packet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Obstalce distance management class. 
 
-A constructor for parsing data. 
-\begin{DoxyParams}{Parameters}
-{\em data} & Data string. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_distance_packet_a008509c21075bc9d8b52374218f1e086}\label{class_distance_packet_a008509c21075bc9d8b52374218f1e086}} 
-\index{DistancePacket@{DistancePacket}!DistancePacket@{DistancePacket}}
-\index{DistancePacket@{DistancePacket}!DistancePacket@{DistancePacket}}
-\doxysubsubsection{\texorpdfstring{DistancePacket()}{DistancePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Distance\+Packet\+::\+Distance\+Packet (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{distance }\end{DoxyParamCaption})}
-
-A constructor. 
-\begin{DoxyParams}{Parameters}
-{\em distance} & Obstacle distance 0-\/100. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_distance_packet_a510e59bcd69d948d4a7d33aad55ce264}\label{class_distance_packet_a510e59bcd69d948d4a7d33aad55ce264}} 
-\index{DistancePacket@{DistancePacket}!````~DistancePacket@{$\sim$DistancePacket}}
-\index{````~DistancePacket@{$\sim$DistancePacket}!DistancePacket@{DistancePacket}}
-\doxysubsubsection{\texorpdfstring{$\sim$DistancePacket()}{~DistancePacket()}}
-{\footnotesize\ttfamily Distance\+Packet\+::$\sim$\+Distance\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-A destructor. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_distance_packet_aec193f1f73455dcd349424a5e64b1133}\label{class_distance_packet_aec193f1f73455dcd349424a5e64b1133}} 
-\index{DistancePacket@{DistancePacket}!getType@{getType}}
-\index{getType@{getType}!DistancePacket@{DistancePacket}}
-\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily char Distance\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Get type of packet. \begin{DoxyReturn}{Returns}
-Type. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-\mbox{\Hypertarget{class_distance_packet_adf78c19d8b3e69bbb56d5eb1dd625b54}\label{class_distance_packet_adf78c19d8b3e69bbb56d5eb1dd625b54}} 
-\index{DistancePacket@{DistancePacket}!prepare@{prepare}}
-\index{prepare@{prepare}!DistancePacket@{DistancePacket}}
-\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
-{\footnotesize\ttfamily std\+::string Distance\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-Prepare packet for sending. \begin{DoxyReturn}{Returns}
-String of data. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_packet}{Packet}}.
-
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\item 
-src/packet.\+cpp\end{DoxyCompactItemize}
+include/packet.\+hpp\end{DoxyCompactItemize}

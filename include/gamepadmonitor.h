@@ -11,6 +11,10 @@ QT_BEGIN_NAMESPACE
 class QGamepad;
 QT_END_NAMESPACE
 
+
+/**
+    @brief Joystick class
+*/
 class GamepadMonitor : public QObject
 {
     Q_OBJECT
