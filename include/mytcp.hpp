@@ -14,7 +14,7 @@ QT_END_NAMESPACE
 
 
 /**
-    @brief UDP client connection class
+    @brief TCP client connection class
 */
 class clientTCP : public QObject
 {
