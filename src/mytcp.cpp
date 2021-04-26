@@ -64,39 +64,40 @@ void clientTCP::readyRead()
         // printf("Nowy string: %s\n", parse.c_str());
         
         Packet* packet = Packet::decode(parse);
-        if (packet != nullptr) return;
-        switch (packet->getType())
-        {
-            case 'P': {
-                qDebug() << "PONG!";
-                auto end = std::chrono::system_clock::now();
-                std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
-                emit latencyChanged(elapsed_seconds.count() * 1000);
-                break;
+        if (packet != nullptr) {
+            switch (packet->getType())
+            {
+                case 'P': {
+                    qDebug() << "PONG!";
+                    auto end = std::chrono::system_clock::now();
+                    std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
+                    emit latencyChanged(elapsed_seconds.count() * 1000);
+                    break;
+                }
+
+                case 'B':
+                    emit batteryChanged(((BatteryPacket*)packet)->level);
+                    break;
+
+                case 'D':
+                    emit distanceChanged(((DistancePacket*)packet)->distance);
+                    break;
+
+                case 'S':
+                    qDebug() << "Speed:" << ((SpeedPacket*)packet)->left << "|" << ((SpeedPacket*)packet)->right;
+                    break;
+
+                case 'C':
+                    emit closeConnection();
+                    break;
+
+                default:
+                    qDebug() << "Undefined UDP packet  -->" <<  data.c_str();
+                    break;
+                
+                delete packet;
             }
-
-            case 'B':
-                emit batteryChanged(((BatteryPacket*)packet)->level);
-                break;
-
-            case 'D':
-                emit distanceChanged(((DistancePacket*)packet)->distance);
-                break;
-
-            case 'S':
-                qDebug() << "Speed:" << ((SpeedPacket*)packet)->left << "|" << ((SpeedPacket*)packet)->right;
-                break;
-
-            case 'C':
-                emit closeConnection();
-                break;
-
-            default:
-                qDebug() << "Undefined UDP packet  -->" <<  data.c_str();
-                break;
-            
-            delete packet;
-        }
+        } else return;
         separator = data.find(';');
         // qDebug() << "Znalazłem separator na miejscu: " << separator;
     }
