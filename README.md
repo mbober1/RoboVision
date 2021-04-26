@@ -9,6 +9,7 @@ https://github.com/mbober1/ReTank
 - [X] Wireless robot connection
 - [X] Robot battery level
 - [X] Measuring latency (ping)
+- [X] Real motor speed
 - [ ] Real speed of the robot
 - [ ] Indications of the robot's accelerometer
 - [ ] 3D robot model
