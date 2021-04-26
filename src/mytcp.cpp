@@ -64,7 +64,7 @@ void clientTCP::readyRead()
         // printf("Nowy string: %s\n", parse.c_str());
         
         Packet* packet = Packet::decode(parse);
-        if (packet != nullptr) {
+        if (packet != nullptr) return;
         switch (packet->getType())
         {
             case 'P': {
@@ -94,7 +94,7 @@ void clientTCP::readyRead()
             default:
                 qDebug() << "Undefined UDP packet  -->" <<  data.c_str();
                 break;
-            }
+            
             delete packet;
         }
         separator = data.find(';');
