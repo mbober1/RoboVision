@@ -8,6 +8,7 @@ https://github.com/mbober1/ReTank
 - [X] Gamepad support
 - [X] Wireless robot connection
 - [X] Robot battery level
+- [X] Measuring latency (ping)
 - [ ] Real speed of the robot
 - [ ] Indications of the robot's accelerometer
 - [ ] 3D robot model
