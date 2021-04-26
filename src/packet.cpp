@@ -18,8 +18,8 @@ Packet::~Packet() {}
  * @param data string with data.
  * @return Calculated crc.
  */
-uint8_t Packet::checksum(const std::string &data) {
-    return CRC::Calculate(data.c_str(), data.size(), CRC::CRC_8());
+byte Packet::checksum(const std::string &data) {
+    return CRC8_DataArray(reinterpret_cast<const byte*>(data.c_str()), data.size());
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "crc.h"
+#include "crc.hpp"
 
 
 /**
@@ -14,7 +14,7 @@ public:
     virtual std::string prepare() = 0;
     static Packet* decode(std::string &data);
     virtual char getType() = 0;
-    static uint8_t checksum(const std::string &data);
+    static byte checksum(const std::string &data);
 };
 
 

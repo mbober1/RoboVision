@@ -32,7 +32,7 @@ set(HEADERS
     include/mainwindow.h
     include/mytcp.hpp
     include/myudp.hpp
-    include/crc.h
+    include/crc.hpp
     include/packet.hpp)
 set(UIS
     ui/ui_mainwindow.h
