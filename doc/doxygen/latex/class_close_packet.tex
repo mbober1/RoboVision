@@ -18,11 +18,13 @@ Inheritance diagram for Close\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_close_packet_afbcede6d7105145916357d328b836e3d}\label{class_close_packet_afbcede6d7105145916357d328b836e3d}} 
-virtual std\+::string {\bfseries prepare} ()
+\mbox{\hyperlink{class_close_packet_aa88cce5c3b8754fd8348b05769374f8a}{Close\+Packet}} ()
 \item 
-\mbox{\Hypertarget{class_close_packet_a25227776bb36706ebca92344c891dc25}\label{class_close_packet_a25227776bb36706ebca92344c891dc25}} 
-virtual char {\bfseries get\+Type} ()
+\mbox{\hyperlink{class_close_packet_aed74bc011c1a6f5c6381e404ccc92b88}{$\sim$\+Close\+Packet}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_close_packet_a95f59015afd4b0390323cd220eaaedc1}{prepare}} ()
+\item 
+virtual char \mbox{\hyperlink{class_close_packet_a10dfc82bdd711e49e938e3404757b26b}{get\+Type}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -30,6 +32,51 @@ virtual char {\bfseries get\+Type} ()
 \doxysubsection{Detailed Description}
 Connection status management class. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_close_packet_aa88cce5c3b8754fd8348b05769374f8a}\label{class_close_packet_aa88cce5c3b8754fd8348b05769374f8a}} 
+\index{ClosePacket@{ClosePacket}!ClosePacket@{ClosePacket}}
+\index{ClosePacket@{ClosePacket}!ClosePacket@{ClosePacket}}
+\doxysubsubsection{\texorpdfstring{ClosePacket()}{ClosePacket()}}
+{\footnotesize\ttfamily Close\+Packet\+::\+Close\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A constructor. \mbox{\Hypertarget{class_close_packet_aed74bc011c1a6f5c6381e404ccc92b88}\label{class_close_packet_aed74bc011c1a6f5c6381e404ccc92b88}} 
+\index{ClosePacket@{ClosePacket}!````~ClosePacket@{$\sim$ClosePacket}}
+\index{````~ClosePacket@{$\sim$ClosePacket}!ClosePacket@{ClosePacket}}
+\doxysubsubsection{\texorpdfstring{$\sim$ClosePacket()}{~ClosePacket()}}
+{\footnotesize\ttfamily Close\+Packet\+::$\sim$\+Close\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_close_packet_a10dfc82bdd711e49e938e3404757b26b}\label{class_close_packet_a10dfc82bdd711e49e938e3404757b26b}} 
+\index{ClosePacket@{ClosePacket}!getType@{getType}}
+\index{getType@{getType}!ClosePacket@{ClosePacket}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily char Close\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get type of packet. \begin{DoxyReturn}{Returns}
+Type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+\mbox{\Hypertarget{class_close_packet_a95f59015afd4b0390323cd220eaaedc1}\label{class_close_packet_a95f59015afd4b0390323cd220eaaedc1}} 
+\index{ClosePacket@{ClosePacket}!prepare@{prepare}}
+\index{prepare@{prepare}!ClosePacket@{ClosePacket}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily std\+::string Close\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepare packet for sending. \begin{DoxyReturn}{Returns}
+String of data. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\end{DoxyCompactItemize}
+include/packet.\+hpp\item 
+src/packet.\+cpp\end{DoxyCompactItemize}

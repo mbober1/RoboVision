@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getparameters_79',['GetParameters',['../struct_c_r_c_1_1_table.html#a7c32dfe94f0652bdf12faac383ad5b2e',1,'CRC::Table']]],
-  ['gettable_80',['GetTable',['../struct_c_r_c_1_1_table.html#a46fb89a74528b52df029248a643d83c0',1,'CRC::Table']]]
+  ['batterypacket_115',['BatteryPacket',['../class_battery_packet.html#aaff78618c35fb3e607f2bb889724f2c2',1,'BatteryPacket::BatteryPacket(const std::string &amp;data)'],['../class_battery_packet.html#a6979e6787a3cbecdaa74ddbacc035c2a',1,'BatteryPacket::BatteryPacket(const uint8_t &amp;level)']]]
 ];

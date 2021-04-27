@@ -18,11 +18,13 @@ Inheritance diagram for Ping\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_ping_packet_aae9ce1992616a3fd2c54f19a55e823ea}\label{class_ping_packet_aae9ce1992616a3fd2c54f19a55e823ea}} 
-virtual std\+::string {\bfseries prepare} ()
+\mbox{\hyperlink{class_ping_packet_a41488fec30e7c0d733d9c13d53b58880}{Ping\+Packet}} ()
 \item 
-\mbox{\Hypertarget{class_ping_packet_aa857597fe978eb69d2a98c7356f89f02}\label{class_ping_packet_aa857597fe978eb69d2a98c7356f89f02}} 
-virtual char {\bfseries get\+Type} ()
+\mbox{\hyperlink{class_ping_packet_aa909b58d4bbbf5a76758b0ce1c4f7aab}{$\sim$\+Ping\+Packet}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_ping_packet_a906bf27d42809067e15b04be0b273f0c}{prepare}} ()
+\item 
+virtual char \mbox{\hyperlink{class_ping_packet_a6a825a541b7ea164b4037a03337f51d8}{get\+Type}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -30,6 +32,51 @@ virtual char {\bfseries get\+Type} ()
 \doxysubsection{Detailed Description}
 Ping request class. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ping_packet_a41488fec30e7c0d733d9c13d53b58880}\label{class_ping_packet_a41488fec30e7c0d733d9c13d53b58880}} 
+\index{PingPacket@{PingPacket}!PingPacket@{PingPacket}}
+\index{PingPacket@{PingPacket}!PingPacket@{PingPacket}}
+\doxysubsubsection{\texorpdfstring{PingPacket()}{PingPacket()}}
+{\footnotesize\ttfamily Ping\+Packet\+::\+Ping\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A constructor. \mbox{\Hypertarget{class_ping_packet_aa909b58d4bbbf5a76758b0ce1c4f7aab}\label{class_ping_packet_aa909b58d4bbbf5a76758b0ce1c4f7aab}} 
+\index{PingPacket@{PingPacket}!````~PingPacket@{$\sim$PingPacket}}
+\index{````~PingPacket@{$\sim$PingPacket}!PingPacket@{PingPacket}}
+\doxysubsubsection{\texorpdfstring{$\sim$PingPacket()}{~PingPacket()}}
+{\footnotesize\ttfamily Ping\+Packet\+::$\sim$\+Ping\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ping_packet_a6a825a541b7ea164b4037a03337f51d8}\label{class_ping_packet_a6a825a541b7ea164b4037a03337f51d8}} 
+\index{PingPacket@{PingPacket}!getType@{getType}}
+\index{getType@{getType}!PingPacket@{PingPacket}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily char Ping\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get type of packet. \begin{DoxyReturn}{Returns}
+Type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+\mbox{\Hypertarget{class_ping_packet_a906bf27d42809067e15b04be0b273f0c}\label{class_ping_packet_a906bf27d42809067e15b04be0b273f0c}} 
+\index{PingPacket@{PingPacket}!prepare@{prepare}}
+\index{prepare@{prepare}!PingPacket@{PingPacket}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily std\+::string Ping\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepare packet for sending. \begin{DoxyReturn}{Returns}
+String of data. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\end{DoxyCompactItemize}
+include/packet.\+hpp\item 
+src/packet.\+cpp\end{DoxyCompactItemize}

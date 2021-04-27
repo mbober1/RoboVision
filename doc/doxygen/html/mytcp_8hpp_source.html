@@ -104,8 +104,8 @@ $(document).ready(function(){initNavTree('mytcp_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classclient_t_c_p.html">clientTCP</a>(QObject *parent = 0);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> initConnection();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classclient_t_c_p.html#a00c1c540dce688e6df9a683ed57adeff">clientTCP</a>(QObject *parent = 0);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classclient_t_c_p.html#a68816e20d86c6bcd650aa0ded9f47a98">initConnection</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    QString address;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> port;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
@@ -120,10 +120,10 @@ $(document).ready(function(){initNavTree('mytcp_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> closeConnection();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> connected();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> disconnected();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> readyRead();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> ping();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classclient_t_c_p.html#aeda1f33fd0c175e7d7f61565e4085020">connected</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classclient_t_c_p.html#a57d490d8226f8dfa938bda9399705f2b">disconnected</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classclient_t_c_p.html#a96c32edf9bb6a5dc35169ff1f7205f93">readyRead</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classclient_t_c_p.html#a5956ae8780fb55a7ac5d822d7f0a611d">ping</a>();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QTimer timer;</div>
@@ -131,6 +131,12 @@ $(document).ready(function(){initNavTree('mytcp_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MYTCP_H</span></div>
 <div class="ttc" id="aclassclient_t_c_p_html"><div class="ttname"><a href="classclient_t_c_p.html">clientTCP</a></div><div class="ttdoc">TCP client connection class.</div><div class="ttdef"><b>Definition:</b> mytcp.hpp:20</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_a00c1c540dce688e6df9a683ed57adeff"><div class="ttname"><a href="classclient_t_c_p.html#a00c1c540dce688e6df9a683ed57adeff">clientTCP::clientTCP</a></div><div class="ttdeci">clientTCP(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:8</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_a57d490d8226f8dfa938bda9399705f2b"><div class="ttname"><a href="classclient_t_c_p.html#a57d490d8226f8dfa938bda9399705f2b">clientTCP::disconnected</a></div><div class="ttdeci">void disconnected()</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:42</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_a5956ae8780fb55a7ac5d822d7f0a611d"><div class="ttname"><a href="classclient_t_c_p.html#a5956ae8780fb55a7ac5d822d7f0a611d">clientTCP::ping</a></div><div class="ttdeci">void ping()</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:110</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_a68816e20d86c6bcd650aa0ded9f47a98"><div class="ttname"><a href="classclient_t_c_p.html#a68816e20d86c6bcd650aa0ded9f47a98">clientTCP::initConnection</a></div><div class="ttdeci">void initConnection()</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:22</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_a96c32edf9bb6a5dc35169ff1f7205f93"><div class="ttname"><a href="classclient_t_c_p.html#a96c32edf9bb6a5dc35169ff1f7205f93">clientTCP::readyRead</a></div><div class="ttdeci">void readyRead()</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:52</div></div>
+<div class="ttc" id="aclassclient_t_c_p_html_aeda1f33fd0c175e7d7f61565e4085020"><div class="ttname"><a href="classclient_t_c_p.html#aeda1f33fd0c175e7d7f61565e4085020">clientTCP::connected</a></div><div class="ttdeci">void connected()</div><div class="ttdef"><b>Definition:</b> mytcp.cpp:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

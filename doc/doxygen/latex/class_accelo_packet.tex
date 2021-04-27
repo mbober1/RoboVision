@@ -18,17 +18,15 @@ Inheritance diagram for Accelo\+Packet\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_accelo_packet_a694414dc19029f91c9d188c9d647a4d2}\label{class_accelo_packet_a694414dc19029f91c9d188c9d647a4d2}} 
-{\bfseries Accelo\+Packet} (std\+::string data)
+\mbox{\hyperlink{class_accelo_packet_a694414dc19029f91c9d188c9d647a4d2}{Accelo\+Packet}} (std\+::string data)
 \item 
-\mbox{\Hypertarget{class_accelo_packet_a7bdfaac3c7f06fc82c2a3a0436295061}\label{class_accelo_packet_a7bdfaac3c7f06fc82c2a3a0436295061}} 
-{\bfseries Accelo\+Packet} (const int8\+\_\+t \&x, const int8\+\_\+t \&y, const int8\+\_\+t \&z)
+\mbox{\hyperlink{class_accelo_packet_a7bdfaac3c7f06fc82c2a3a0436295061}{Accelo\+Packet}} (const int8\+\_\+t \&x, const int8\+\_\+t \&y, const int8\+\_\+t \&z)
 \item 
-\mbox{\Hypertarget{class_accelo_packet_a28a57c74e6322362eb03ca40a10bbe1c}\label{class_accelo_packet_a28a57c74e6322362eb03ca40a10bbe1c}} 
-virtual std\+::string {\bfseries prepare} ()
+\mbox{\hyperlink{class_accelo_packet_a773f20481347f80b7b48061c292aacc3}{$\sim$\+Accelo\+Packet}} ()
 \item 
-\mbox{\Hypertarget{class_accelo_packet_a5ae9ca94a07f2e07586548979774c915}\label{class_accelo_packet_a5ae9ca94a07f2e07586548979774c915}} 
-virtual char {\bfseries get\+Type} ()
+virtual std\+::string \mbox{\hyperlink{class_accelo_packet_a1cf7ec4126d5b262acb30931c317f0b9}{prepare}} ()
+\item 
+virtual char \mbox{\hyperlink{class_accelo_packet_a7311164796e287198e9e896cb8591580}{get\+Type}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -48,6 +46,71 @@ int8\+\_\+t {\bfseries z}
 \doxysubsection{Detailed Description}
 Accelometer data management class. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_accelo_packet_a694414dc19029f91c9d188c9d647a4d2}\label{class_accelo_packet_a694414dc19029f91c9d188c9d647a4d2}} 
+\index{AcceloPacket@{AcceloPacket}!AcceloPacket@{AcceloPacket}}
+\index{AcceloPacket@{AcceloPacket}!AcceloPacket@{AcceloPacket}}
+\doxysubsubsection{\texorpdfstring{AcceloPacket()}{AcceloPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Accelo\+Packet\+::\+Accelo\+Packet (\begin{DoxyParamCaption}\item[{std\+::string}]{data }\end{DoxyParamCaption})}
+
+A constructor for parsing data. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Data string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accelo_packet_a7bdfaac3c7f06fc82c2a3a0436295061}\label{class_accelo_packet_a7bdfaac3c7f06fc82c2a3a0436295061}} 
+\index{AcceloPacket@{AcceloPacket}!AcceloPacket@{AcceloPacket}}
+\index{AcceloPacket@{AcceloPacket}!AcceloPacket@{AcceloPacket}}
+\doxysubsubsection{\texorpdfstring{AcceloPacket()}{AcceloPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Accelo\+Packet\+::\+Accelo\+Packet (\begin{DoxyParamCaption}\item[{const int8\+\_\+t \&}]{x,  }\item[{const int8\+\_\+t \&}]{y,  }\item[{const int8\+\_\+t \&}]{z }\end{DoxyParamCaption})}
+
+A constructor. 
+\begin{DoxyParams}{Parameters}
+{\em x} & accelerometer data of X axis. \\
+\hline
+{\em y} & accelerometer data of Y axis. \\
+\hline
+{\em z} & accelerometer data of Z axis. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accelo_packet_a773f20481347f80b7b48061c292aacc3}\label{class_accelo_packet_a773f20481347f80b7b48061c292aacc3}} 
+\index{AcceloPacket@{AcceloPacket}!````~AcceloPacket@{$\sim$AcceloPacket}}
+\index{````~AcceloPacket@{$\sim$AcceloPacket}!AcceloPacket@{AcceloPacket}}
+\doxysubsubsection{\texorpdfstring{$\sim$AcceloPacket()}{~AcceloPacket()}}
+{\footnotesize\ttfamily Accelo\+Packet\+::$\sim$\+Accelo\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_accelo_packet_a7311164796e287198e9e896cb8591580}\label{class_accelo_packet_a7311164796e287198e9e896cb8591580}} 
+\index{AcceloPacket@{AcceloPacket}!getType@{getType}}
+\index{getType@{getType}!AcceloPacket@{AcceloPacket}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily char Accelo\+Packet\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get type of packet. \begin{DoxyReturn}{Returns}
+Type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+\mbox{\Hypertarget{class_accelo_packet_a1cf7ec4126d5b262acb30931c317f0b9}\label{class_accelo_packet_a1cf7ec4126d5b262acb30931c317f0b9}} 
+\index{AcceloPacket@{AcceloPacket}!prepare@{prepare}}
+\index{prepare@{prepare}!AcceloPacket@{AcceloPacket}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily std\+::string Accelo\+Packet\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepare packet for sending. \begin{DoxyReturn}{Returns}
+String of data. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_packet}{Packet}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/packet.\+hpp\end{DoxyCompactItemize}
+include/packet.\+hpp\item 
+src/packet.\+cpp\end{DoxyCompactItemize}
