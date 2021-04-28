@@ -16,6 +16,7 @@ find_package(Qt53DInput)
 find_package(Qt53DRender)
 find_package(Qt5Gui)
 find_package(Qt5Network)
+find_package(Qt5Charts)
 
 
 set(SOURCES
@@ -57,4 +58,5 @@ Qt5::3DInput
 Qt5::3DRender
 Qt5::Gui
 Qt5::Network
+Qt5::Charts
 )
