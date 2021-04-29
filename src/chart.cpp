@@ -16,7 +16,6 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     pointCount(30)
 {   
     QObject::connect(&timer, &QTimer::timeout, this, &Chart::timerTimeout);
-
     QPen red(Qt::red);
     QPen green(Qt::green);
     QPen blue(Qt::blue);
@@ -63,14 +62,6 @@ void Chart::timerTimeout() {
 
     this->addPoint(x, y, z);
 }
-// void Chart::addPoint() {
-//     QDateTime timestamp;
-//     timestamp.setDate(QDate::currentDate());
-//     timestamp.setTime(QTime::currentTime());
-    
-//     this->X->append(timestamp.currentSecsSinceEpoch(), rand() % 8 + 1);
-//     qDebug() << timestamp.currentSecsSinceEpoch() << timestamp << this->X->points().size();
-// }
 
 void Chart::addPoint(int x, int y, int z)
 {
