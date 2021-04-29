@@ -23,18 +23,12 @@ class Chart : public QChart
     Q_OBJECT
 public:
     Chart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = {});
-    QLineSeries *X = new QLineSeries();
-    QLineSeries *Y = new QLineSeries();
-    QLineSeries *Z = new QLineSeries();
-    QValueAxis *axisX = new QValueAxis;
 
 public slots:
     void addPoint();
-    void handleTimeout();
 
 private:
     QTimer timer;
-    QTimer m_timer;
 
     QSplineSeries *x_series;
     QSplineSeries *y_series;
@@ -42,9 +36,10 @@ private:
     QStringList m_titles;
     QValueAxis *m_axisX;
     QValueAxis *m_axisY;
-    qreal m_step;
     qreal m_x;
     qreal m_y;
+
+    uint pointCount;
 };
 
 #endif
