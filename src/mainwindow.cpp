@@ -49,6 +49,9 @@ MainWindow::MainWindow(QWidget *parent)
        QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
     });
 
+    QChartView *chartView = new QChartView(this->chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    // ui->chart->set
 }
 
 

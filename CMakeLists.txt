@@ -26,6 +26,7 @@ set(SOURCES
     src/mainwindow.cpp
     src/mytcp.cpp
     src/myudp.cpp
+    src/chart.cpp
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
@@ -33,6 +34,7 @@ set(HEADERS
     include/mainwindow.h
     include/mytcp.hpp
     include/myudp.hpp
+    include/chart.hpp
     include/crc.h
     include/packet.hpp)
 set(UIS
