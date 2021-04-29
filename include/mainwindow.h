@@ -7,6 +7,7 @@
 #include "myudp.hpp"
 #include "mytcp.hpp"
 #include "chart.hpp"
+#include "scene.hpp"
 // #include "keyboard.hpp"
 
 QT_BEGIN_NAMESPACE
@@ -31,6 +32,7 @@ public:
     clientUDP udp;
     clientTCP tcp;
     Chart *chart = new Chart();
+    Scene *scene = new Scene();
 
 protected:
     void keyPressEvent(QKeyEvent* event);
