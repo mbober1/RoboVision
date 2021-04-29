@@ -51,15 +51,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     QChartView *chartView = new QChartView(this->chart);
     chartView->setRenderHint(QPainter::Antialiasing);
-    // ui->chartLayout->SetMinimumSize()
 
     ui->visualLayout->addWidget(scene->container);
     ui->chartLayout->addWidget(chartView);
-
-    // Qt3DRender::QCamera *camera = this->camera();
-    // camera->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
-    // camera->setPosition(QVector3D(0, 0, 40.0f));
-    // camera->setViewCenter(QVector3D(0, 0, 0));
 
 }
 
