@@ -16,6 +16,7 @@ find_package(Qt53DInput)
 find_package(Qt53DRender)
 find_package(Qt5Gui)
 find_package(Qt5Network)
+find_package(Qt5Charts)
 
 
 set(SOURCES
@@ -25,6 +26,7 @@ set(SOURCES
     src/mainwindow.cpp
     src/mytcp.cpp
     src/myudp.cpp
+    src/chart.cpp
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
@@ -32,6 +34,7 @@ set(HEADERS
     include/mainwindow.h
     include/mytcp.hpp
     include/myudp.hpp
+    include/chart.hpp
     include/crc.h
     include/packet.hpp)
 set(UIS
@@ -57,4 +60,5 @@ Qt5::3DInput
 Qt5::3DRender
 Qt5::Gui
 Qt5::Network
+Qt5::Charts
 )

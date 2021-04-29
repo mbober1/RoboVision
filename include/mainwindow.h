@@ -6,6 +6,7 @@
 #include "gamepadmonitor.h"
 #include "myudp.hpp"
 #include "mytcp.hpp"
+#include "chart.hpp"
 // #include "keyboard.hpp"
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +30,7 @@ public:
     // Keyboard keyboard;
     clientUDP udp;
     clientTCP tcp;
+    Chart *chart = new Chart();
 
 protected:
     void keyPressEvent(QKeyEvent* event);
