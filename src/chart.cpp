@@ -70,9 +70,9 @@ void Chart::addPoint(int x, int y, int z)
     if(this->z_series->points().size() > this->pointCount) this->z_series->remove(0);
     
     m_x += (m_axisX->max() - m_axisX->min()) / m_axisX->tickCount();
-    this->x_series->append(m_x + 5, x);
-    this->y_series->append(m_x + 5, y);
-    this->z_series->append(m_x + 5, z);
+    this->x_series->append(m_x + 10, x);
+    this->y_series->append(m_x + 10, y);
+    this->z_series->append(m_x + 10, z);
 
     scroll(plotArea().width() / m_axisX->tickCount(), 0);
 }
