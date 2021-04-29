@@ -51,10 +51,9 @@ public:
 
 
     Qt3DCore::QEntity *rootEntity;
-    Qt3DRender::QCamera *cameraEntity;
-    QQuaternion orientation;
-    QVector3D position;
+    Qt3DRender::QCamera *camera;
     Object *object;
+    QWidget *container;
 
 public slots:
 
