@@ -30,7 +30,7 @@ public:
     // Keyboard keyboard;
     clientUDP udp;
     clientTCP tcp;
-    myChart *chart = new myChart();
+    Chart *chart = new Chart();
 
 protected:
     void keyPressEvent(QKeyEvent* event);

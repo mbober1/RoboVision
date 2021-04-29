@@ -51,7 +51,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QChartView *chartView = new QChartView(this->chart);
     chartView->setRenderHint(QPainter::Antialiasing);
-    // ui->chart->set
+    ui->chartLayout->addWidget(chartView);
 }
 
 

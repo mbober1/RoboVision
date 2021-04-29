@@ -29,33 +29,54 @@
       <height>431</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout_2">
+    <layout class="QGridLayout" name="mainLayout">
      <item row="1" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Obstacle distance</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QProgressBar" name="progressBarObstacle">
-       <property name="value">
-        <number>0</number>
-       </property>
-       <property name="format">
-        <string>%p cm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="ObstacleLayout">
        <item>
-        <widget class="QWidget" name="chart" native="true"/>
+        <widget class="QLabel" name="distanceLabel">
+         <property name="text">
+          <string>Obstacle distance</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBarObstacle">
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="format">
+          <string>%p cm</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
      <item row="0" column="0">
-      <widget class="QOpenGLWidget" name="openGLWidget_2"/>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="visualLayout">
+         <item>
+          <widget class="QOpenGLWidget" name="openGLWidget"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="chartLayout"/>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -98,7 +119,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="pingUnitsLabel">
          <property name="text">
           <string>ms</string>
          </property>
@@ -137,7 +158,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="speedUnitsLabel">
          <property name="text">
           <string>m/s</string>
          </property>
@@ -161,7 +182,7 @@
      <item row="0" column="0">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="pingLabel">
          <property name="text">
           <string>Ping</string>
          </property>
@@ -171,7 +192,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="speedLabel">
          <property name="text">
           <string>Speed</string>
          </property>
