@@ -7,6 +7,12 @@
 #include <QDesktopServices>
 
 
+
+
+// #include "orbittransformcontroller.h"
+// #include "qorbitcameracontroller.h"
+
+
 /**
  * A constructor.
  * @param parent QWidget type parent.
@@ -51,7 +57,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     QChartView *chartView = new QChartView(this->chart);
     chartView->setRenderHint(QPainter::Antialiasing);
-    ui->chartLayout->addWidget(chartView);
+    // ui->chartLayout->addWidget(chartView);
+
+    ui->visualLayout->addWidget(scene);
+
+
+
 }
 
 
