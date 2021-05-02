@@ -93,7 +93,6 @@ void clientTCP::readyRead()
 
                 case 'A':
                     emit accelChanged(((AcceloPacket*)packet)->x, ((AcceloPacket*)packet)->y, ((AcceloPacket*)packet)->z);
-                    printf("\nX: %3d, Y: %3d, Z: %3d\n", ((AcceloPacket*)packet)->x, ((AcceloPacket*)packet)->y, ((AcceloPacket*)packet)->z);
                     break;
 
                 case 'C':
