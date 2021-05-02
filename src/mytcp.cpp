@@ -84,6 +84,7 @@ void clientTCP::readyRead()
                     break;
 
                 case 'S':
+                    emit speedChanged(((SpeedPacket*)packet)->left, ((SpeedPacket*)packet)->right);
                     qDebug() << "Speed:" << ((SpeedPacket*)packet)->left << "|" << ((SpeedPacket*)packet)->right;
                     break;
 

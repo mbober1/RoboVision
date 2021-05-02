@@ -33,6 +33,7 @@ signals:
     void latencyChanged(int latency);
     void batteryChanged(int level);
     void distanceChanged(int distance);
+    void speedChanged(int left, int right);
     void closeConnection();
 
 public slots:
