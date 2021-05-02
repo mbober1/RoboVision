@@ -60,7 +60,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->visualLayout->addWidget(scene->container);
     ui->chartLayout->addWidget(chartView);
-
 }
 
 

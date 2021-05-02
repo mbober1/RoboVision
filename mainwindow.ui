@@ -156,7 +156,7 @@
        <item row="2" column="1">
         <widget class="QLabel" name="speedUnitsLabel">
          <property name="text">
-          <string>m/s</string>
+          <string>cm/s</string>
          </property>
         </widget>
        </item>
