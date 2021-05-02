@@ -45,6 +45,12 @@ MainWindow::MainWindow(QWidget *parent)
        ui->progressBarObstacle->setValue(distance);
     });
 
+    QObject::connect(&tcp, &clientTCP::speedChanged, [this](int left, int right) {
+       int speed = abs(left + right)/2;
+       printf("Speed %d | %d -> %d", left, right, speed);
+       ui->lcdNumberSpeed->display(speed);
+    });
+
     QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {
        QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
     });
