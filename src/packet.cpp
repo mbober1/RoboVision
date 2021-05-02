@@ -347,9 +347,9 @@ GyroPacket::GyroPacket(std::string data) {
         data.erase(0, separator);
         this->y = std::atoi(parse.c_str());
 
-        separator = data.find(';') + 1;
-        parse = data.substr(0, separator);
-        this->z = std::atoi(parse.c_str());
+        // separator = data.find(';') + 1;
+        // parse = data.substr(0, separator);
+        this->z = std::atoi(data.c_str());
     }
 }
 
@@ -416,9 +416,9 @@ AcceloPacket::AcceloPacket(std::string data) {
         data.erase(0, separator);
         this->y = std::atoi(parse.c_str());
 
-        separator = data.find(';') + 1;
-        parse = data.substr(0, separator);
-        this->z = std::atoi(parse.c_str());
+        // separator = data.find(';') + 1;
+        // parse = data.substr(0, separator);
+        this->z = std::atoi(data.c_str());
     }
 }
 

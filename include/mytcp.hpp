@@ -34,6 +34,8 @@ signals:
     void batteryChanged(int level);
     void distanceChanged(int distance);
     void speedChanged(int left, int right);
+    void gyroChanged(int x, int y, int z);
+    void accelChanged(int x, int y, int z);
     void closeConnection();
 
 public slots:

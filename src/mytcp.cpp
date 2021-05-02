@@ -86,13 +86,22 @@ void clientTCP::readyRead()
                 case 'S':
                     emit speedChanged(((SpeedPacket*)packet)->left, ((SpeedPacket*)packet)->right);
                     break;
+                
+                case 'G':
+                    emit gyroChanged(((GyroPacket*)packet)->x, ((GyroPacket*)packet)->y, ((GyroPacket*)packet)->z);
+                    break;
+
+                case 'A':
+                    emit accelChanged(((AcceloPacket*)packet)->x, ((AcceloPacket*)packet)->y, ((AcceloPacket*)packet)->z);
+                    printf("\nX: %3d, Y: %3d, Z: %3d\n", ((AcceloPacket*)packet)->x, ((AcceloPacket*)packet)->y, ((AcceloPacket*)packet)->z);
+                    break;
 
                 case 'C':
                     emit closeConnection();
                     break;
 
                 default:
-                    qDebug() << "Undefined UDP packet  -->" <<  data.c_str();
+                    qDebug() << "Undefined TCP packet  -->" <<  data.c_str();
                     break;
                 
                 delete packet;

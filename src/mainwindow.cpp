@@ -47,8 +47,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(&tcp, &clientTCP::speedChanged, [this](int left, int right) {
        int speed = abs(left + right)/2;
-       printf("Speed %d | %d -> %d", left, right, speed);
        ui->lcdNumberSpeed->display(speed);
+    });
+
+    QObject::connect(&tcp, &clientTCP::accelChanged, [this](int x, int y, int z) {
+       chart->addPoint(x,y,z);
     });
 
     QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {

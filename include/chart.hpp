@@ -26,10 +26,8 @@ public:
 
 public slots:
     void addPoint(int x, int y, int z);
-    void timerTimeout();
 
 private:
-    QTimer timer;
 
     QSplineSeries *x_series;
     QSplineSeries *y_series;

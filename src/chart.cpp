@@ -15,7 +15,6 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     m_x(0), m_y(0),
     pointCount(30)
 {   
-    QObject::connect(&timer, &QTimer::timeout, this, &Chart::timerTimeout);
     QPen red(Qt::red);
     QPen green(Qt::green);
     QPen blue(Qt::blue);
@@ -46,22 +45,22 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
 
     m_axisX->setTickCount(this->pointCount);
     m_axisX->setRange(0, 10);
-    m_axisY->setRange(-5, 10);
+    m_axisY->setRange(-200, 200);
 
-    timer.start(200);
+    // timer.start(200);
 
 
     this->legend()->hide();
     this->setAnimationOptions(QChart::NoAnimation);
 }
 
-void Chart::timerTimeout() {
-    int x = QRandomGenerator::global()->bounded(10) - 2.5;
-    int y = QRandomGenerator::global()->bounded(10) - 2.5;
-    int z = QRandomGenerator::global()->bounded(10) - 2.5;
+// void Chart::timerTimeout() {
+//     int x = QRandomGenerator::global()->bounded(10) - 2.5;
+//     int y = QRandomGenerator::global()->bounded(10) - 2.5;
+//     int z = QRandomGenerator::global()->bounded(10) - 2.5;
 
-    this->addPoint(x, y, z);
-}
+//     this->addPoint(x, y, z);
+// }
 
 void Chart::addPoint(int x, int y, int z)
 {
