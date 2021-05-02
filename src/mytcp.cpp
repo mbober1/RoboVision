@@ -68,7 +68,7 @@ void clientTCP::readyRead()
             switch (packet->getType())
             {
                 case 'P': {
-                    qDebug() << "PONG!";
+                    // qDebug() << "PONG!";
                     auto end = std::chrono::system_clock::now();
                     std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
                     emit latencyChanged(elapsed_seconds.count() * 1000);
@@ -85,7 +85,6 @@ void clientTCP::readyRead()
 
                 case 'S':
                     emit speedChanged(((SpeedPacket*)packet)->left, ((SpeedPacket*)packet)->right);
-                    qDebug() << "Speed:" << ((SpeedPacket*)packet)->left << "|" << ((SpeedPacket*)packet)->right;
                     break;
 
                 case 'C':
