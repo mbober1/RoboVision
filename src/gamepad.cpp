@@ -1,11 +1,11 @@
-#include "gamepadmonitor.h"
+#include "gamepad.h"
 
 
 /**
  * A constructor.
  * @param parent QWidget type parent.
  */
-GamepadMonitor::GamepadMonitor(QObject *parent)
+Gamepad::Gamepad(QObject *parent)
     : QObject(parent)
     , m_gamepad(0)
 {
@@ -22,7 +22,7 @@ GamepadMonitor::GamepadMonitor(QObject *parent)
 /**
  * A destructor.
  */
-GamepadMonitor::~GamepadMonitor()
+Gamepad::~Gamepad()
 {
     delete m_gamepad;
 }

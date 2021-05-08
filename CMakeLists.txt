@@ -19,7 +19,7 @@ find_package(Qt5Charts)
 set(SOURCES
     src/main.cpp
     src/connectiondialog.cpp
-    src/gamepadmonitor.cpp
+    src/gamepad.cpp
     src/mainwindow.cpp
     src/mytcp.cpp
     src/myudp.cpp
@@ -28,7 +28,7 @@ set(SOURCES
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
-    include/gamepadmonitor.h
+    include/gamepad.h
     include/mainwindow.h
     include/mytcp.hpp
     include/myudp.hpp

@@ -5,7 +5,6 @@
 #include <QtGamepad/QGamepad>
 
 #include <QDebug>
-#include <QLoggingCategory>
 
 QT_BEGIN_NAMESPACE
 class QGamepad;
@@ -15,12 +14,12 @@ QT_END_NAMESPACE
 /**
     @brief Joystick class
 */
-class GamepadMonitor : public QObject
+class Gamepad : public QObject
 {
     Q_OBJECT
 public:
-    explicit GamepadMonitor(QObject *parent = 0);
-    ~GamepadMonitor();
+    explicit Gamepad(QObject *parent = 0);
+    ~Gamepad();
     QGamepad *m_gamepad;
 
 private:

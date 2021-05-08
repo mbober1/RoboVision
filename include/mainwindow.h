@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QKeyEvent>
-#include "gamepadmonitor.h"
+#include "gamepad.h"
 #include "myudp.hpp"
 #include "mytcp.hpp"
 #include "chart.hpp"
@@ -27,7 +27,7 @@ public:
     ~MainWindow();
     void connectionError(QAbstractSocket::SocketError error);
 
-    GamepadMonitor joystick;
+    Gamepad joystick;
     // Keyboard keyboard;
     clientUDP udp;
     clientTCP tcp;
