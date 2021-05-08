@@ -47,20 +47,10 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     m_axisX->setRange(0, 10);
     m_axisY->setRange(-200, 200);
 
-    // timer.start(200);
-
-
     this->legend()->hide();
     this->setAnimationOptions(QChart::NoAnimation);
 }
 
-// void Chart::timerTimeout() {
-//     int x = QRandomGenerator::global()->bounded(10) - 2.5;
-//     int y = QRandomGenerator::global()->bounded(10) - 2.5;
-//     int z = QRandomGenerator::global()->bounded(10) - 2.5;
-
-//     this->addPoint(x, y, z);
-// }
 
 void Chart::addPoint(int x, int y, int z)
 {
