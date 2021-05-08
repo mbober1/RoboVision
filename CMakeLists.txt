@@ -2,12 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 project(RoboVision LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
-# Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
 
-# Find the QtWidgets library
 find_package(Qt5Widgets)
 find_package(Qt5Gamepad)
 find_package(Qt53DCore)
@@ -28,7 +25,6 @@ set(SOURCES
     src/myudp.cpp
     src/chart.cpp
     src/scene.cpp
-    src/object.cpp
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
@@ -38,7 +34,6 @@ set(HEADERS
     include/myudp.hpp
     include/chart.hpp
     include/scene.hpp
-    include/object.hpp
     include/crc.h
     include/packet.hpp)
 set(UIS
@@ -47,14 +42,7 @@ set(UIS
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
 target_include_directories(${PROJECT_NAME} PUBLIC include ui)
 
-# add_subdirectory(src)
-# include_directories(inc)
-# add_executable(RoboVision ${SRC_LIST})
-# target_include_directories(${PROJECT_NAME} PUBLIC inc)
 
-
-
-# Use the Widgets module from Qt 5.
 target_link_libraries(RoboVision 
 Qt5::Widgets 
 Qt5::Gamepad
