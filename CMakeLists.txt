@@ -28,7 +28,7 @@ set(SOURCES
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
-    include/gamepad.h
+    include/gamepad.hpp
     include/mainwindow.h
     include/mytcp.hpp
     include/myudp.hpp

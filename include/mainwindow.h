@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QKeyEvent>
-#include "gamepad.h"
+#include "gamepad.hpp"
 #include "myudp.hpp"
 #include "mytcp.hpp"
 #include "chart.hpp"

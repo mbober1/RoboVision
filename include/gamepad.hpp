@@ -1,5 +1,5 @@
-#ifndef GAMEPADMONITOR_H
-#define GAMEPADMONITOR_H
+#ifndef GAMEPAD_H
+#define GAMEPAD_H
 
 #include <QtCore/QObject>
 #include <QtGamepad/QGamepad>
@@ -26,4 +26,4 @@ private:
 
 };
 
-#endif // GAMEPADMONITOR_H
+#endif // GAMEPAD_H
