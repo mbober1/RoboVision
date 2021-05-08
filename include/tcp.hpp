@@ -1,5 +1,5 @@
-#ifndef MYTCP_H
-#define MYTCP_H
+#ifndef TCP_H
+#define TCP_H
 
 #include <QObject>
 #include <QTcpSocket>
@@ -48,4 +48,4 @@ private:
     QTimer timer;
 };
 
-#endif // MYTCP_H
+#endif // TCP_H

@@ -21,8 +21,8 @@ set(SOURCES
     src/connectiondialog.cpp
     src/gamepad.cpp
     src/mainwindow.cpp
-    src/mytcp.cpp
-    src/myudp.cpp
+    src/tcp.cpp
+    src/udp.cpp
     src/chart.cpp
     src/scene.cpp
     src/packet.cpp)
@@ -30,8 +30,8 @@ set(HEADERS
     include/connectiondialog.h
     include/gamepad.hpp
     include/mainwindow.h
-    include/mytcp.hpp
-    include/myudp.hpp
+    include/tcp.hpp
+    include/udp.hpp
     include/chart.hpp
     include/scene.hpp
     include/crc.h

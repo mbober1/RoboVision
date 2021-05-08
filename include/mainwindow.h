@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QKeyEvent>
 #include "gamepad.hpp"
-#include "myudp.hpp"
-#include "mytcp.hpp"
+#include "udp.hpp"
+#include "tcp.hpp"
 #include "chart.hpp"
 #include "scene.hpp"
 // #include "keyboard.hpp"

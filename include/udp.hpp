@@ -1,5 +1,5 @@
-#ifndef MYUDP_H
-#define MYUDP_H
+#ifndef UDP_H
+#define UDP_H
 
 #include <QObject>
 #include <QUdpSocket>
@@ -37,4 +37,4 @@ public slots:
 private:
 };
 
-#endif // MYUDP_H
+#endif // UDP_H
