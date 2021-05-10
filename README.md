@@ -10,7 +10,7 @@ https://github.com/mbober1/ReTank
 - [X] Robot battery level
 - [X] Measuring latency (ping)
 - [X] Real motor speed
-- [ ] Indications of the robot's accelerometer
+- [X] Indications of the robot's accelerometer
 - [ ] 3D robot model with gyro position readings
 
 
