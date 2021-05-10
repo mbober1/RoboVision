@@ -11,16 +11,16 @@ QWidget(parent)
     view->defaultFrameGraph()->setClearColor(QColor(53, 53, 53));
 
     Qt3DCore::QEntity *rootEntity = new Qt3DCore::QEntity;
-    QUrl data = QUrl::fromLocalFile("/home/mbober/Documents/RoboVision/Model.obj");
+    QUrl data = QUrl::fromLocalFile("/home/mbober/Documents/RoboVision/chassis.stl");
 
     camera = view->camera();
     camera->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
-    camera->setPosition(QVector3D(0, 0, 10.0f));
+    camera->setPosition(QVector3D(0, 0, 100.0f));
     camera->setViewCenter(QVector3D(0, 0, 0));    
 
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QPointLight *light = new Qt3DRender::QPointLight(lightEntity);
-    light->setColor("white");
+    light->setColor("red");
     light->setIntensity(0.8f);
     lightEntity->addComponent(light);
 
@@ -36,26 +36,20 @@ QWidget(parent)
     material->setDiffuse(QColor(255, 0, 0));
 
     this->robot = new Qt3DCore::QEntity(rootEntity);
-    Qt3DRender::QMesh *robotMesh = new Qt3DRender::QMesh;
-    robotMesh->setSource(data);
-    this->robot->addComponent(robotMesh);
     this->robot->addComponent(material);
+    
+    Qt3DRender::QSceneLoader *loader = new Qt3DRender::QSceneLoader(rootEntity);
+    loader->setSource(data);
+    this->robot->addComponent(loader);
 
-    // Sphere
-    Qt3DCore::QEntity *sphereEntity = new Qt3DCore::QEntity(rootEntity);
-    Qt3DExtras::QSphereMesh *sphereMesh = new Qt3DExtras::QSphereMesh;
-    sphereMesh->setRadius(3);
-    sphereEntity->addComponent(sphereMesh);
-    sphereEntity->addComponent(material);
-
+    this->rotate(QVector3D(0,1,0), 180);
 
     view->setRootEntity(rootEntity);
-    // view->show();
 }
 
 void Scene::rotate(QVector3D axis, float angle) {
     Qt3DCore::QTransform *transform = new Qt3DCore::QTransform();
-    transform->setScale(2.0f);
+    transform->setScale(0.30f);
     transform->setRotation(QQuaternion::fromAxisAndAngle(axis, angle));
     this->robot->addComponent(transform);
 }

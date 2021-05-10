@@ -16,8 +16,6 @@
 
 #include "qt3dwindow.h"
 
-
-
 /*!
 *   \file 
 *   \brief The file contains the 3D scene class.
