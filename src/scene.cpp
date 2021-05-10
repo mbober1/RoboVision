@@ -8,14 +8,14 @@ QWidget(parent)
     container = QWidget::createWindowContainer(view);
     container->setMinimumSize(QSize(400, 400));
 
-    view->defaultFrameGraph()->setClearColor(QColor(49, 54, 59));
+    view->defaultFrameGraph()->setClearColor(QColor(53, 53, 53));
 
     Qt3DCore::QEntity *rootEntity = new Qt3DCore::QEntity;
     QUrl data = QUrl::fromLocalFile("/home/mbober/Documents/RoboVision/Model.obj");
 
     camera = view->camera();
     camera->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
-    camera->setPosition(QVector3D(0, 0, 40.0f));
+    camera->setPosition(QVector3D(0, 0, 10.0f));
     camera->setViewCenter(QVector3D(0, 0, 0));    
 
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
@@ -35,11 +35,11 @@ QWidget(parent)
     Qt3DExtras::QPhongMaterial *material = new Qt3DExtras::QPhongMaterial();
     material->setDiffuse(QColor(255, 0, 0));
 
-    Qt3DCore::QEntity *robot = new Qt3DCore::QEntity(rootEntity);
+    this->robot = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QMesh *robotMesh = new Qt3DRender::QMesh;
     robotMesh->setSource(data);
-    robot->addComponent(robotMesh);
-    robot->addComponent(material);
+    this->robot->addComponent(robotMesh);
+    this->robot->addComponent(material);
 
     // Sphere
     Qt3DCore::QEntity *sphereEntity = new Qt3DCore::QEntity(rootEntity);
@@ -51,4 +51,11 @@ QWidget(parent)
 
     view->setRootEntity(rootEntity);
     // view->show();
+}
+
+void Scene::rotate(QVector3D axis, float angle) {
+    Qt3DCore::QTransform *transform = new Qt3DCore::QTransform();
+    transform->setScale(2.0f);
+    transform->setRotation(QQuaternion::fromAxisAndAngle(axis, angle));
+    this->robot->addComponent(transform);
 }

@@ -54,6 +54,11 @@ MainWindow::MainWindow(QWidget *parent)
        chart->addPoint(x,y,z);
     });
 
+    QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
+       this->scene->rotate(QVector3D(0.0f, 1.0f, 0.0f), 25.0f);
+       qDebug() << x << y << z;
+    });
+
     QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {
        QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
     });

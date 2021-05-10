@@ -25,9 +25,10 @@ public:
 
     Qt3DRender::QCamera *camera;
     QWidget *container;
+    Qt3DCore::QEntity *robot;
 
 public slots:
-
+    void rotate(QVector3D axis, float angle);
 
 private:
 };
