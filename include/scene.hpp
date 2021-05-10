@@ -15,6 +15,7 @@
 #include <QPropertyAnimation>
 
 #include "qt3dwindow.h"
+#include <math.h>
 
 /*!
 *   \file 
@@ -32,7 +33,7 @@ public:
     Qt3DCore::QEntity *robot;
 
 public slots:
-    void rotate(QVector3D axis, float angle);
+    void rotate(float x, float y, float z);
 
 private:
 };
