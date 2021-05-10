@@ -53,8 +53,6 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     m_axisY->setRange(-200, 200);
 
     this->legend()->setVisible(true);
-    // this->legend()->setAlignment(Qt::AlignBottom);
-    // this->legend()->detachFromChart();
     this->setAnimationOptions(QChart::NoAnimation);
 
     this->setMargins(QMargins(0,0,0,0));
