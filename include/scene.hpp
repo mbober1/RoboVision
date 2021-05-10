@@ -36,6 +36,7 @@ public slots:
     void rotate(float x, float y, float z);
 
 private:
+    float x, y, z;
 };
 
 #endif //SCENE_H

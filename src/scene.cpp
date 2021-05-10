@@ -4,7 +4,7 @@ float degToPi(float deg) { return deg * (M_PI/180); }
 
 
 Scene::Scene(QWidget *parent) : 
-QWidget(parent)
+QWidget(parent), x(0), y(0), z(0)
 {
     // window
     Qt3DExtras::Qt3DWindow *view = new Qt3DExtras::Qt3DWindow();
@@ -47,16 +47,19 @@ QWidget(parent)
 
     this->rotate(degToPi(10), degToPi(150), degToPi(0));
 
-
     view->setRootEntity(rootEntity);
 }
 
 void Scene::rotate(float x, float y, float z) {
+    this->x += x;
+    this->y += y;
+    this->z += z;
     auto *transform = new Qt3DCore::QTransform();
-    QMatrix4x4 matrix_x(1, 0, 0, 0, 0, cos(x), -sin(x), 0 , 0, sin(x), cos(x), 0, 0, 0, 0, 1);
-    QMatrix4x4 matrix_y(cos(y), 0, sin(y), 0, 0, 1, 0, 0, -sin(y), 0, cos(y), 0, 0, 0, 0, 1);
-    QMatrix4x4 matrix_z(cos(z), -sin(z), 0, 0, sin(z), cos(z), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    QMatrix4x4 matrix = matrix_x * matrix_y * matrix_z;
+    QMatrix4x4 matrix;
+    QMatrix4x4 matrix_x(1, 0, 0, 0, 0, cos(this->x), -sin(this->x), 0 , 0, sin(this->x), cos(this->x), 0, 0, 0, 0, 1);
+    QMatrix4x4 matrix_y(cos(this->y), 0, sin(this->y), 0, 0, 1, 0, 0, -sin(this->y), 0, cos(this->y), 0, 0, 0, 0, 1);
+    QMatrix4x4 matrix_z(cos(this->z), -sin(this->z), 0, 0, sin(this->z), cos(this->z), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    matrix = matrix_x * matrix_y * matrix_z;
     transform->setMatrix(matrix);
     this->robot->addComponent(transform);
 }
