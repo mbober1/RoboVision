@@ -1,10 +1,18 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
-    [ "chart.hpp", "chart_8hpp_source.html", null ],
-    [ "connectiondialog.h", "connectiondialog_8h_source.html", null ],
+    [ "chart.hpp", "chart_8hpp.html", [
+      [ "Chart", "class_chart.html", "class_chart" ]
+    ] ],
+    [ "connectiondialog.h", "connectiondialog_8h.html", [
+      [ "ConnectionDialog", "class_connection_dialog.html", "class_connection_dialog" ]
+    ] ],
     [ "crc.h", "crc_8h.html", "crc_8h" ],
-    [ "gamepad.hpp", "gamepad_8hpp_source.html", null ],
-    [ "mainwindow.h", "mainwindow_8h_source.html", null ],
+    [ "gamepad.hpp", "gamepad_8hpp.html", [
+      [ "Gamepad", "class_gamepad.html", "class_gamepad" ]
+    ] ],
+    [ "mainwindow.h", "mainwindow_8h.html", [
+      [ "MainWindow", "class_main_window.html", "class_main_window" ]
+    ] ],
     [ "packet.hpp", "packet_8hpp.html", [
       [ "Packet", "class_packet.html", "class_packet" ],
       [ "PingPacket", "class_ping_packet.html", "class_ping_packet" ],
@@ -16,7 +24,13 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "AcceloPacket", "class_accelo_packet.html", "class_accelo_packet" ],
       [ "GyroPacket", "class_gyro_packet.html", "class_gyro_packet" ]
     ] ],
-    [ "scene.hpp", "scene_8hpp_source.html", null ],
-    [ "tcp.hpp", "tcp_8hpp_source.html", null ],
-    [ "udp.hpp", "udp_8hpp_source.html", null ]
+    [ "scene.hpp", "scene_8hpp.html", [
+      [ "Scene", "class_scene.html", "class_scene" ]
+    ] ],
+    [ "tcp.hpp", "tcp_8hpp.html", [
+      [ "clientTCP", "classclient_t_c_p.html", "classclient_t_c_p" ]
+    ] ],
+    [ "udp.hpp", "udp_8hpp.html", [
+      [ "clientUDP", "classclient_u_d_p.html", "classclient_u_d_p" ]
+    ] ]
 ];

@@ -9,7 +9,7 @@
 /**
  * A constructor.
  * @param parent QWidget type parent.
- * @param wFlags window flags.
+ * @param wFlags Window flags.
  */
 Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) : 
     QChart(QChart::ChartTypeCartesian, parent, wFlags),
