@@ -107,7 +107,7 @@
   \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{img/schemat2.png}
-    \caption{szablon interfejsu graficznego}
+    \caption{Szablon interfejsu graficznego}
     \label{fig:interfejs}
   \end{figure}
 
@@ -240,7 +240,27 @@
   Gdzie \# oznacza CRC. Przed nim znajdujdują się trzy wartości oddzielone spacją
   odnoszące się do aktualnych wskazań żyroskopu.
 
+  \section{Wykres akcelometru}
+  Jednym z założeń projektu było umieszczenie wykresów przyśpieszeń wszystkich
+  trzech osi sterowanego pojazdu. Została podjęta decyzja scalenia tych wskazań
+  do jednego dużego wykresu w celu zwiększenia czytelności. Przełożyło się to także
+  na znaczną poprawę wydajności aplikacji. W celu dalszej optymalizacji 
+  zaimplementowałem algorytm, który pozbywa się wskazań wychodzących poza okno 
+  aplikacji. Wszystkie te działania sprawiły że dodanie tej funkcionalności
+  nie wpłynęło znacząco na ogólną złożoność obliczeniową aplikacji.
+  
+  Wykres wyskalowany został w przedziale od -2G do +2G. Każda z odczytywanych osi
+  ma swój własny kolor. W przypadku osi Z jest to kolor niebieski. 
+  Dla osi X wybrany został kolor zielony, natomiast osi Y przypadł kolor czerwony.
 
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{img/app.png}
+    \caption{Wykresy wskazań akcelometru}
+    \label{fig:wykresy}
+  \end{figure}
+
+  
   \section{Aktualne rezultaty}
   Na dzień dzisiejszy, projekt nie jest obarczony żadnymi opóźnieniami. Wszystkie 
   zaplanowane kamienie milowe zostały osiągnięte przed terminem. Aplikacja może 
