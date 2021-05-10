@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
-    //    this->scene->rotate(QVector3D(0.0f, 1.0f, 0.0f), 25.0f);
+       this->scene->rotate(x, 0, y); //degToPi
        qDebug() << x << y << z;
     });
 
