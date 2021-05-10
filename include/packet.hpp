@@ -3,6 +3,11 @@
 #include "crc.h"
 
 
+/*!
+*   \file 
+*   \brief The file contains the package class definitions and derived classes.
+*/
+
 /**
     @brief Generic packet class
 */

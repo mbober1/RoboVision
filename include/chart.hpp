@@ -3,12 +3,8 @@
 
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtCharts/QChartView>
-#include <QtCharts/QLineSeries>
-#include <QtCharts/QDateTimeAxis>
-#include <QtCharts/QValueAxis>
+#include <QtCharts>
 #include <QDateTime>
-#include <QtCharts/QChart>
 #include <QtCore/QTimer>
 
 QT_CHARTS_BEGIN_NAMESPACE
@@ -18,6 +14,14 @@ QT_CHARTS_END_NAMESPACE
 
 QT_CHARTS_USE_NAMESPACE
 
+/*!
+*   \file 
+*   \brief The file contains the chart class.
+*/
+
+/**
+    @brief Chart class
+*/
 class Chart : public QChart
 {
     Q_OBJECT

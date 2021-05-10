@@ -5,6 +5,12 @@
 #include <QtCore/QRandomGenerator>
 #include <QtCore/QDebug>
 
+
+/**
+ * A constructor.
+ * @param parent QWidget type parent.
+ * @param wFlags window flags.
+ */
 Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) : 
     QChart(QChart::ChartTypeCartesian, parent, wFlags),
     x_series(new QSplineSeries(this)), 
@@ -59,6 +65,12 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
 }
 
 
+/**
+ * Add point to chart.
+ * @param x X series value.
+ * @param y Y series value.
+ * @param z Z series value.
+ */
 void Chart::addPoint(int x, int y, int z)
 {
     if(this->x_series->points().size() > this->pointCount) this->x_series->remove(0);

@@ -11,6 +11,12 @@ class QGamepad;
 QT_END_NAMESPACE
 
 
+
+/*!
+*   \file 
+*   \brief The file contains the gamepad class.
+*/
+
 /**
     @brief Joystick class
 */

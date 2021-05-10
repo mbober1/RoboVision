@@ -8,6 +8,11 @@ class ConnectionDialog;
 }
 
 
+/*!
+*   \file 
+*   \brief The file contains the pop-up dialog class.
+*/
+
 /**
     @brief Connection pop-up dialog class
 */

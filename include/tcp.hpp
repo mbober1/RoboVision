@@ -13,6 +13,12 @@ class QTcpSocket;
 QT_END_NAMESPACE
 
 
+/*!
+*   \file 
+*   \brief The file contains the TCP client class.
+*/
+
+
 /**
     @brief TCP client connection class
 */

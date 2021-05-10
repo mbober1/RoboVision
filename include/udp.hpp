@@ -11,6 +11,12 @@ class QUdpSocket;
 QT_END_NAMESPACE
 
 
+/*!
+*   \file 
+*   \brief The file contains the UDP client class.
+*/
+
+
 /**
     @brief UDP client connection class
 */

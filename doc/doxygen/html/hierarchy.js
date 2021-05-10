@@ -12,6 +12,9 @@ var hierarchy =
       [ "SpeedPacket", "class_speed_packet.html", null ]
     ] ],
     [ "CRC::Parameters< CRCType, CRCWidth >", "struct_c_r_c_1_1_parameters.html", null ],
+    [ "QChart", null, [
+      [ "Chart", "class_chart.html", null ]
+    ] ],
     [ "QDialog", null, [
       [ "ConnectionDialog", "class_connection_dialog.html", null ]
     ] ],
@@ -19,15 +22,20 @@ var hierarchy =
       [ "MainWindow", "class_main_window.html", null ]
     ] ],
     [ "QObject", null, [
-      [ "GamepadMonitor", "class_gamepad_monitor.html", null ],
+      [ "Gamepad", "class_gamepad.html", null ],
       [ "clientTCP", "classclient_t_c_p.html", null ],
       [ "clientUDP", "classclient_u_d_p.html", null ]
     ] ],
+    [ "qt_meta_stringdata_Chart_t", "structqt__meta__stringdata___chart__t.html", null ],
     [ "qt_meta_stringdata_clientTCP_t", "structqt__meta__stringdata__client_t_c_p__t.html", null ],
     [ "qt_meta_stringdata_clientUDP_t", "structqt__meta__stringdata__client_u_d_p__t.html", null ],
     [ "qt_meta_stringdata_ConnectionDialog_t", "structqt__meta__stringdata___connection_dialog__t.html", null ],
-    [ "qt_meta_stringdata_GamepadMonitor_t", "structqt__meta__stringdata___gamepad_monitor__t.html", null ],
+    [ "qt_meta_stringdata_Gamepad_t", "structqt__meta__stringdata___gamepad__t.html", null ],
     [ "qt_meta_stringdata_MainWindow_t", "structqt__meta__stringdata___main_window__t.html", null ],
+    [ "qt_meta_stringdata_Scene_t", "structqt__meta__stringdata___scene__t.html", null ],
+    [ "QWidget", null, [
+      [ "Scene", "class_scene.html", null ]
+    ] ],
     [ "CRC::Table< CRCType, CRCWidth >", "struct_c_r_c_1_1_table.html", null ],
     [ "Ui_ConnectionDialog", "class_ui___connection_dialog.html", [
       [ "Ui::ConnectionDialog", "class_ui_1_1_connection_dialog.html", null ]

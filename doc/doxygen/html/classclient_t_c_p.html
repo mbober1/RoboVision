@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('classclient_t_c_p.html',''); initResiz
 <p>TCP client connection class.  
  <a href="classclient_t_c_p.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="mytcp_8hpp_source.html">mytcp.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="tcp_8hpp_source.html">tcp.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for clientTCP:</div>
 <div class="dyncontent">
@@ -125,6 +125,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>batteryChanged</b> (i
 <tr class="memitem:ae9e02374329a7fbfc12bfda8e32564fa"><td class="memItemLeft" align="right" valign="top"><a id="ae9e02374329a7fbfc12bfda8e32564fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>distanceChanged</b> (int distance)</td></tr>
 <tr class="separator:ae9e02374329a7fbfc12bfda8e32564fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dce0882790a850df6d666021aea9e7"><td class="memItemLeft" align="right" valign="top"><a id="a16dce0882790a850df6d666021aea9e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>speedChanged</b> (int left, int right)</td></tr>
+<tr class="separator:a16dce0882790a850df6d666021aea9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd393fd9ace8b253c74caa8426bd1658"><td class="memItemLeft" align="right" valign="top"><a id="abd393fd9ace8b253c74caa8426bd1658"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>gyroChanged</b> (int x, int y, int z)</td></tr>
+<tr class="separator:abd393fd9ace8b253c74caa8426bd1658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565386fad65ead880c8d3376f49f6260"><td class="memItemLeft" align="right" valign="top"><a id="a565386fad65ead880c8d3376f49f6260"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>accelChanged</b> (int x, int y, int z)</td></tr>
+<tr class="separator:a565386fad65ead880c8d3376f49f6260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b7f9eb507f4da0c891bef1c1866dafc"><td class="memItemLeft" align="right" valign="top"><a id="a9b7f9eb507f4da0c891bef1c1866dafc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>closeConnection</b> ()</td></tr>
 <tr class="separator:a9b7f9eb507f4da0c891bef1c1866dafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,9 +319,10 @@ QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><b>socket</b></t
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="mytcp_8hpp_source.html">mytcp.hpp</a></li>
+<li>include/<a class="el" href="tcp_8hpp_source.html">tcp.hpp</a></li>
 <li>build/RoboVision_autogen/6YEA5652QU/moc_mytcp.cpp</li>
-<li>src/mytcp.cpp</li>
+<li>build/RoboVision_autogen/6YEA5652QU/moc_tcp.cpp</li>
+<li>src/tcp.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -7,7 +7,9 @@ var class_main_window =
     [ "changeConnectionStatus", "class_main_window.html#a53679cbbcb7362027bdb2eac6839847f", null ],
     [ "connectionError", "class_main_window.html#a2805e86c6e8e689f51ce8cc536596449", null ],
     [ "keyPressEvent", "class_main_window.html#a9c4f542263838b9ecd06eae839a42a34", null ],
-    [ "joystick", "class_main_window.html#a096077c4172c3ccd61b9ec00b0076519", null ],
+    [ "chart", "class_main_window.html#a49e608ed992fde7d85b3acc3ddbba6c2", null ],
+    [ "joystick", "class_main_window.html#abef2c46c6c37532609c79ad2aa860752", null ],
+    [ "scene", "class_main_window.html#a5fac52928ceff08c8137f4689aee3874", null ],
     [ "tcp", "class_main_window.html#aca9dd8232b913c9d25452e8ca21144a1", null ],
     [ "udp", "class_main_window.html#a2e713bc72772f8cfc590147bb55ca550", null ]
 ];
