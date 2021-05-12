@@ -111,9 +111,7 @@ void clientTCP::readyRead()
  */
 void clientTCP::ping()
 {
-    qDebug() << "PING!";
     std::string data = PingPacket().prepare();
-    qDebug() << data.c_str();
     socket->write(data.c_str(), data.size());
     this->lastPing = std::chrono::system_clock::now();
 }
