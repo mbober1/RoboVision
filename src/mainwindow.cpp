@@ -25,30 +25,18 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     connect(joystick.m_gamepad, &QGamepad::connectedChanged, this, &MainWindow::toggleDataTimer);
+    connect(tcp.socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::errorOccurred), this, &MainWindow::connectionError);
     connect(udp.socket, &QUdpSocket::stateChanged, this, &MainWindow::toggleDataTimer);
     connect(ui->actionConnect, &QAction::triggered, this, &MainWindow::actionConnect);
     connect(ui->actionDisconnect, &QAction::triggered, this, &MainWindow::actionDisconnect);
     connect(ui->actionQuit, &QAction::triggered, this, &MainWindow::close);
-    connect(tcp.socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::errorOccurred), this, &MainWindow::connectionError);
     connect(&dataTimer, &QTimer::timeout, this, &MainWindow::readData);
     connect(&tcp, &clientTCP::closeConnection, this, &MainWindow::actionDisconnect);
-
-    QObject::connect(&tcp, &clientTCP::latencyChanged, [this](int latency) {
-       ui->lcdNumberPing->display(latency);
-    });
-
-    QObject::connect(&tcp, &clientTCP::batteryChanged, [this](int level) {
-       ui->progressBarBattery->setValue(level);
-    });
-
-    QObject::connect(&tcp, &clientTCP::distanceChanged, [this](int distance) {
-       ui->progressBarObstacle->setValue(distance);
-    });
-
-    QObject::connect(&tcp, &clientTCP::speedChanged, [this](int left, int right) {
-       int speed = abs(left + right)/2;
-       ui->lcdNumberSpeed->display(speed);
-    });
+    connect(&tcp, &clientTCP::latencyChanged, this,  &MainWindow::ping);
+    connect(&tcp, &clientTCP::batteryChanged, this, &MainWindow::battery);
+    connect(&tcp, &clientTCP::distanceChanged, this, &MainWindow::obstacle);
+    connect(&tcp, &clientTCP::speedChanged, this, &MainWindow::speed);
+    connect(ui->actionGitHub, &QAction::triggered, this, &MainWindow::github);
 
     QObject::connect(&tcp, &clientTCP::accelChanged, [this](int x, int y, int z) {
        chart->addPoint(x,y,z);
@@ -56,16 +44,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
        this->scene->rotate(y, z, x);
-       qDebug() << x << y << z;
-    });
-
-    QObject::connect(ui->actionGitHub, &QAction::triggered, [this] () {
-       QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
+    //    qDebug() << x << y << z;
     });
 
     QChartView *chartView = new QChartView(this->chart);
     chartView->setRenderHint(QPainter::Antialiasing);
-
     ui->visualLayout->addWidget(scene->container);
     ui->chartLayout->addWidget(chartView);
 }
@@ -75,7 +58,6 @@ MainWindow::MainWindow(QWidget *parent)
  * A destructor.
  */
 MainWindow::~MainWindow() {
-    qDebug() << "koniec";
     actionDisconnect();
     delete ui;
 }
@@ -104,6 +86,10 @@ void MainWindow::actionDisconnect() {
     tcp.socket->close();
     udp.socket->close();
     scene->resetPosition();
+    this->ping(0);
+    this->speed(0, 0);
+    this->obstacle(0);
+    this->battery(0);
 }
 
 
@@ -133,10 +119,6 @@ void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
         ui->actionDisconnect->setVisible(true);
         ui->actionDisconnect->setEnabled(true);
         ui->labelConnectionStatus->setText("CONNECTING...");
-        break;
-    
-    default:
-        qDebug() << state;
         break;
     }
 }
@@ -178,22 +160,11 @@ void MainWindow::readData() {
     int nJoyX = -joystick.m_gamepad->axisLeftX() * 100;
     int nJoyY = -joystick.m_gamepad->axisLeftY() * 100;
 
-    // CONFIG
-    // - fPivYLimt  : The threshold at which the pivot action starts
-    //                This threshold is measured in units on the Y-axis
-    //                away from the X-axis (Y=0). A greater value will assign
-    //                more of the joystick's range to pivot actions.
-    //                Allowable range: (0..+127)
     float fPivYLimit = 32.0;
                 
-    // TEMP VARIABLES
-    float   nMotPremixL;    // Motor (left)  premixed output        (-128..+127)
-    float   nMotPremixR;    // Motor (right) premixed output        (-128..+127)
-    int     nPivSpeed;      // Pivot Speed                          (-128..+127)
-    float   fPivScale;      // Balance scale b/w drive and pivot    (   0..1   )
+    float nMotPremixL;
+    float nMotPremixR;
 
-
-    // Calculate Drive Turn output due to Joystick X input
     if (nJoyY >= 0) {
     // Forward
         nMotPremixL = (nJoyX>=0)? 127.0 : (127.0 + nJoyX);
@@ -204,20 +175,16 @@ void MainWindow::readData() {
         nMotPremixR = (nJoyX>=0)? 127.0 : (127.0 + nJoyX);
     }
 
-    // Scale Drive output due to Joystick Y input (throttle)
     nMotPremixL = nMotPremixL * nJoyY/128.0;
     nMotPremixR = nMotPremixR * nJoyY/128.0;
 
-    // Now calculate pivot amount
-    // - Strength of pivot (nPivSpeed) based on Joystick X input
-    // - Blending of pivot vs drive (fPivScale) based on Joystick Y input
-    nPivSpeed = nJoyX;
-    fPivScale = (abs(nJoyY)>fPivYLimit)? 0.0 : (1.0 - abs(nJoyY)/fPivYLimit);
+    int nPivSpeed = nJoyX;
+    float fPivScale = (abs(nJoyY)>fPivYLimit)? 0.0 : (1.0 - abs(nJoyY)/fPivYLimit);
 
     int left = (1.0-fPivScale)*nMotPremixL + fPivScale*( nPivSpeed);
     int right = (1.0-fPivScale)*nMotPremixR + fPivScale*(-nPivSpeed);
 
-	printf("L: %d, R: %d\n", left, right);			
+	// printf("L: %d, R: %d\n", left, right);			
     udp.send(left, right);
 }
 
@@ -229,4 +196,26 @@ void MainWindow::toggleDataTimer() {
     if(joystick.m_gamepad->isConnected() && tcp.socket->state() == QAbstractSocket::ConnectedState && udp.socket->state() == QAbstractSocket::ConnectedState) {
         dataTimer.start(50);
     } else dataTimer.stop();
+}
+
+
+void MainWindow::ping(int latency) {
+    ui->lcdNumberPing->display(latency);
+}
+
+void MainWindow::battery(int level) {
+    ui->progressBarBattery->setValue(level);
+}
+
+void MainWindow::obstacle(int distance) {
+    ui->progressBarObstacle->setValue(distance);
+}
+
+void MainWindow::speed(int left, int right) {
+    int speed = abs(left + right)/2;
+    ui->lcdNumberSpeed->display(speed);
+}
+
+void MainWindow::github() {
+    QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
 }

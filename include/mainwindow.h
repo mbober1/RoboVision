@@ -47,6 +47,11 @@ public slots:
     void actionConnect();
     void actionDisconnect();
     void changeConnectionStatus(QAbstractSocket::SocketState status);
+    void ping(int latency);
+    void battery(int level);
+    void obstacle(int distance);
+    void speed(int left, int right);
+    void github();
 
 private:
     QTimer dataTimer;
