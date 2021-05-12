@@ -52,23 +52,18 @@ void clientTCP::disconnected()
 void clientTCP::readyRead()
 {
     std::string data = socket->readAll().toStdString();
-    // qDebug() << "Odbieram: " << data.c_str();
-
 
     int separator = data.find(';');
-    // printf("Znalazłem separator na miejscu: %d\n", separator);
     
     while(separator != std::string::npos) {
         std::string parse = data.substr(0, separator);
         data.erase(0, separator + 1);
-        // printf("Nowy string: %s\n", parse.c_str());
         
         Packet* packet = Packet::decode(parse);
         if (packet != nullptr) {
             switch (packet->getType())
             {
                 case 'P': {
-                    // qDebug() << "PONG!";
                     auto end = std::chrono::system_clock::now();
                     std::chrono::duration<double> elapsed_seconds = end-this->lastPing;
                     emit latencyChanged(elapsed_seconds.count() * 1000);
@@ -89,7 +84,6 @@ void clientTCP::readyRead()
                 
                 case 'G':
                     emit gyroChanged(((GyroPacket*)packet)->x, ((GyroPacket*)packet)->y, ((GyroPacket*)packet)->z);
-                    // printf("gyro %d, %d, %d\n", ((GyroPacket*)packet)->x, ((GyroPacket*)packet)->y, ((GyroPacket*)packet)->z);
                     break;
 
                 case 'A':
@@ -108,7 +102,6 @@ void clientTCP::readyRead()
             }
         } else return;
         separator = data.find(';');
-        // qDebug() << "Znalazłem separator na miejscu: " << separator;
     }
 }
 
