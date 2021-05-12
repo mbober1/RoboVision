@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
-       this->scene->rotate(x, 0, y); //degToPi
+       this->scene->rotate(y, z, x);
        qDebug() << x << y << z;
     });
 
@@ -103,6 +103,7 @@ void MainWindow::actionConnect() {
 void MainWindow::actionDisconnect() {
     tcp.socket->close();
     udp.socket->close();
+    scene->resetPosition();
 }
 
 

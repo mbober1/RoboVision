@@ -37,8 +37,8 @@ set(HEADERS
     include/crc.h
     include/packet.hpp)
 set(UIS
-    ui/ui_mainwindow.h
-    ui/ui_connectiondialog.h)
+    ui_mainwindow.h
+    ui_connectiondialog.h)
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
 target_include_directories(${PROJECT_NAME} PUBLIC include ui)
 

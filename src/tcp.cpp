@@ -89,6 +89,7 @@ void clientTCP::readyRead()
                 
                 case 'G':
                     emit gyroChanged(((GyroPacket*)packet)->x, ((GyroPacket*)packet)->y, ((GyroPacket*)packet)->z);
+                    // printf("gyro %d, %d, %d\n", ((GyroPacket*)packet)->x, ((GyroPacket*)packet)->y, ((GyroPacket*)packet)->z);
                     break;
 
                 case 'A':

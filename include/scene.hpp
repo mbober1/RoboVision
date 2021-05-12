@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SCENE_H
 #define SCENE_H
 
@@ -17,6 +18,7 @@
 #include "qt3dwindow.h"
 #include <math.h>
 
+
 /*!
 *   \file 
 *   \brief The file contains the 3D scene class.
@@ -34,6 +36,7 @@ public:
 
 public slots:
     void rotate(float x, float y, float z);
+    void resetPosition();
 
 private:
     float x, y, z;

@@ -2,7 +2,6 @@
 
 float degToPi(float deg) { return deg * (M_PI/180); }
 
-
 Scene::Scene(QWidget *parent) : 
 QWidget(parent), x(0), y(0), z(0)
 {
@@ -45,16 +44,16 @@ QWidget(parent), x(0), y(0), z(0)
     loader->setSource(data);
     this->robot->addComponent(loader);
 
-    this->rotate(degToPi(10), degToPi(150), degToPi(0));
+    this->resetPosition();
 
     view->setRootEntity(rootEntity);
 }
 
 void Scene::rotate(float x, float y, float z) {
     auto *transform = new Qt3DCore::QTransform();
-    this->x += x;
-    this->y += y;
-    this->z += z;
+    this->x += degToPi(x);
+    this->y += degToPi(y);
+    this->z += degToPi(z);
     QVector3D offset(0, 0, 55);
     QMatrix4x4 matrix_x(1, 0, 0, offset[0], 0, cos(this->x), -sin(this->x), offset[1] , 0, sin(this->x), cos(this->x), offset[2], 0, 0, 0, 1);
     QMatrix4x4 matrix_y(cos(this->y), 0, sin(this->y), 0, 0, 1, 0, 0, -sin(this->y), 0, cos(this->y), 0, 0, 0, 0, 1);
@@ -62,4 +61,11 @@ void Scene::rotate(float x, float y, float z) {
     QMatrix4x4 matrix = matrix_x * matrix_y * matrix_z;
     transform->setMatrix(matrix);
     this->robot->addComponent(transform);
+}
+
+void Scene::resetPosition() {
+    this->x = 0;
+    this->y = 0;
+    this->z = 0;
+    this->rotate(10, 150, 0);
 }
