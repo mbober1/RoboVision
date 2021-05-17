@@ -66,7 +66,6 @@ Packet* Packet::decode(std::string &data) {
             break;
         }
     } else {
-        printf("bad crc :(\n");
         return nullptr;
     }
 }
