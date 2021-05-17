@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keypressevent_202',['keyPressEvent',['../class_main_window.html#a9c4f542263838b9ecd06eae839a42a34',1,'MainWindow']]]
+  ['mainwindow_201',['MainWindow',['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]],
+  ['maketable_202',['MakeTable',['../struct_c_r_c_1_1_parameters.html#a07a2e848a332b32b17d8eddfe5deb11a',1,'CRC::Parameters']]]
 ];

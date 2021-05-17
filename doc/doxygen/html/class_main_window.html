@@ -153,7 +153,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9c4f542263838b9ecd06eae839a42a34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a9c4f542263838b9ecd06eae839a42a34">keyPressEvent</a> (QKeyEvent *event)</td></tr>
+<tr class="memitem:a9c4f542263838b9ecd06eae839a42a34"><td class="memItemLeft" align="right" valign="top"><a id="a9c4f542263838b9ecd06eae839a42a34"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>keyPressEvent</b> (QKeyEvent *event)</td></tr>
 <tr class="separator:a9c4f542263838b9ecd06eae839a42a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -176,7 +177,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>A constructor. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>QWidget type parent. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">parent</td><td>QWidget type parent. </td></tr>
   </table>
   </dd>
 </dl>
@@ -305,7 +306,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Display battery value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>Value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Value </td></tr>
   </table>
   </dd>
 </dl>
@@ -337,7 +338,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Change connection status slot </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td>Socket state </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Socket state </td></tr>
   </table>
   </dd>
 </dl>
@@ -361,7 +362,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Connection error handler </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">error</td><td>Socket error </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>Socket error </td></tr>
   </table>
   </dd>
 </dl>
@@ -394,38 +395,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c4f542263838b9ecd06eae839a42a34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4f542263838b9ecd06eae839a42a34">&#9670;&nbsp;</a></span>keyPressEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainWindow::keyPressEvent </td>
-          <td>(</td>
-          <td class="paramtype">QKeyEvent *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>CKeyboard key event handler </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>Key event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a8596a8e9868e66b38b784b11c2d8cd01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8596a8e9868e66b38b784b11c2d8cd01">&#9670;&nbsp;</a></span>obstacle</h2>
 
@@ -451,7 +420,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Display distance to nearest obstacle </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">distance</td><td>Value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distance</td><td>Value </td></tr>
   </table>
   </dd>
 </dl>
@@ -483,7 +452,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Display ping value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">latency</td><td>Value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">latency</td><td>Value </td></tr>
   </table>
   </dd>
 </dl>
@@ -525,8 +494,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Display speed value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">left</td><td>Left motor speed </td></tr>
-    <tr><td class="paramname">right</td><td>Right motor speed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Left motor speed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>Right motor speed </td></tr>
   </table>
   </dd>
 </dl>

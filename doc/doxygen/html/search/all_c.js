@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['qt_5fmeta_5fstringdata_5faboutprogramdialog_5ft_75',['qt_meta_stringdata_AboutProgramDialog_t',['../structqt__meta__stringdata___about_program_dialog__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fchart_5ft_76',['qt_meta_stringdata_Chart_t',['../structqt__meta__stringdata___chart__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fclienttcp_5ft_77',['qt_meta_stringdata_clientTCP_t',['../structqt__meta__stringdata__client_t_c_p__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fclientudp_5ft_78',['qt_meta_stringdata_clientUDP_t',['../structqt__meta__stringdata__client_u_d_p__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fconnectiondialog_5ft_79',['qt_meta_stringdata_ConnectionDialog_t',['../structqt__meta__stringdata___connection_dialog__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fgamepad_5ft_80',['qt_meta_stringdata_Gamepad_t',['../structqt__meta__stringdata___gamepad__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fmainwindow_5ft_81',['qt_meta_stringdata_MainWindow_t',['../structqt__meta__stringdata___main_window__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fscene_5ft_82',['qt_meta_stringdata_Scene_t',['../structqt__meta__stringdata___scene__t.html',1,'']]]
+  ['readyread_82',['readyRead',['../classclient_t_c_p.html#a96c32edf9bb6a5dc35169ff1f7205f93',1,'clientTCP']]],
+  ['reflectinput_83',['reflectInput',['../struct_c_r_c_1_1_parameters.html#ac069bff622f62a8b6f158ed22fd67287',1,'CRC::Parameters']]],
+  ['reflectoutput_84',['reflectOutput',['../struct_c_r_c_1_1_parameters.html#ac92c0cd24ad04cbe7fe155f001381941',1,'CRC::Parameters']]],
+  ['resetposition_85',['resetPosition',['../class_scene.html#a2b08488d2761604cd080a89ec50a1a33',1,'Scene']]],
+  ['robovision_20_2d_20remote_20control_20software_86',['RoboVision - Remote control software',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['rotate_87',['rotate',['../class_scene.html#a57f113206c65bb2e6948feb1a878f67a',1,'Scene']]]
 ];
