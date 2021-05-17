@@ -4,7 +4,7 @@
 
 /**
  * A constructor.
- * @param parent QWidget type parent.
+ * @param[in,out] parent QWidget type parent.
  */
 ConnectionDialog::ConnectionDialog(QWidget *parent) :
     QDialog(parent),

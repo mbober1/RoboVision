@@ -8,8 +8,8 @@
 
 /**
  * A constructor.
- * @param parent QWidget type parent.
- * @param wFlags Window flags.
+ * @param[in,out] parent QWidget type parent.
+ * @param[in] wFlags Window flags.
  */
 Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) : 
     QChart(QChart::ChartTypeCartesian, parent, wFlags),
@@ -67,9 +67,9 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
 
 /**
  * Add point to chart.
- * @param x X series value.
- * @param y Y series value.
- * @param z Z series value.
+ * @param[in] x X series value.
+ * @param[in] y Y series value.
+ * @param[in] z Z series value.
  */
 void Chart::addPoint(int x, int y, int z)
 {

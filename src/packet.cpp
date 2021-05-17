@@ -15,7 +15,7 @@ Packet::~Packet() {}
 
 /**
  * Calculate CRC for given string
- * @param data String with data frame.
+ * @param[in] data String with data frame.
  * @return Calculated crc.
  */
 uint8_t Packet::checksum(const std::string &data) {
@@ -25,7 +25,7 @@ uint8_t Packet::checksum(const std::string &data) {
 
 /**
  * Decode incoming packet.
- * @param data String with data frame.
+ * @param[in] data String with data frame.
  * @return Pointer to decoded packet.
  */
 Packet* Packet::decode(std::string &data) {
@@ -147,8 +147,8 @@ std::string ClosePacket::prepare() {
 
 /**
  * A constructor.
- * @param left      Engine power from -100 to 100.
- * @param right     Engine power from -100 to 100.
+ * @param[in] left      Engine power from -100 to 100.
+ * @param[in] right     Engine power from -100 to 100.
  */
 EnginePacket::EnginePacket(const int8_t &left, const int8_t &right) : left(left), right(right) {}
 
@@ -167,7 +167,7 @@ EnginePacket::~EnginePacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data  Data string.
+ * @param[in] data  Data string.
  */
 EnginePacket::EnginePacket(const std::string &data) {
     if(!data.empty()) {
@@ -211,7 +211,7 @@ std::string EnginePacket::prepare() {
 
 /**
  * A constructor.
- * @param level Battery level 0-100.
+ * @param[in] level Battery level 0-100.
  */
 BatteryPacket::BatteryPacket(const uint8_t &level) : level(level) {}
 
@@ -224,7 +224,7 @@ BatteryPacket::~BatteryPacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data Data string.
+ * @param[in] data Data string.
  */
 BatteryPacket::BatteryPacket(const std::string &data) {
     if(!data.empty()) {
@@ -263,7 +263,7 @@ std::string BatteryPacket::prepare() {
 
 /**
  * A constructor.
- * @param distance Obstacle distance 0-100.
+ * @param[in] distance Obstacle distance 0-100.
  */
 DistancePacket::DistancePacket(const uint8_t &distance) : distance(distance) {}
 
@@ -276,7 +276,7 @@ DistancePacket::~DistancePacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data Data string.
+ * @param[in] data Data string.
  */
 DistancePacket::DistancePacket(const std::string &data) {
     if(!data.empty()) {
@@ -315,9 +315,9 @@ std::string DistancePacket::prepare() {
 
 /**
  * A constructor.
- * @param x     Gyroscop data of X axis.
- * @param y     Gyroscop data of Y axis.
- * @param z     Gyroscop data of Z axis.
+ * @param[in] x     Gyroscop data of X axis.
+ * @param[in] y     Gyroscop data of Y axis.
+ * @param[in] z     Gyroscop data of Z axis.
  */
 GyroPacket::GyroPacket(const int8_t &x, const int8_t &y, const int8_t &z) : x(x), y(y), z(z) {}
 
@@ -330,7 +330,7 @@ GyroPacket::~GyroPacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data      Data string.
+ * @param[in] data      Data string.
  */
 GyroPacket::GyroPacket(std::string data) {
     if(!data.empty()) {
@@ -384,9 +384,9 @@ std::string GyroPacket::prepare() {
 
 /**
  * A constructor.
- * @param x     Accelerometer data of X axis.
- * @param y     Accelerometer data of Y axis.
- * @param z     Accelerometer data of Z axis.
+ * @param[in] x     Accelerometer data of X axis.
+ * @param[in] y     Accelerometer data of Y axis.
+ * @param[in] z     Accelerometer data of Z axis.
  */
 AcceloPacket::AcceloPacket(const int8_t &x, const int8_t &y, const int8_t &z) : x(x), y(y), z(z) {}
 
@@ -399,7 +399,7 @@ AcceloPacket::~AcceloPacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data      Data string.
+ * @param[in] data      Data string.
  */
 AcceloPacket::AcceloPacket(std::string data) {
     if(!data.empty()) {
@@ -454,8 +454,8 @@ std::string AcceloPacket::prepare() {
 
 /**
  * A constructor.
- * @param left      Engine speed.
- * @param right     Engine speed.
+ * @param[in] left      Engine speed.
+ * @param[in] right     Engine speed.
  */
 SpeedPacket::SpeedPacket(const int8_t &left, const int8_t &right) : left(left), right(right) {}
 
@@ -468,7 +468,7 @@ SpeedPacket::~SpeedPacket() {}
 
 /**
  * A constructor for parsing data.
- * @param data      Data string.
+ * @param[in] data      Data string.
  */
 SpeedPacket::SpeedPacket(const std::string &data) {
     if(!data.empty()) {

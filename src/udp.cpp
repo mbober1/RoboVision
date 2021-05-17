@@ -3,7 +3,7 @@
 
 /**
  * A constructor.
- * @param parent QWidget type parent.
+ * @param[in,out] parent QWidget type parent.
  */
 clientUDP::clientUDP(QObject *parent) :
     QObject(parent)
@@ -33,8 +33,8 @@ void clientUDP::close() {
 
 /**
  * Send sterring data
- * @param left Left engine power 0-100
- * @param left Right engine power 0-100
+ * @param[in] left Left engine power 0-100
+ * @param[in] left Right engine power 0-100
  */
 void clientUDP::send(int left, int right)
 {   

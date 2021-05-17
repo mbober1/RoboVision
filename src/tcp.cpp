@@ -3,7 +3,7 @@
 
 /**
  * A constructor.
- * @param parent QWidget type parent.
+ * @param[in,out] parent QWidget type parent.
  */
 clientTCP::clientTCP(QObject *parent) :
     QObject(parent)

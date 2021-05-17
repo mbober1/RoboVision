@@ -10,7 +10,7 @@
 
 /**
  * A constructor.
- * @param parent QWidget type parent.
+ * @param[in,out] parent QWidget type parent.
  */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -97,7 +97,7 @@ void MainWindow::actionDisconnect() {
 
 /**
  * Change connection status slot
- * @param state Socket state
+ * @param[in] state Socket state
  */
 void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
     switch (state)
@@ -128,7 +128,7 @@ void MainWindow::changeConnectionStatus(QAbstractSocket::SocketState state) {
 
 /**
  * Connection error handler
- * @param error Socket error
+ * @param[in] error Socket error
  */
 void MainWindow::connectionError(QAbstractSocket::SocketError error) {
     QString mess = "Connection error occured! Please try again";
@@ -143,15 +143,6 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
         break;
     }
     QMessageBox::critical(this, "Connection error", mess);
-}
-
-
-/**
- * CKeyboard key event handler
- * @param event Key event
- */
-void MainWindow::keyPressEvent(QKeyEvent* event) {
-    qDebug() << event->text();
 }
 
 
@@ -202,7 +193,7 @@ void MainWindow::toggleDataTimer() {
 
 /**
  * Display ping value
- * @param latency Value
+ * @param[in] latency Value
  */
 void MainWindow::ping(int latency) {
     ui->lcdNumberPing->display(latency);
@@ -211,7 +202,7 @@ void MainWindow::ping(int latency) {
 
 /**
  * Display battery value
- * @param level Value
+ * @param[in] level Value
  */
 void MainWindow::battery(int level) {
     ui->progressBarBattery->setValue(level);
@@ -220,7 +211,7 @@ void MainWindow::battery(int level) {
 
 /**
  * Display distance to nearest obstacle
- * @param distance Value
+ * @param[in] distance Value
  */
 void MainWindow::obstacle(int distance) {
     ui->progressBarObstacle->setValue(distance);
@@ -229,8 +220,8 @@ void MainWindow::obstacle(int distance) {
 
 /**
  * Display speed value
- * @param left Left motor speed
- * @param right Right motor speed
+ * @param[in] left Left motor speed
+ * @param[in] right Right motor speed
  */
 void MainWindow::speed(int left, int right) {
     int speed = abs(left + right)/2;

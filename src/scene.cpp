@@ -3,14 +3,14 @@
 
 /**
  * Convert degrees to radians
- * @param deg Degrees value
+ * @param[in] deg Degrees value
  */
 float degToPi(float deg) { return deg * (M_PI/180); }
 
 
 /**
  * A constructor.
- * @param parent QWidget type parent
+ * @param[in,out] parent QWidget type parent
  */
 Scene::Scene(QWidget *parent) : 
 QWidget(parent), x(0), y(0), z(0)
@@ -62,9 +62,9 @@ QWidget(parent), x(0), y(0), z(0)
 
 /**
  * Rotate 3D model
- * @param x Rotation about the X axis in radians
- * @param z Rotation about the Y axis in radians
- * @param z Rotation about the Z axis in radians
+ * @param[in] x Rotation about the X axis in radians
+ * @param[in] z Rotation about the Y axis in radians
+ * @param[in] z Rotation about the Z axis in radians
  */
 void Scene::rotate(float x, float y, float z) {
     auto *transform = new Qt3DCore::QTransform();
