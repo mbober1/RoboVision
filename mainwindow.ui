@@ -257,21 +257,37 @@
    <addaction name="menuHelp"/>
   </widget>
   <action name="actionConnect">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icon/icons/connect.png</normaloff>:/icon/icons/connect.png</iconset>
+   </property>
    <property name="text">
     <string>Connect</string>
    </property>
   </action>
   <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icon/icons/quit.png</normaloff>:/icon/icons/quit.png</iconset>
+   </property>
    <property name="text">
     <string>Quit</string>
    </property>
   </action>
   <action name="actionGitHub">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icon/icons/github.png</normaloff>:/icon/icons/github.png</iconset>
+   </property>
    <property name="text">
     <string>GitHub</string>
    </property>
   </action>
   <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icon/icons/information.png</normaloff>:/icon/icons/information.png</iconset>
+   </property>
    <property name="text">
     <string>About this program</string>
    </property>
@@ -279,6 +295,10 @@
   <action name="actionDisconnect">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icon/icons/disconnect.png</normaloff>:/icon/icons/disconnect.png</iconset>
    </property>
    <property name="text">
     <string>Disconnect</string>
@@ -288,6 +308,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
