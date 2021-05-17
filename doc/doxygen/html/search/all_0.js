@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['accelopacket_0',['AcceloPacket',['../class_accelo_packet.html',1,'AcceloPacket'],['../class_accelo_packet.html#a694414dc19029f91c9d188c9d647a4d2',1,'AcceloPacket::AcceloPacket(std::string data)'],['../class_accelo_packet.html#a7bdfaac3c7f06fc82c2a3a0436295061',1,'AcceloPacket::AcceloPacket(const int8_t &amp;x, const int8_t &amp;y, const int8_t &amp;z)']]],
-  ['actionconnect_1',['actionConnect',['../class_main_window.html#a50ad376f4c1f3a989b381de4fd3a071d',1,'MainWindow']]],
-  ['actiondisconnect_2',['actionDisconnect',['../class_main_window.html#aeed5af23fce11f0ef698e6e5fdc14a30',1,'MainWindow']]],
-  ['addpoint_3',['addPoint',['../class_chart.html#aa2c554795b67a0270c9165010da94cf1',1,'Chart']]]
+  ['about_0',['about',['../class_main_window.html#a7be6a5d98970ac1a6296c6f9aee1e9bb',1,'MainWindow']]],
+  ['aboutdialog_1',['AboutDialog',['../class_ui_1_1_about_dialog.html',1,'Ui']]],
+  ['aboutdialog_2eh_2',['aboutdialog.h',['../aboutdialog_8h.html',1,'']]],
+  ['aboutprogramdialog_3',['AboutProgramDialog',['../class_about_program_dialog.html',1,'AboutProgramDialog'],['../class_about_program_dialog.html#a936b89dc9c420ac4ce81e038dfa92ddc',1,'AboutProgramDialog::AboutProgramDialog()']]],
+  ['accelopacket_4',['AcceloPacket',['../class_accelo_packet.html',1,'AcceloPacket'],['../class_accelo_packet.html#a694414dc19029f91c9d188c9d647a4d2',1,'AcceloPacket::AcceloPacket(std::string data)'],['../class_accelo_packet.html#a7bdfaac3c7f06fc82c2a3a0436295061',1,'AcceloPacket::AcceloPacket(const int8_t &amp;x, const int8_t &amp;y, const int8_t &amp;z)']]],
+  ['actionconnect_5',['actionConnect',['../class_main_window.html#a50ad376f4c1f3a989b381de4fd3a071d',1,'MainWindow']]],
+  ['actiondisconnect_6',['actionDisconnect',['../class_main_window.html#aeed5af23fce11f0ef698e6e5fdc14a30',1,'MainWindow']]],
+  ['addpoint_7',['addPoint',['../class_chart.html#aa2c554795b67a0270c9165010da94cf1',1,'Chart']]]
 ];

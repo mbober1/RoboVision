@@ -1,5 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
+    [ "aboutdialog.h", "aboutdialog_8h.html", [
+      [ "AboutProgramDialog", "class_about_program_dialog.html", "class_about_program_dialog" ]
+    ] ],
     [ "chart.hpp", "chart_8hpp.html", [
       [ "Chart", "class_chart.html", "class_chart" ]
     ] ],
@@ -24,9 +27,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "AcceloPacket", "class_accelo_packet.html", "class_accelo_packet" ],
       [ "GyroPacket", "class_gyro_packet.html", "class_gyro_packet" ]
     ] ],
-    [ "scene.hpp", "scene_8hpp.html", [
-      [ "Scene", "class_scene.html", "class_scene" ]
-    ] ],
+    [ "scene.hpp", "scene_8hpp.html", "scene_8hpp" ],
     [ "tcp.hpp", "tcp_8hpp.html", [
       [ "clientTCP", "classclient_t_c_p.html", "classclient_t_c_p" ]
     ] ],

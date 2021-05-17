@@ -23,6 +23,18 @@ void \mbox{\hyperlink{class_main_window_a50ad376f4c1f3a989b381de4fd3a071d}{actio
 void \mbox{\hyperlink{class_main_window_aeed5af23fce11f0ef698e6e5fdc14a30}{action\+Disconnect}} ()
 \item 
 void \mbox{\hyperlink{class_main_window_a53679cbbcb7362027bdb2eac6839847f}{change\+Connection\+Status}} (QAbstract\+Socket\+::\+Socket\+State status)
+\item 
+void \mbox{\hyperlink{class_main_window_a8a32d9a8a5c1c114a1dd84103c2e048f}{ping}} (int latency)
+\item 
+void \mbox{\hyperlink{class_main_window_ad30e1d8b098057fb2cbc5b094b3eadfd}{battery}} (int level)
+\item 
+void \mbox{\hyperlink{class_main_window_a8596a8e9868e66b38b784b11c2d8cd01}{obstacle}} (int distance)
+\item 
+void \mbox{\hyperlink{class_main_window_a83bd7c89d149fd3c094c5ab09839851a}{speed}} (int left, int right)
+\item 
+void \mbox{\hyperlink{class_main_window_a108f5c5c1f4ce4aab968880c94b151c5}{github}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a7be6a5d98970ac1a6296c6f9aee1e9bb}{about}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -82,7 +94,13 @@ A constructor.
 A destructor. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_main_window_a50ad376f4c1f3a989b381de4fd3a071d}\label{class_main_window_a50ad376f4c1f3a989b381de4fd3a071d}} 
+\mbox{\Hypertarget{class_main_window_a7be6a5d98970ac1a6296c6f9aee1e9bb}\label{class_main_window_a7be6a5d98970ac1a6296c6f9aee1e9bb}} 
+\index{MainWindow@{MainWindow}!about@{about}}
+\index{about@{about}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{about}{about}}
+{\footnotesize\ttfamily void Main\+Window\+::about (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Display the popup about dialog \mbox{\Hypertarget{class_main_window_a50ad376f4c1f3a989b381de4fd3a071d}\label{class_main_window_a50ad376f4c1f3a989b381de4fd3a071d}} 
 \index{MainWindow@{MainWindow}!actionConnect@{actionConnect}}
 \index{actionConnect@{actionConnect}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{actionConnect}{actionConnect}}
@@ -94,7 +112,18 @@ Connect to server slot. \mbox{\Hypertarget{class_main_window_aeed5af23fce11f0ef6
 \doxysubsubsection{\texorpdfstring{actionDisconnect}{actionDisconnect}}
 {\footnotesize\ttfamily void Main\+Window\+::action\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
-Disconect from server slot. \mbox{\Hypertarget{class_main_window_a53679cbbcb7362027bdb2eac6839847f}\label{class_main_window_a53679cbbcb7362027bdb2eac6839847f}} 
+Disconect from server slot. \mbox{\Hypertarget{class_main_window_ad30e1d8b098057fb2cbc5b094b3eadfd}\label{class_main_window_ad30e1d8b098057fb2cbc5b094b3eadfd}} 
+\index{MainWindow@{MainWindow}!battery@{battery}}
+\index{battery@{battery}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{battery}{battery}}
+{\footnotesize\ttfamily void Main\+Window\+::battery (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Display battery value 
+\begin{DoxyParams}{Parameters}
+{\em level} & Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a53679cbbcb7362027bdb2eac6839847f}\label{class_main_window_a53679cbbcb7362027bdb2eac6839847f}} 
 \index{MainWindow@{MainWindow}!changeConnectionStatus@{changeConnectionStatus}}
 \index{changeConnectionStatus@{changeConnectionStatus}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{changeConnectionStatus}{changeConnectionStatus}}
@@ -116,7 +145,13 @@ Connection error handler
 {\em error} & Socket error \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_a9c4f542263838b9ecd06eae839a42a34}\label{class_main_window_a9c4f542263838b9ecd06eae839a42a34}} 
+\mbox{\Hypertarget{class_main_window_a108f5c5c1f4ce4aab968880c94b151c5}\label{class_main_window_a108f5c5c1f4ce4aab968880c94b151c5}} 
+\index{MainWindow@{MainWindow}!github@{github}}
+\index{github@{github}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{github}{github}}
+{\footnotesize\ttfamily void Main\+Window\+::github (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Open github link in browser \mbox{\Hypertarget{class_main_window_a9c4f542263838b9ecd06eae839a42a34}\label{class_main_window_a9c4f542263838b9ecd06eae839a42a34}} 
 \index{MainWindow@{MainWindow}!keyPressEvent@{keyPressEvent}}
 \index{keyPressEvent@{keyPressEvent}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
@@ -125,6 +160,41 @@ Connection error handler
 CKeyboard key event handler 
 \begin{DoxyParams}{Parameters}
 {\em event} & Key event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a8596a8e9868e66b38b784b11c2d8cd01}\label{class_main_window_a8596a8e9868e66b38b784b11c2d8cd01}} 
+\index{MainWindow@{MainWindow}!obstacle@{obstacle}}
+\index{obstacle@{obstacle}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{obstacle}{obstacle}}
+{\footnotesize\ttfamily void Main\+Window\+::obstacle (\begin{DoxyParamCaption}\item[{int}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Display distance to nearest obstacle 
+\begin{DoxyParams}{Parameters}
+{\em distance} & Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a8a32d9a8a5c1c114a1dd84103c2e048f}\label{class_main_window_a8a32d9a8a5c1c114a1dd84103c2e048f}} 
+\index{MainWindow@{MainWindow}!ping@{ping}}
+\index{ping@{ping}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ping}{ping}}
+{\footnotesize\ttfamily void Main\+Window\+::ping (\begin{DoxyParamCaption}\item[{int}]{latency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Display ping value 
+\begin{DoxyParams}{Parameters}
+{\em latency} & Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a83bd7c89d149fd3c094c5ab09839851a}\label{class_main_window_a83bd7c89d149fd3c094c5ab09839851a}} 
+\index{MainWindow@{MainWindow}!speed@{speed}}
+\index{speed@{speed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily void Main\+Window\+::speed (\begin{DoxyParamCaption}\item[{int}]{left,  }\item[{int}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Display speed value 
+\begin{DoxyParams}{Parameters}
+{\em left} & Left motor speed \\
+\hline
+{\em right} & Right motor speed \\
 \hline
 \end{DoxyParams}
 

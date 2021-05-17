@@ -111,6 +111,18 @@ Public Slots</h2></td></tr>
 <tr class="separator:aeed5af23fce11f0ef698e6e5fdc14a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53679cbbcb7362027bdb2eac6839847f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a53679cbbcb7362027bdb2eac6839847f">changeConnectionStatus</a> (QAbstractSocket::SocketState status)</td></tr>
 <tr class="separator:a53679cbbcb7362027bdb2eac6839847f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a32d9a8a5c1c114a1dd84103c2e048f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8a32d9a8a5c1c114a1dd84103c2e048f">ping</a> (int latency)</td></tr>
+<tr class="separator:a8a32d9a8a5c1c114a1dd84103c2e048f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30e1d8b098057fb2cbc5b094b3eadfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ad30e1d8b098057fb2cbc5b094b3eadfd">battery</a> (int level)</td></tr>
+<tr class="separator:ad30e1d8b098057fb2cbc5b094b3eadfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8596a8e9868e66b38b784b11c2d8cd01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8596a8e9868e66b38b784b11c2d8cd01">obstacle</a> (int distance)</td></tr>
+<tr class="separator:a8596a8e9868e66b38b784b11c2d8cd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bd7c89d149fd3c094c5ab09839851a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a83bd7c89d149fd3c094c5ab09839851a">speed</a> (int left, int right)</td></tr>
+<tr class="separator:a83bd7c89d149fd3c094c5ab09839851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108f5c5c1f4ce4aab968880c94b151c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a108f5c5c1f4ce4aab968880c94b151c5">github</a> ()</td></tr>
+<tr class="separator:a108f5c5c1f4ce4aab968880c94b151c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be6a5d98970ac1a6296c6f9aee1e9bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7be6a5d98970ac1a6296c6f9aee1e9bb">about</a> ()</td></tr>
+<tr class="separator:a7be6a5d98970ac1a6296c6f9aee1e9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -190,6 +202,32 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7be6a5d98970ac1a6296c6f9aee1e9bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be6a5d98970ac1a6296c6f9aee1e9bb">&#9670;&nbsp;</a></span>about</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::about </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display the popup about dialog </p>
+
+</div>
+</div>
 <a id="a50ad376f4c1f3a989b381de4fd3a071d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50ad376f4c1f3a989b381de4fd3a071d">&#9670;&nbsp;</a></span>actionConnect</h2>
 
@@ -239,6 +277,38 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Disconect from server slot. </p>
+
+</div>
+</div>
+<a id="ad30e1d8b098057fb2cbc5b094b3eadfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30e1d8b098057fb2cbc5b094b3eadfd">&#9670;&nbsp;</a></span>battery</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::battery </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display battery value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Value </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -298,6 +368,32 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a108f5c5c1f4ce4aab968880c94b151c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108f5c5c1f4ce4aab968880c94b151c5">&#9670;&nbsp;</a></span>github</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::github </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open github link in browser </p>
+
+</div>
+</div>
 <a id="a9c4f542263838b9ecd06eae839a42a34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c4f542263838b9ecd06eae839a42a34">&#9670;&nbsp;</a></span>keyPressEvent()</h2>
 
@@ -324,6 +420,113 @@ Protected Member Functions</h2></td></tr>
 <p>CKeyboard key event handler </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Key event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8596a8e9868e66b38b784b11c2d8cd01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8596a8e9868e66b38b784b11c2d8cd01">&#9670;&nbsp;</a></span>obstacle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::obstacle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display distance to nearest obstacle </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>Value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a32d9a8a5c1c114a1dd84103c2e048f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a32d9a8a5c1c114a1dd84103c2e048f">&#9670;&nbsp;</a></span>ping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::ping </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>latency</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display ping value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latency</td><td>Value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83bd7c89d149fd3c094c5ab09839851a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83bd7c89d149fd3c094c5ab09839851a">&#9670;&nbsp;</a></span>speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::speed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display speed value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>Left motor speed </td></tr>
+    <tr><td class="paramname">right</td><td>Right motor speed </td></tr>
   </table>
   </dd>
 </dl>

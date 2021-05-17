@@ -1,9 +1,11 @@
 var annotated_dup =
 [
     [ "Ui", null, [
+      [ "AboutDialog", "class_ui_1_1_about_dialog.html", null ],
       [ "ConnectionDialog", "class_ui_1_1_connection_dialog.html", null ],
       [ "MainWindow", "class_ui_1_1_main_window.html", null ]
     ] ],
+    [ "AboutProgramDialog", "class_about_program_dialog.html", "class_about_program_dialog" ],
     [ "AcceloPacket", "class_accelo_packet.html", "class_accelo_packet" ],
     [ "BatteryPacket", "class_battery_packet.html", "class_battery_packet" ],
     [ "Chart", "class_chart.html", "class_chart" ],
@@ -19,6 +21,7 @@ var annotated_dup =
     [ "MainWindow", "class_main_window.html", "class_main_window" ],
     [ "Packet", "class_packet.html", "class_packet" ],
     [ "PingPacket", "class_ping_packet.html", "class_ping_packet" ],
+    [ "qt_meta_stringdata_AboutProgramDialog_t", "structqt__meta__stringdata___about_program_dialog__t.html", "structqt__meta__stringdata___about_program_dialog__t" ],
     [ "qt_meta_stringdata_Chart_t", "structqt__meta__stringdata___chart__t.html", "structqt__meta__stringdata___chart__t" ],
     [ "qt_meta_stringdata_clientTCP_t", "structqt__meta__stringdata__client_t_c_p__t.html", "structqt__meta__stringdata__client_t_c_p__t" ],
     [ "qt_meta_stringdata_clientUDP_t", "structqt__meta__stringdata__client_u_d_p__t.html", "structqt__meta__stringdata__client_u_d_p__t" ],
@@ -28,6 +31,7 @@ var annotated_dup =
     [ "qt_meta_stringdata_Scene_t", "structqt__meta__stringdata___scene__t.html", "structqt__meta__stringdata___scene__t" ],
     [ "Scene", "class_scene.html", "class_scene" ],
     [ "SpeedPacket", "class_speed_packet.html", "class_speed_packet" ],
+    [ "Ui_AboutDialog", "class_ui___about_dialog.html", "class_ui___about_dialog" ],
     [ "Ui_ConnectionDialog", "class_ui___connection_dialog.html", "class_ui___connection_dialog" ],
     [ "Ui_MainWindow", "class_ui___main_window.html", "class_ui___main_window" ]
 ];

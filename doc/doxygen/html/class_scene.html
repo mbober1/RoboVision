@@ -99,14 +99,14 @@ Inheritance diagram for Scene:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:af1060cfc88465676e139c8d4a1a57f71"><td class="memItemLeft" align="right" valign="top"><a id="af1060cfc88465676e139c8d4a1a57f71"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate</b> (QVector3D axis, float angle)</td></tr>
-<tr class="separator:af1060cfc88465676e139c8d4a1a57f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f113206c65bb2e6948feb1a878f67a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a57f113206c65bb2e6948feb1a878f67a">rotate</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a57f113206c65bb2e6948feb1a878f67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b08488d2761604cd080a89ec50a1a33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a2b08488d2761604cd080a89ec50a1a33">resetPosition</a> ()</td></tr>
+<tr class="separator:a2b08488d2761604cd080a89ec50a1a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1fb20bcf2548898588337aaf5c007028"><td class="memItemLeft" align="right" valign="top"><a id="a1fb20bcf2548898588337aaf5c007028"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:a1fb20bcf2548898588337aaf5c007028"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1fb20bcf2548898588337aaf5c007028">Scene</a> (QWidget *parent=nullptr)</td></tr>
 <tr class="separator:a1fb20bcf2548898588337aaf5c007028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -121,6 +121,116 @@ QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>container</b></t
 Qt3DCore::QEntity *&#160;</td><td class="memItemRight" valign="bottom"><b>robot</b></td></tr>
 <tr class="separator:a054c71f910d95d0884f6d81d5f3b2a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1fb20bcf2548898588337aaf5c007028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb20bcf2548898588337aaf5c007028">&#9670;&nbsp;</a></span>Scene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A constructor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>QWidget type parent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2b08488d2761604cd080a89ec50a1a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b08488d2761604cd080a89ec50a1a33">&#9670;&nbsp;</a></span>resetPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::resetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset position of 3D model </p>
+
+</div>
+</div>
+<a id="a57f113206c65bb2e6948feb1a878f67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f113206c65bb2e6948feb1a878f67a">&#9670;&nbsp;</a></span>rotate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::rotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate 3D model </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Rotation about the X axis in radians </td></tr>
+    <tr><td class="paramname">z</td><td>Rotation about the Y axis in radians </td></tr>
+    <tr><td class="paramname">z</td><td>Rotation about the Z axis in radians </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="scene_8hpp_source.html">scene.hpp</a></li>
 <li>src/scene.cpp</li>

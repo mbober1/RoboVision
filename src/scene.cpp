@@ -1,7 +1,17 @@
 #include "scene.hpp"
 
+
+/**
+ * Convert degrees to radians
+ * @param deg Degrees value
+ */
 float degToPi(float deg) { return deg * (M_PI/180); }
 
+
+/**
+ * A constructor.
+ * @param parent QWidget type parent
+ */
 Scene::Scene(QWidget *parent) : 
 QWidget(parent), x(0), y(0), z(0)
 {
@@ -22,9 +32,9 @@ QWidget(parent), x(0), y(0), z(0)
     camera->setPosition(QVector3D(0, 0, 300.0f));
     camera->setViewCenter(QVector3D(0, 0, 0));  
     
-    Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(rootEntity);
-    camController->setCamera(camera);  
-
+    // camera control
+    // Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(rootEntity);
+    // camController->setCamera(camera);  
 
     // light
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
@@ -41,7 +51,7 @@ QWidget(parent), x(0), y(0), z(0)
     // object
     this->robot = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QSceneLoader *loader = new Qt3DRender::QSceneLoader(rootEntity);
-    loader->setSource(QUrl(":/model/chassis.obj"));
+    loader->setSource(QUrl("qrc:///model/chassis.obj"));
     this->robot->addComponent(loader);
 
     this->resetPosition();
@@ -49,6 +59,13 @@ QWidget(parent), x(0), y(0), z(0)
     view->setRootEntity(rootEntity);
 }
 
+
+/**
+ * Rotate 3D model
+ * @param x Rotation about the X axis in radians
+ * @param z Rotation about the Y axis in radians
+ * @param z Rotation about the Z axis in radians
+ */
 void Scene::rotate(float x, float y, float z) {
     auto *transform = new Qt3DCore::QTransform();
     this->x += degToPi(x);
@@ -63,6 +80,10 @@ void Scene::rotate(float x, float y, float z) {
     this->robot->addComponent(transform);
 }
 
+
+/**
+ * Reset position of 3D model
+ */
 void Scene::resetPosition() {
     this->x = 0;
     this->y = 0;

@@ -16,6 +16,7 @@ var hierarchy =
       [ "Chart", "class_chart.html", null ]
     ] ],
     [ "QDialog", null, [
+      [ "AboutProgramDialog", "class_about_program_dialog.html", null ],
       [ "ConnectionDialog", "class_connection_dialog.html", null ]
     ] ],
     [ "QMainWindow", null, [
@@ -26,6 +27,7 @@ var hierarchy =
       [ "clientTCP", "classclient_t_c_p.html", null ],
       [ "clientUDP", "classclient_u_d_p.html", null ]
     ] ],
+    [ "qt_meta_stringdata_AboutProgramDialog_t", "structqt__meta__stringdata___about_program_dialog__t.html", null ],
     [ "qt_meta_stringdata_Chart_t", "structqt__meta__stringdata___chart__t.html", null ],
     [ "qt_meta_stringdata_clientTCP_t", "structqt__meta__stringdata__client_t_c_p__t.html", null ],
     [ "qt_meta_stringdata_clientUDP_t", "structqt__meta__stringdata__client_u_d_p__t.html", null ],
@@ -37,11 +39,13 @@ var hierarchy =
       [ "Scene", "class_scene.html", null ]
     ] ],
     [ "CRC::Table< CRCType, CRCWidth >", "struct_c_r_c_1_1_table.html", null ],
+    [ "Ui_AboutDialog", "class_ui___about_dialog.html", [
+      [ "Ui::AboutDialog", "class_ui_1_1_about_dialog.html", null ]
+    ] ],
     [ "Ui_ConnectionDialog", "class_ui___connection_dialog.html", [
       [ "Ui::ConnectionDialog", "class_ui_1_1_connection_dialog.html", null ]
     ] ],
     [ "Ui_MainWindow", "class_ui___main_window.html", [
-      [ "Ui::MainWindow", "class_ui_1_1_main_window.html", null ],
       [ "Ui::MainWindow", "class_ui_1_1_main_window.html", null ]
     ] ]
 ];

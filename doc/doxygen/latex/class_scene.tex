@@ -9,14 +9,14 @@ Inheritance diagram for Scene\+:\begin{figure}[H]
 \doxysubsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_af1060cfc88465676e139c8d4a1a57f71}\label{class_scene_af1060cfc88465676e139c8d4a1a57f71}} 
-void {\bfseries rotate} (QVector3D axis, float angle)
+void \mbox{\hyperlink{class_scene_a57f113206c65bb2e6948feb1a878f67a}{rotate}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{class_scene_a2b08488d2761604cd080a89ec50a1a33}{reset\+Position}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_a1fb20bcf2548898588337aaf5c007028}\label{class_scene_a1fb20bcf2548898588337aaf5c007028}} 
-{\bfseries Scene} (QWidget $\ast$parent=nullptr)
+\mbox{\hyperlink{class_scene_a1fb20bcf2548898588337aaf5c007028}{Scene}} (QWidget $\ast$parent=nullptr)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -30,6 +30,44 @@ QWidget $\ast$ {\bfseries container}
 \mbox{\Hypertarget{class_scene_a054c71f910d95d0884f6d81d5f3b2a59}\label{class_scene_a054c71f910d95d0884f6d81d5f3b2a59}} 
 Qt3\+DCore\+::\+QEntity $\ast$ {\bfseries robot}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_a1fb20bcf2548898588337aaf5c007028}\label{class_scene_a1fb20bcf2548898588337aaf5c007028}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+A constructor. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & QWidget type parent \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_a2b08488d2761604cd080a89ec50a1a33}\label{class_scene_a2b08488d2761604cd080a89ec50a1a33}} 
+\index{Scene@{Scene}!resetPosition@{resetPosition}}
+\index{resetPosition@{resetPosition}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{resetPosition}{resetPosition}}
+{\footnotesize\ttfamily void Scene\+::reset\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Reset position of 3D model \mbox{\Hypertarget{class_scene_a57f113206c65bb2e6948feb1a878f67a}\label{class_scene_a57f113206c65bb2e6948feb1a878f67a}} 
+\index{Scene@{Scene}!rotate@{rotate}}
+\index{rotate@{rotate}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily void Scene\+::rotate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Rotate 3D model 
+\begin{DoxyParams}{Parameters}
+{\em x} & Rotation about the X axis in radians \\
+\hline
+{\em z} & Rotation about the Y axis in radians \\
+\hline
+{\em z} & Rotation about the Z axis in radians \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

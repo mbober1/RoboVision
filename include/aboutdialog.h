@@ -12,7 +12,7 @@ class AboutDialog;
 */
 
 /**
-    @brief Connection pop-up dialog class
+    @brief About program pop-up dialog class
 */
 class AboutProgramDialog : public QDialog
 {

@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
-       this->scene->rotate(y, z, x);
+       this->scene->rotate(y/2, z/2, x/2);
     });
 
     QChartView *chartView = new QChartView(this->chart);
@@ -71,6 +71,7 @@ void MainWindow::actionConnect() {
     ConnectionDialog dialog;
     dialog.setModal(true);
     if(dialog.exec() == QDialog::Accepted) {
+        scene->resetPosition();
         tcp.address = dialog.getAdress();
         tcp.port = dialog.getTcpPort();
         udp.address = dialog.getAdress();
@@ -185,7 +186,6 @@ void MainWindow::readData() {
     int left = (1.0-fPivScale)*nMotPremixL + fPivScale*( nPivSpeed);
     int right = (1.0-fPivScale)*nMotPremixR + fPivScale*(-nPivSpeed);
 
-	// printf("L: %d, R: %d\n", left, right);			
     udp.send(left, right);
 }
 
@@ -200,27 +200,55 @@ void MainWindow::toggleDataTimer() {
 }
 
 
+/**
+ * Display ping value
+ * @param latency Value
+ */
 void MainWindow::ping(int latency) {
     ui->lcdNumberPing->display(latency);
 }
 
+
+/**
+ * Display battery value
+ * @param level Value
+ */
 void MainWindow::battery(int level) {
     ui->progressBarBattery->setValue(level);
 }
 
+
+/**
+ * Display distance to nearest obstacle
+ * @param distance Value
+ */
 void MainWindow::obstacle(int distance) {
     ui->progressBarObstacle->setValue(distance);
 }
 
+
+/**
+ * Display speed value
+ * @param left Left motor speed
+ * @param right Right motor speed
+ */
 void MainWindow::speed(int left, int right) {
     int speed = abs(left + right)/2;
     ui->lcdNumberSpeed->display(speed);
 }
 
+
+/**
+ * Open github link in browser
+ */
 void MainWindow::github() {
     QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
 }
 
+
+/**
+ * Display the popup about dialog 
+ */
 void MainWindow::about() {
     AboutProgramDialog dialog;
     dialog.setModal(true);
