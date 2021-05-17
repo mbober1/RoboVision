@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "connectiondialog.h"
+#include "aboutdialog.h"
 #include <QDebug>
 #include <string>
 #include <QMessageBox>
@@ -37,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&tcp, &clientTCP::distanceChanged, this, &MainWindow::obstacle);
     connect(&tcp, &clientTCP::speedChanged, this, &MainWindow::speed);
     connect(ui->actionGitHub, &QAction::triggered, this, &MainWindow::github);
+    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::about);
 
     QObject::connect(&tcp, &clientTCP::accelChanged, [this](int x, int y, int z) {
        chart->addPoint(x,y,z);
@@ -44,7 +46,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(&tcp, &clientTCP::gyroChanged, [this](int x, int y, int z) {
        this->scene->rotate(y, z, x);
-    //    qDebug() << x << y << z;
     });
 
     QChartView *chartView = new QChartView(this->chart);
@@ -218,4 +219,10 @@ void MainWindow::speed(int left, int right) {
 
 void MainWindow::github() {
     QDesktopServices::openUrl(QUrl("https://github.com/mbober1/RoboVision", QUrl::TolerantMode));
+}
+
+void MainWindow::about() {
+    AboutProgramDialog dialog;
+    dialog.setModal(true);
+    dialog.exec();
 }

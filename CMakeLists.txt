@@ -19,6 +19,7 @@ find_package(Qt5Charts)
 set(SOURCES
     src/main.cpp
     src/connectiondialog.cpp
+    src/aboutdialog.cpp
     src/gamepad.cpp
     src/mainwindow.cpp
     src/tcp.cpp
@@ -28,6 +29,7 @@ set(SOURCES
     src/packet.cpp)
 set(HEADERS
     include/connectiondialog.h
+    include/aboutdialog.h
     include/gamepad.hpp
     include/mainwindow.h
     include/tcp.hpp
@@ -38,6 +40,7 @@ set(HEADERS
     include/packet.hpp)
 set(UIS
     ui_mainwindow.h
+    ui_aboutdialog.h
     ui_connectiondialog.h)
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
 target_include_directories(${PROJECT_NAME} PUBLIC include ui)

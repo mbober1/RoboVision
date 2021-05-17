@@ -34,7 +34,6 @@ public:
     void connectionError(QAbstractSocket::SocketError error);
 
     Gamepad joystick;
-    // Keyboard keyboard;
     clientUDP udp;
     clientTCP tcp;
     Chart *chart = new Chart();
@@ -52,6 +51,7 @@ public slots:
     void obstacle(int distance);
     void speed(int left, int right);
     void github();
+    void about();
 
 private:
     QTimer dataTimer;
