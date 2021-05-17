@@ -42,6 +42,8 @@ set(UIS
     ui_mainwindow.h
     ui_aboutdialog.h
     ui_connectiondialog.h)
+
+qt5_add_resources(SOURCES resources.qrc)
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UIS})
 target_include_directories(${PROJECT_NAME} PUBLIC include ui)
 

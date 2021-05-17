@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icons/connect.png</file>
+    <file>icons/disconnect.png</file>
+    <file>icons/github.png</file>
+    <file>icons/information.png</file>
+    <file>icons/quit.png</file>
+  </qresource>
+  <qresource prefix="model">
+    <file>chassis.obj</file>
+  </qresource>
+</RCC>

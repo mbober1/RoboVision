@@ -13,8 +13,8 @@ QWidget(parent), x(0), y(0), z(0)
 
 
     Qt3DCore::QEntity *rootEntity = new Qt3DCore::QEntity;
-    QUrl data = QUrl::fromLocalFile("/home/mbober/Documents/RoboVision/chassis.obj");
-
+    
+    Q_INIT_RESOURCE(resources);
 
     // camera
     camera = view->camera();
@@ -41,7 +41,7 @@ QWidget(parent), x(0), y(0), z(0)
     // object
     this->robot = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QSceneLoader *loader = new Qt3DRender::QSceneLoader(rootEntity);
-    loader->setSource(data);
+    loader->setSource(QUrl(":/model/chassis.obj"));
     this->robot->addComponent(loader);
 
     this->resetPosition();
