@@ -31,10 +31,6 @@ QWidget(parent), x(0), y(0), z(0)
     camera->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
     camera->setPosition(QVector3D(0, 0, 300.0f));
     camera->setViewCenter(QVector3D(0, 0, 0));  
-    
-    // camera control
-    // Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(rootEntity);
-    // camController->setCamera(camera);  
 
     // light
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
