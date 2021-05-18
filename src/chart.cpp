@@ -24,7 +24,6 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     QPen red(Qt::red);
     QPen green(Qt::green);
     QPen blue(Qt::blue);
-    this->setTitleBrush(QBrush(Qt::white));
 
     red.setWidth(2);
     green.setWidth(2);
@@ -44,10 +43,14 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     addSeries(y_series);
     addSeries(z_series);
 
+    QFont labelsFont;
+    labelsFont.setBold(true);
+
     m_axisX->setLabelsVisible(false);
     m_axisY->setLabelsColor(Qt::white);
-    m_axisX->setGridLineColor(QColor(200, 200, 200));
-    m_axisY->setGridLineColor(QColor(200, 200, 200));
+    m_axisY->setLabelsFont(labelsFont);
+    m_axisX->setGridLineColor(QColor(150, 150, 150));
+    m_axisY->setGridLineColor(QColor(150, 150, 150));
 
     addAxis(m_axisX,Qt::AlignBottom);
     addAxis(m_axisY,Qt::AlignLeft);
@@ -65,7 +68,7 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
 
     this->legend()->setVisible(true);
     this->setAnimationOptions(QChart::NoAnimation);
-    this->legend()->setLabelColor(QColor(200, 200, 200));
+    this->legend()->setLabelColor(QColor(150, 150, 150));
 
     this->setMargins(QMargins(0,0,0,0));
     this->setBackgroundRoundness(3);
