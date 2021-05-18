@@ -35,7 +35,7 @@ QWidget(parent), x(0), y(0), z(0)
     // light
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QPointLight *light = new Qt3DRender::QPointLight(lightEntity);
-    light->setColor("red");
+    light->setColor(QColor(255, 50, 50));
     light->setIntensity(2);
     lightEntity->addComponent(light);
 
