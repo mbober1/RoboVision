@@ -24,6 +24,7 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     QPen red(Qt::red);
     QPen green(Qt::green);
     QPen blue(Qt::blue);
+    this->setTitleBrush(QBrush(Qt::white));
 
     red.setWidth(2);
     green.setWidth(2);
@@ -37,12 +38,16 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
     y_series->setName("Y");
     z_series->setName("Z");
 
+    QBrush axisBrush(Qt::white);
+
     addSeries(x_series);
     addSeries(y_series);
     addSeries(z_series);
 
     m_axisX->setLabelsVisible(false);
-
+    m_axisY->setLabelsColor(Qt::white);
+    m_axisX->setGridLineColor(QColor(200, 200, 200));
+    m_axisY->setGridLineColor(QColor(200, 200, 200));
 
     addAxis(m_axisX,Qt::AlignBottom);
     addAxis(m_axisY,Qt::AlignLeft);
@@ -60,8 +65,11 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags) :
 
     this->legend()->setVisible(true);
     this->setAnimationOptions(QChart::NoAnimation);
+    this->legend()->setLabelColor(QColor(200, 200, 200));
 
     this->setMargins(QMargins(0,0,0,0));
+    this->setBackgroundRoundness(3);
+    this->setBackgroundBrush(QBrush(QColor(80, 80, 80)));
 }
 
 

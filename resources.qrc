@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icons/robot.png</file>
     <file>icons/connect.png</file>
     <file>icons/disconnect.png</file>
     <file>icons/github.png</file>

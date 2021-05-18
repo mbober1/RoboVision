@@ -39,9 +39,6 @@ public:
     Chart *chart = new Chart();
     Scene *scene = new Scene();
 
-protected:
-    void keyPressEvent(QKeyEvent* event);
-
 public slots:
     void actionConnect();
     void actionDisconnect();

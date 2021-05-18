@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>RoboVision</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icon/icons/robot.png</normaloff>:/icon/icons/robot.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
@@ -40,6 +44,12 @@
       <layout class="QHBoxLayout" name="ObstacleLayout">
        <item>
         <widget class="QLabel" name="distanceLabel">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Obstacle distance</string>
          </property>
@@ -47,8 +57,18 @@
        </item>
        <item>
         <widget class="QProgressBar" name="progressBarObstacle">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="value">
           <number>0</number>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
          </property>
          <property name="format">
           <string>%p cm</string>
@@ -88,7 +108,7 @@
       <x>10</x>
       <y>460</y>
       <width>781</width>
-      <height>92</height>
+      <height>104</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -103,6 +123,12 @@
        </item>
        <item row="0" column="0">
         <widget class="QLCDNumber" name="lcdNumberPing">
+         <property name="font">
+          <font>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -135,6 +161,13 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
          </property>
@@ -148,6 +181,12 @@
        </item>
        <item row="2" column="0">
         <widget class="QLCDNumber" name="lcdNumberSpeed">
+         <property name="font">
+          <font>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -185,6 +224,12 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="pingLabel">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Ping</string>
          </property>
@@ -195,6 +240,12 @@
        </item>
        <item>
         <widget class="QLabel" name="speedLabel">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Speed</string>
          </property>
@@ -207,13 +258,29 @@
      </item>
      <item row="1" column="1">
       <widget class="QProgressBar" name="progressBarBattery">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="value">
         <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
        </property>
