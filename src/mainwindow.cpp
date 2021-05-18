@@ -150,7 +150,7 @@ void MainWindow::connectionError(QAbstractSocket::SocketError error) {
  * Read data from joystick and send it to robot
  */
 void MainWindow::readData() {
-    int nJoyX = -joystick.m_gamepad->axisLeftX() * 100;
+    int nJoyX = joystick.m_gamepad->axisLeftX() * 100;
     int nJoyY = -joystick.m_gamepad->axisLeftY() * 100;
 
     float fPivYLimit = 32.0;
