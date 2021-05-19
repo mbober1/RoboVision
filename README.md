@@ -11,6 +11,6 @@ https://github.com/mbober1/ReTank
 - [X] Measuring latency (ping)
 - [X] Real motor speed
 - [X] Indications of the robot's accelerometer
-- [ ] 3D robot model with gyro position readings
+- [X] 3D robot model with gyro position readings
 
 
