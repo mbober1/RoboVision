@@ -55,7 +55,7 @@
      i implementacja interfejsu sieciowego.
     \item Parsowanie danych odbieraych z robota.
     \item Przygotowanie wizualizacji zebranych danych.
-    \item Obsługa klawiatury i joysticka.
+    \item Obsługa joysticka.
     \item Implementacja algorytmu sterowania i przesyłanie wyników do urządzenia.
   \end{itemize}
 
@@ -253,23 +253,157 @@
   ma swój własny kolor. W przypadku osi Z jest to kolor niebieski. 
   Dla osi X wybrany został kolor zielony, natomiast osi Y przypadł kolor czerwony.
 
+  \subsection{Prototyp aplikacji}
+  Obrazek pokazujący zaawansowany etap prac nad aplikacją.
+
   \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{img/app.png}
-    \caption{Wykresy wskazań akcelometru}
-    \label{fig:wykresy}
+    \caption{Póżny prototyp aplikacji}
+    \label{fig:interfejs}
   \end{figure}
-
   
-  \section{Aktualne rezultaty}
-  Na dzień dzisiejszy, projekt nie jest obarczony żadnymi opóźnieniami. Wszystkie 
-  zaplanowane kamienie milowe zostały osiągnięte przed terminem. Aplikacja może 
-  poszczycić się już działającą obsługa joysticka, gotową komunikacją z robotem,
+  \section{Ostateczne rezultaty}
+  Wszystkie zaplanowane kamienie milowe zostały osiągnięte. Aplikacja może 
+  poszczycić się działającą obsługa joysticka, gotową komunikacją z robotem,
   wykresem przeciążeń, algorytmem różnicowego układu sterowania oraz działającym
   wskaźnikiem opóźnienia, prędkości liniowej i poziomu baterii. 
-  Pozostało więc jedynie zaimplementować wizualizację obiektu 3D. 
-  Ostatnia faza projektu zakłada również eliminację błędów.
+  Została również zaimplementowana wizualizacja obiektu 3D. 
 
+
+  \subsection{Okienko inicializacji połączenia}
+  Aby uprościć interfejs urzytkownika, zdecydowałem się umieścić wszystkie aspekty
+  związane z połączeniem w osobnym, specialnie zaprojektowanym do tego celu okienku.
+  Wywoływane jest ono poprzez menu narzędziowe w zakładce "Connection".
+  Znajdują się w nim sformatowane pola tekstowe, w które należy wpisać adres urządzenia
+  docelowego oraz porty serwera UDP i TCP.  
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/final/conn.png}
+    \caption{Okienko konfiguracji połączenia}
+    \label{fig:conn}
+  \end{figure}
+
+
+
+  \subsection{Okienko informacyjne}
+  Okienko to można znaleźć w belce narzędziowej w zakładce "Help". 
+  Jego celem jest informowanie urzytkownika o autorze aplikacji i
+  jej przeznaczeniu. Dodatkowo informuje ona, gdzie można zgłaszać
+  napotkane błędy. Podobnie jak okienko z konfiguracją połączenia, 
+  wykorzustuje ono półprzezroczystość, co pozytywnie wpływa na ogólną
+  estetykę aplikacji. W tej samej zakładce znaleźć można także odnośnik
+  do repozytorium projektu.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/final/info.png}
+    \caption{Okienko konfiguracji połączenia}
+    \label{fig:info}
+  \end{figure}
+
+
+  \subsection{Wykresy przeciążeń}
+  Jednym z najefektywniejszych wizualnie elementów jest wykres przeciążeń.
+  Jego zadaniem jest przedstwianie wskazań pobranych z akcelometru robota.
+  Pozwala nam to w bardzo przejrzysty sposób dowiedzieć się jakie siły
+  działają na nasz pojazd. Został on wykonany przy użyciu modułu QTChart.
+  Aby zmniejszyć jego wpływ na wydajność aplikacji wszystkie punkty, które
+  nie mieszczą się na wykresie zostają usunięte. Ma to duży wpływ na użycie
+  pamięci i procesora, w szczególności podczas dłuższej pracy z programem.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/final/chart.png}
+    \caption{Wykres przeciążeń}
+    \label{fig:chart}
+  \end{figure}
+
+  \subsection{Wizualizacja 3D}
+  Wizualizacja robota w trówymiarze, jest najbardziej złożonym obliczeniowo
+  elementem całego programu. Jego celem jest przekazanie urzytkownikowi 
+  jaknajdokładniejszego odwzorowania pochylenia pojazdu względem podłoża.
+  Jest to niezastąpione podczas podjazdów na strome zbocza lub przeprawy 
+  w trudnym terenie. Na potrzeby tej części aplikacji, został stworzony
+  bardzo dokłady model 3D sterowanego robota. Obraca się on  w zależności 
+  od danych uzyskanych z żyroskopu robota. Po wielu przeprowadzonych
+  testach zdecydowałem się na czerwone światło padające z przodu kamery,
+  poniewa takie ustawienia dają najlepszy efekt wizualny.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/final/3d.png}
+    \caption{Wizualizacja 3D}
+    \label{fig:3d}
+  \end{figure}
+
+
+  \subsection{Wskaźniki}
+  Ostatnim ważnym elementem są wskaźniki. Wyświetlają one dane z różnych
+  czujników zainstalowanych na pojeździe. Pierwszy z nich otrzymuje odlegość
+  zmierzoną przez czujnik ultradzwiękowy zamontowany na przodzie. Jest to 
+  ważna informacja podczas zbliżana się do ścian lub innych obiektów.
+  Pasek postępu wyskalowany jest do jednego metra, ponieważ powyżej tej 
+  wartości nie musimy się obawiać zderzenia.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{img/final/wska.png}
+    \caption{Wizualizacja 3D}
+    \label{fig:indications}
+  \end{figure}
+
+  Z lewej strony znajdują się inforamcje dotyczące obliczonego opóźnienia i
+  prędkości jazdy. W szczególności ta pierwsza jest niezwykle potrzebna, bo
+  sprawia że w prosty sposób dowiadujemy się o zbliżającym się końcu zasięgu.
+  Z prawej strony znajduje się status połączenia z robotem. Natomiast poniżej
+  udostępniona jest nam aproksymacja poziomu naładowania akumulatora.
+
+  \section{Eksperymenty}
+
+  \subsection{Próba połączenia}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.78\textwidth]{img/final/0.png}
+    \caption{Próba połączenia}
+  \end{figure}
+
+  \newpage
+
+
+  \subsection{Stanie na przeszkodzie}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.77\textwidth]{img/final/2.png}
+    \includegraphics[width=0.77\textwidth]{img/final/2e.jpg}
+    \caption{Stanie na przeszkodzie}
+  \end{figure}
+
+  \newpage
+
+  \subsection{Zjazd z górki}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.77\textwidth]{img/final/3.png}
+    \includegraphics[width=0.77\textwidth]{img/final/3e.jpg}
+    \caption{Zjazd z górki}
+  \end{figure}
+
+
+  \newpage
+
+  \subsection{Stanie bokiem}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.77\textwidth]{img/final/4.png}
+    \includegraphics[width=0.77\textwidth]{img/final/4e.jpg}
+    \caption{Stanie bokiem}
+  \end{figure}
+
+
+  
   
 \bibliographystyle{plplain}
 \bibliography{baza_bibliografii}
