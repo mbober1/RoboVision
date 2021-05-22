@@ -9,7 +9,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "connectiondialog.h", "connectiondialog_8h.html", [
       [ "ConnectionDialog", "class_connection_dialog.html", "class_connection_dialog" ]
     ] ],
-    [ "crc.h", "crc_8h.html", "crc_8h" ],
     [ "gamepad.hpp", "gamepad_8hpp.html", [
       [ "Gamepad", "class_gamepad.html", "class_gamepad" ]
     ] ],

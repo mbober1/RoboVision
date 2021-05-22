@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structqt__meta__stringdata___chart__t.html#a1033bf12d9f785ae18556c62b7684336":[1,0,18,1],
 "structqt__meta__stringdata___chart__t.html#a9ff8cf363c63a9f412376a87bc508ca5":[1,0,18,0],
 "structqt__meta__stringdata___connection_dialog__t.html":[1,0,21],
 "structqt__meta__stringdata___connection_dialog__t.html#a62d5725808785e701a3a2d0785b94a67":[1,0,21,1],

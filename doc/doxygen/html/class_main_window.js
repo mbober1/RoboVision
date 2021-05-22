@@ -9,7 +9,6 @@ var class_main_window =
     [ "changeConnectionStatus", "class_main_window.html#a53679cbbcb7362027bdb2eac6839847f", null ],
     [ "connectionError", "class_main_window.html#a2805e86c6e8e689f51ce8cc536596449", null ],
     [ "github", "class_main_window.html#a108f5c5c1f4ce4aab968880c94b151c5", null ],
-    [ "keyPressEvent", "class_main_window.html#a9c4f542263838b9ecd06eae839a42a34", null ],
     [ "obstacle", "class_main_window.html#a8596a8e9868e66b38b784b11c2d8cd01", null ],
     [ "ping", "class_main_window.html#a8a32d9a8a5c1c114a1dd84103c2e048f", null ],
     [ "speed", "class_main_window.html#a83bd7c89d149fd3c094c5ab09839851a", null ],

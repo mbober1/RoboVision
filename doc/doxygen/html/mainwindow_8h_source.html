@@ -118,27 +118,24 @@ $(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initRe
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_chart.html">Chart</a> *chart = <span class="keyword">new</span> <a class="code" href="class_chart.html">Chart</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_scene.html">Scene</a> *scene = <span class="keyword">new</span> <a class="code" href="class_scene.html">Scene</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> keyPressEvent(QKeyEvent* event);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a50ad376f4c1f3a989b381de4fd3a071d">actionConnect</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aeed5af23fce11f0ef698e6e5fdc14a30">actionDisconnect</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a53679cbbcb7362027bdb2eac6839847f">changeConnectionStatus</a>(QAbstractSocket::SocketState status);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8a32d9a8a5c1c114a1dd84103c2e048f">ping</a>(<span class="keywordtype">int</span> latency);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ad30e1d8b098057fb2cbc5b094b3eadfd">battery</a>(<span class="keywordtype">int</span> level);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8596a8e9868e66b38b784b11c2d8cd01">obstacle</a>(<span class="keywordtype">int</span> distance);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a83bd7c89d149fd3c094c5ab09839851a">speed</a>(<span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a108f5c5c1f4ce4aab968880c94b151c5">github</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a7be6a5d98970ac1a6296c6f9aee1e9bb">about</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QTimer dataTimer;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_ui_1_1_main_window.html">Ui::MainWindow</a> *ui;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> readData();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> toggleDataTimer();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a50ad376f4c1f3a989b381de4fd3a071d">actionConnect</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aeed5af23fce11f0ef698e6e5fdc14a30">actionDisconnect</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a53679cbbcb7362027bdb2eac6839847f">changeConnectionStatus</a>(QAbstractSocket::SocketState status);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8a32d9a8a5c1c114a1dd84103c2e048f">ping</a>(<span class="keywordtype">int</span> latency);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ad30e1d8b098057fb2cbc5b094b3eadfd">battery</a>(<span class="keywordtype">int</span> level);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8596a8e9868e66b38b784b11c2d8cd01">obstacle</a>(<span class="keywordtype">int</span> distance);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a83bd7c89d149fd3c094c5ab09839851a">speed</a>(<span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a108f5c5c1f4ce4aab968880c94b151c5">github</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a7be6a5d98970ac1a6296c6f9aee1e9bb">about</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QTimer dataTimer;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Ui::MainWindow *ui;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> readData();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> toggleDataTimer();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
 <div class="ttc" id="achart_8hpp_html"><div class="ttname"><a href="chart_8hpp.html">chart.hpp</a></div><div class="ttdoc">The file contains the chart class.</div></div>
 <div class="ttc" id="aclass_chart_html"><div class="ttname"><a href="class_chart.html">Chart</a></div><div class="ttdoc">Chart class.</div><div class="ttdef"><b>Definition:</b> chart.hpp:26</div></div>
 <div class="ttc" id="aclass_gamepad_html"><div class="ttname"><a href="class_gamepad.html">Gamepad</a></div><div class="ttdoc">Joystick class.</div><div class="ttdef"><b>Definition:</b> gamepad.hpp:24</div></div>
@@ -155,8 +152,7 @@ $(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initRe
 <div class="ttc" id="aclass_main_window_html_ad30e1d8b098057fb2cbc5b094b3eadfd"><div class="ttname"><a href="class_main_window.html#ad30e1d8b098057fb2cbc5b094b3eadfd">MainWindow::battery</a></div><div class="ttdeci">void battery(int level)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:207</div></div>
 <div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:61</div></div>
 <div class="ttc" id="aclass_main_window_html_aeed5af23fce11f0ef698e6e5fdc14a30"><div class="ttname"><a href="class_main_window.html#aeed5af23fce11f0ef698e6e5fdc14a30">MainWindow::actionDisconnect</a></div><div class="ttdeci">void actionDisconnect()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:87</div></div>
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> scene.hpp:28</div></div>
-<div class="ttc" id="aclass_ui_1_1_main_window_html"><div class="ttname"><a href="class_ui_1_1_main_window.html">Ui::MainWindow</a></div><div class="ttdef"><b>Definition:</b> ui_mainwindow.h:277</div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">3D scene class</div><div class="ttdef"><b>Definition:</b> scene.hpp:32</div></div>
 <div class="ttc" id="aclassclient_t_c_p_html"><div class="ttname"><a href="classclient_t_c_p.html">clientTCP</a></div><div class="ttdoc">TCP client connection class.</div><div class="ttdef"><b>Definition:</b> tcp.hpp:26</div></div>
 <div class="ttc" id="aclassclient_u_d_p_html"><div class="ttname"><a href="classclient_u_d_p.html">clientUDP</a></div><div class="ttdoc">UDP client connection class.</div><div class="ttdef"><b>Definition:</b> udp.hpp:24</div></div>
 <div class="ttc" id="agamepad_8hpp_html"><div class="ttname"><a href="gamepad_8hpp.html">gamepad.hpp</a></div><div class="ttdoc">The file contains the gamepad class.</div></div>
