@@ -1,5 +1,8 @@
 # RoboVision - Remote control software
 
+![alt model](https://github.com/mbober1/RoboVision/blob/master/doc/latex/img/final/app.png)
+
+
 ## Remote control device
 This software can controls the robot based on ReTank project
 https://github.com/mbober1/ReTank
